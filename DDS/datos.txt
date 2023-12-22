@@ -6,3 +6,11 @@ Usuarios:
 
 -admin    1234
 -usuariomodelo   tpdisenio2023
+
++------------------+
+|Tareas Pendientes |
++------------------+
+1- Cambiar el frontend de perfil.html para que el campo dirección sea un dropdown que se llena mediante las locaciones de la API
+2- Modificar el esquema para que la pagina raiz sea de presentación y luego de hacer login se vaya a la verdadera página de la aplicación
+3- Crear las clases abstractas necesarias según entrega 2
+4- Revisar el modelado de comunidades y usuario administrador de comunidades
