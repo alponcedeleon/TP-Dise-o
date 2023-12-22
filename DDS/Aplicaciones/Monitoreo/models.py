@@ -66,6 +66,13 @@ class Perfil(models.Model):
 
 def crear_perfil (sender, instance, created, **kwargs):
     if created:
-        Perfil.objects.create(user=instance)
+        Perfil.objects.create(
+            user=instance,
+            nombre = "Nombre",
+            apellido = "Apellido",
+            email = "email@monitoreo.com",
+            direccion = "Dirección",
+            profile_picture = 'profile_pics/profile_Default.jpg'
+            )
 
 post_save.connect(crear_perfil, sender=User)
