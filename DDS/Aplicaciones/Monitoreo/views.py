@@ -4,6 +4,7 @@ from django.contrib.auth import authenticate, login
 from django.contrib import messages
 from .forms import CustomUserCreationForm , UserProfileForm
 from .models import Perfil
+from .requests import obtener_localidades
 
 # Create your views here.
 def register(request):
@@ -44,6 +45,8 @@ def perfil_usuario(request):
     # Obtener el perfil del usuario actual, si existe
     perfil_usuario = get_object_or_404(Perfil, user=request.user)
 
+    localidades = obtener_localidades()
+
     if request.method == 'POST':
         form = UserProfileForm(request.POST, request.FILES, instance=perfil_usuario)
         if form.is_valid():
@@ -57,6 +60,7 @@ def perfil_usuario(request):
     context = {
         'perfil_usuario': perfil_usuario,
         'form': form,
+        'localidades': localidades,
     }
 
     return render(request, 'perfil.html', context)

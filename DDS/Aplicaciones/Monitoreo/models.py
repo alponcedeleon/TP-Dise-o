@@ -1,14 +1,20 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.db.models.signals import post_save
+import requests
+from django import forms
 
 # Create your models here.
+
 class Estacion(models.Model):
     nombre = models.CharField(max_length=30)
     ubicacion_geografica = models.CharField(max_length=30)
+    localidad = models.CharField(max_length=20, null=True)
 
     def __str__(self):
         return self.nombre
+    
+
     
 class LineaTransporte(models.Model):
     TIPO_CHOICES = (
@@ -76,3 +82,4 @@ def crear_perfil (sender, instance, created, **kwargs):
             )
 
 post_save.connect(crear_perfil, sender=User)
+

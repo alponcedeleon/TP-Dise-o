@@ -40,7 +40,17 @@
                                 <input type="text" name="nombre" value="{{ perfil_usuario.nombre }}" class="form-control mb-2" placeholder="Ingrese un Nombre">
                                 <input type="text" name="apellido" value="{{ perfil_usuario.apellido }}" class="form-control mb-2" placeholder="Ingrese un Apellido">
                                 <input type="email" name="email" value="{{ perfil_usuario.email }}" class="form-control mb-2" placeholder="Ingrese un Correo Electrónico">
-                                <input type="text" name="direccion" value="{{ perfil_usuario.direccion }}" class="form-control mb-2" placeholder="Ingrese una Dirección">
+                                <select name="direccion" class="form-control mb-2">
+                                    {% for localidad in localidades %}
+                                        {% if localidad.nombre ==  perfil_usuario.direccion %}
+                                            <option value="{{ localidad.nombre }}" selected>{{ localidad.nombre }}</option>
+                                        {% else %}
+                                            <option value="{{ localidad.nombre }}">{{ localidad.nombre }}</option>
+                                        {% endif %}
+                                    {% endfor %}
+                                </select>
+                                
+
                                 <input type="file" name="profile_picture" class="form-control mb-2" >
                                 <button type="submit" class="btn btn-primary btn-block">Guardar Cambios</button>
                             </form>
