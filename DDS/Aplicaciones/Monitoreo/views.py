@@ -24,7 +24,7 @@ def register(request):
     return render(request, 'registration/register.html',data)
 
 def home_view(request):
-    return render(request, 'home.html')
+    return render(request, 'index.html')
 
 
 """
