@@ -199,9 +199,6 @@ testing_settings.py
 # Ignore the secrets file
 secrets.json
 
-# Ignore static files collected by Django
-static/
-
 # Ignore coverage reports
 htmlcov/
 .coverage
