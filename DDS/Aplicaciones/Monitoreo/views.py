@@ -4,7 +4,9 @@ from django.contrib.auth import authenticate, login
 from django.contrib import messages
 from .forms import CustomUserCreationForm , UserProfileForm
 from .models import Perfil
-from .requests import obtener_localidades
+from .requests import obtener_localidades, obtener_provincias
+from django.contrib.auth.decorators import login_required, user_passes_test
+import logging
 
 # Create your views here.
 def register(request):
@@ -23,8 +25,25 @@ def register(request):
 
     return render(request, 'registration/register.html',data)
 
+@login_required
+@user_passes_test(lambda u: not u.is_superuser, login_url='/admin/')
 def home_view(request):
-    return render(request, 'home.html')
+    # Obtener grupos a los que pertenece el usuario
+    user = request.user
+    user_groups = user.groups.all()
+    group_names = [group.name for group in user_groups]
+    
+    # Obtener el perfil del usuario actual, si existe
+    perfil_usuario = get_object_or_404(Perfil, user=request.user)
+
+    # Contexto con los datos del perfil para pasar a la plantilla
+    context = {
+        'request':request,
+        'perfil_usuario': perfil_usuario,
+        'groups':group_names
+    }
+    logging.info(request.path)
+    return render(request, 'home.html', context)
 
 
 """
@@ -40,12 +59,17 @@ def perfil_usuario(request):
 
     return render(request, 'perfil.html', context)
     """
-
+@login_required
 def perfil_usuario(request):
+    # Obtener grupos a los que pertenece el usuario
+    user = request.user
+    user_groups = user.groups.all()
+    group_names = [group.name for group in user_groups]
+    
     # Obtener el perfil del usuario actual, si existe
     perfil_usuario = get_object_or_404(Perfil, user=request.user)
 
-    localidades = obtener_localidades()
+    provincias = obtener_provincias()
 
     if request.method == 'POST':
         form = UserProfileForm(request.POST, request.FILES, instance=perfil_usuario)
@@ -58,9 +82,12 @@ def perfil_usuario(request):
 
     # Contexto con los datos del perfil para pasar a la plantilla
     context = {
+        'request':request,
         'perfil_usuario': perfil_usuario,
         'form': form,
-        'localidades': localidades,
+        'provincias': provincias,
+        'groups':group_names
     }
+    logging.info(request.path)
 
     return render(request, 'perfil.html', context)

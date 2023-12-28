@@ -1,11 +1,24 @@
 from django.db import models
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User, Group
 from django.db.models.signals import post_save
 import requests
 from django import forms
 
 # Create your models here.
 
+class Role(Group):
+    class Meta:
+        proxy = True
+
+# Definir roles específicos
+class Miembro(Role):
+    pass
+
+class AdminComunidad(Role):
+    pass
+
+class Control(Role):
+    pass
 class Estacion(models.Model):
     nombre = models.CharField(max_length=30)
     ubicacion_geografica = models.CharField(max_length=30)

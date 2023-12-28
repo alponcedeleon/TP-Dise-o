@@ -1,75 +1,139 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Perfil de Usuario</title>
     <!-- Agregar enlaces a los archivos CSS de Bootstrap -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <style>
-        /* Estilos personalizados */
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-        .profile-details {
-            margin-top: 20px;
-        }
-        .list-group-item {
-            background-color: transparent;
-            border: none;
-        }
+      /* Estilos personalizados */
+      .profile-img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+      .profile-details {
+        margin-top: 20px;
+      }
+      .list-group-item {
+        background-color: transparent;
+        border: none;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
+    {% include 'fragments/header.html' %} 
     <div class="container mt-5">
-        <div class="row">
-            <div class="col-md-6 offset-md-3">
-                <div class="card">
-                    <div class="card-header bg-primary text-white">
-                        <h3 class="text-center">{{ user.username }}</h3>
-                    </div>
-                    <div class="card-body text-center">
-                        <img src="{{ perfil_usuario.profile_picture.url }}" alt="Foto de perfil" class="profile-img">
-                        
-                        
-                        <div class="profile-details">
-                            <form method="post" enctype="multipart/form-data">
-                                {% csrf_token %}
-                                <input type="text" name="nombre" value="{{ perfil_usuario.nombre }}" class="form-control mb-2" placeholder="Ingrese un Nombre">
-                                <input type="text" name="apellido" value="{{ perfil_usuario.apellido }}" class="form-control mb-2" placeholder="Ingrese un Apellido">
-                                <input type="email" name="email" value="{{ perfil_usuario.email }}" class="form-control mb-2" placeholder="Ingrese un Correo Electrónico">
-                                <select name="direccion" class="form-control mb-2">
-                                    {% for localidad in localidades %}
-                                        {% if localidad.nombre ==  perfil_usuario.direccion %}
-                                            <option value="{{ localidad.nombre }}" selected>{{ localidad.nombre }}</option>
-                                        {% else %}
-                                            <option value="{{ localidad.nombre }}">{{ localidad.nombre }}</option>
-                                        {% endif %}
-                                    {% endfor %}
-                                </select>
-                                
-
-                                <input type="file" name="profile_picture" class="form-control mb-2" >
-                                <button type="submit" class="btn btn-primary btn-block">Guardar Cambios</button>
-                            </form>
-                        </div>
-                        
-                    </div>
-                    <div class="card-footer bg-light text-center">
-                        <a href="/" class="btn btn-secondary">Volver a Home</a>
-                    </div>
-                </div>
+      <div class="row">
+        <div class="col-md-6 offset-md-3">
+          <div class="card">
+            <div class="card-header bg-primary text-white">
+              <h3 class="text-center">{{ user.username }}</h3>
             </div>
-        </div>
-    </div>
+            <div class="card-body text-center">
+              <img
+                src="{{ perfil_usuario.profile_picture.url }}"
+                alt="Foto de perfil"
+                class="profile-img"
+              />
 
-    
+              <div class="profile-details">
+                <form method="post" enctype="multipart/form-data">
+                  {% csrf_token %}
+                  <input
+                    type="text"
+                    name="nombre"
+                    value="{{ perfil_usuario.nombre }}"
+                    class="form-control mb-2"
+                    placeholder="Ingrese un Nombre"
+                  />
+                  <input
+                    type="text"
+                    name="apellido"
+                    value="{{ perfil_usuario.apellido }}"
+                    class="form-control mb-2"
+                    placeholder="Ingrese un Apellido"
+                  />
+                  <input
+                    type="email"
+                    name="email"
+                    value="{{ perfil_usuario.email }}"
+                    class="form-control mb-2"
+                    placeholder="Ingrese un Correo Electrónico"
+                  />
+                  <select
+                    id="direccion"
+                    name="direccion"
+                    class="form-control mb-2"
+                  >
+                    {% for provincia in provincias %} 
+                      {% if provincia.nombre == perfil_usuario.direccion %}
+                    <option value="{{ provincia.nombre }}" selected>
+                      {{ provincia.nombre }}
+                    </option>
+                      {% else %}
+                    <option value="{{ provincia.nombre }}">
+                      {{ provincia.nombre }}
+                    </option>
+                      {% endif %} 
+                    {% endfor %}
+                  </select>
+                  <select
+                    id="departamento"
+                    name="departamento"
+                    class="form-control mb-2"
+                  ></select>
+
+                  <input
+                    type="file"
+                    name="profile_picture"
+                    class="form-control mb-2"
+                  />
+                  <button type="submit" class="btn btn-primary btn-block">
+                    Guardar Cambios
+                  </button>
+                </form>
+              </div>
+            </div>
+            <div class="card-footer bg-light text-center">
+              <a href="/" class="btn btn-secondary">Volver a Home</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Agregar los enlaces a los archivos JS de Bootstrap -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
+    <script>
+      $(document).ready(function () {
+        $("#direccion").change(function () {
+          var selectedValue = $(this).val();
+          $.ajax({
+            url: "https://apis.datos.gob.ar/georef/api/departamentos?provincia=" + selectedValue +"&max=1000" ,
+            type: "GET",
+            dataType: "json",
+            success: function (data) {
+              var campoRelacionadoSelect = $("#departamento");
+              campoRelacionadoSelect.empty();
+              $.each(data.departamentos, function (index, value) {
+                campoRelacionadoSelect.append(
+                  '<option value="' + value.nombre + '">' + value.nombre + "</option>"
+                );
+              });
+            },
+            error: function (xhr, status, error) {
+              console.error("Error al obtener datos: " + error);
+            },
+          });
+        });
+      });
+    </script>
+  </body>
 </html>
