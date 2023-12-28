@@ -12,7 +12,7 @@ Usuarios:
 +------------------+
 1- Cambiar el frontend de perfil.html para que el campo dirección sea un dropdown que se llena mediante las locaciones de la API -->>>> RESUELTO
 
-2- Modificar el esquema para que la pagina raiz sea de presentación y luego de hacer login se vaya a la verdadera página de la aplicación
+2- Modificar el esquema para que la pagina raiz sea de presentación y luego de hacer login se vaya a la verdadera página de la aplicación (En Curso)
 
 3- Crear las clases abstractas necesarias según entrega 2
 

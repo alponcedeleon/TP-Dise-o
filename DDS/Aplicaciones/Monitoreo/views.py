@@ -20,7 +20,7 @@ def register(request):
             user = authenticate(username=formulario.cleaned_data['username'], password=formulario.cleaned_data['password1'],)
             login(request,user)
             messages.success(request,"Te has registrado correctamente")
-            return redirect(to='home')
+            return redirect(to='index')
         data["form"] = formulario
 
     return render(request, 'registration/register.html',data)
@@ -43,7 +43,7 @@ def home_view(request):
         'groups':group_names
     }
     logging.info(request.path)
-    return render(request, 'home.html', context)
+    return render(request, 'index.html', context)
 
 
 """
@@ -76,7 +76,7 @@ def perfil_usuario(request):
         if form.is_valid():
             form.save()
             # Redirigir a la página del perfil o a donde sea necesario después de guardar los cambios
-            return redirect('home')  # Cambia 'perfil' por el nombre de la URL de tu vista de perfil
+            return redirect('index')  # Cambia 'perfil' por el nombre de la URL de tu vista de perfil
     else:
         form = UserProfileForm(instance=perfil_usuario)
 
