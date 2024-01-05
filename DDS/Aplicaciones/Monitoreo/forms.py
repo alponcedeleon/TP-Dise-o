@@ -8,8 +8,8 @@ class CustomUserCreationForm(UserCreationForm):
 class UserProfileForm(forms.ModelForm):
     class Meta:
         model = Perfil
-        fields = ['nombre', 'apellido','email', 'direccion' ,'comunidades', 'profile_picture']
+        fields = ['nombre', 'apellido','email', 'direccion' , 'profile_picture']
         # Asegúrate de incluir 'profile_picture' si es el campo para la foto de perfil en tu modelo
-        widgets = {
-            'comunidades': forms.CheckboxSelectMultiple()  # Esto es un ejemplo, puedes cambiar el widget según tu necesidad
-        }
+       # widgets = {
+       #     'comunidades': forms.CheckboxSelectMultiple()  # Esto es un ejemplo, puedes cambiar el widget según tu necesidad
+       # }

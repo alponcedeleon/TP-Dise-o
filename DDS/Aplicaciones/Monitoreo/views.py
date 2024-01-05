@@ -3,7 +3,7 @@ from django.contrib.auth.forms import AuthenticationForm , UserCreationForm
 from django.contrib.auth import authenticate, login
 from django.contrib import messages
 from .forms import CustomUserCreationForm , UserProfileForm
-from .models import Perfil
+from .models import Perfil, Comunidad
 from .requests import obtener_localidades, obtener_provincias
 from django.contrib.auth.decorators import login_required, user_passes_test
 import logging
@@ -24,6 +24,28 @@ def register(request):
         data["form"] = formulario
 
     return render(request, 'registration/register.html',data)
+
+@login_required
+def listar_comunidades(request):
+    comunidades = Comunidad.objects.all()
+    perfil = Perfil.objects.get(user=request.user)
+
+    if request.method == 'POST':
+        comunidad_id = request.POST.get('comunidad_id')
+        comunidad = Comunidad.objects.get(id=comunidad_id)
+
+        if 'unirse' in request.POST:
+            if comunidad not in perfil.comunidades.all():
+                perfil.comunidades.add(comunidad)
+                perfil.save()
+        elif 'salir' in request.POST:
+            if comunidad in perfil.comunidades.all():
+                perfil.comunidades.remove(comunidad)
+                perfil.save()
+
+    perfil_comunidades = perfil.comunidades.all()
+
+    return render(request, 'listar_comunidades.html', {'comunidades': comunidades, 'perfil': perfil, 'perfil_comunidades': perfil_comunidades})
 
 @login_required
 @user_passes_test(lambda u: not u.is_superuser, login_url='/admin/')

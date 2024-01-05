@@ -1,0 +1,25 @@
+
+{% load static %}
+{% block content %}
+    <h1>Lista de Comunidades</h1>
+    <ul>
+        {% for comunidad in comunidades %}
+        <li>
+            {{ comunidad.nombre }}
+            {% if not comunidad in perfil_comunidades %}
+            <form method="post" action="{% url 'listar_comunidades' %}">
+                {% csrf_token %}
+                <input type="hidden" name="comunidad_id" value="{{ comunidad.id }}">
+                <button type="submit" name="unirse">Unirse</button>
+            </form>
+            {% else %}
+                <form method="post" action="{% url 'listar_comunidades' %}">
+                    {% csrf_token %}
+                    <input type="hidden" name="comunidad_id" value="{{ comunidad.id }}">
+                    <button type="submit" name="salir">Salir</button>
+                </form>
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

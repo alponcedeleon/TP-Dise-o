@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from Aplicaciones.Monitoreo.views import register, home_view, perfil_usuario
+from Aplicaciones.Monitoreo.views import register, home_view, perfil_usuario, listar_comunidades
 from django.urls import include
 from django.contrib.auth.views import logout_then_login
 from django.conf import settings
@@ -30,6 +30,7 @@ urlpatterns = [
     path('', home_view, name='index'),
     path('logout/',logout_then_login,name='logout'),
     path('perfil/',perfil_usuario, name = "perfil_usuario"),
+    path('test/',listar_comunidades, name = "listar_comunidades"),
 ]
 
 if settings.DEBUG:

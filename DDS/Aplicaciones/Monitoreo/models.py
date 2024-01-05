@@ -6,19 +6,7 @@ from django import forms
 
 # Create your models here.
 
-class Role(Group):
-    class Meta:
-        proxy = True
 
-# Definir roles específicos
-class Miembro(Role):
-    pass
-
-class AdminComunidad(Role):
-    pass
-
-class Control(Role):
-    pass
 class Estacion(models.Model):
     nombre = models.CharField(max_length=30)
     ubicacion_geografica = models.CharField(max_length=30)
@@ -65,22 +53,29 @@ class PrestacionServicio(models.Model):
 
 class Comunidad(models.Model):
     nombre = models.CharField(max_length=100)
-    
+    descripcion = models.CharField(max_length=255, null=True)
 
     def __str__(self):
         return self.nombre
+
+class ComunidadPerfil(models.Model):
+    comunidad = models.ForeignKey(Comunidad, on_delete=models.CASCADE)
+    perfil = models.ForeignKey('Perfil', on_delete=models.CASCADE)
+    esAdmin = models.BooleanField(default=False)
+    def __str__(self):
+        return 'Admin de la comunidad'+ self.comunidad.nombre + '-' + self.perfil.user.username  if self.esAdmin else  'Miembro de la comunidad' + self.comunidad.nombre + ' - ' + self.perfil.user.username 
 
 class Perfil(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     nombre = models.CharField(max_length=100)
     apellido = models.CharField(max_length=100)
-    email = models.CharField(max_length=100,blank=True, null=True)
-    direccion = models.CharField(max_length=100,blank=True, null=True)
-    comunidades = models.ManyToManyField(Comunidad, related_name='comunidades', blank=True)
-    profile_picture = models.ImageField(upload_to='profile_pics/', blank=True, null=True)  # Nuevo campo para la foto de perfil
+    email = models.CharField(max_length=100, blank=True, null=True)
+    direccion = models.CharField(max_length=100, blank=True, null=True)
+    comunidades = models.ManyToManyField(Comunidad, through=ComunidadPerfil, related_name='comunidades', blank=True)
+    profile_picture = models.ImageField(upload_to='profile_pics/', blank=True, null=True)
+
     def __str__(self):
         return self.user.username
-    
   ####################################################################  
 
 def crear_perfil (sender, instance, created, **kwargs):

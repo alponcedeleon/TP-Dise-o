@@ -4,8 +4,10 @@ Usemos este espacio para comentar lo que sea necesario
 
 Usuarios:
 
--admin    1234
--usuariomodelo   tpdisenio2023
+-admin              TPdds2023
+-usuario            TPdds2023
+-adminComunidad     TPdds2023
+-control            TPdds2023
 
 +------------------+
 |Tareas Pendientes |
