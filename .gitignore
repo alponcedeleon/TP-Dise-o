@@ -181,9 +181,6 @@ env/
 db.sqlite3
 media/
 
-# Ignore the Django migrations
-**/migrations/
-
 # Ignore local settings
 local_settings.py
 
