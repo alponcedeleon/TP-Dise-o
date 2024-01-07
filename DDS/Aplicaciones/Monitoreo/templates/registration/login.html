@@ -57,7 +57,7 @@
 							<a href="#"><img src="{% static 'images/logo1.png' %}" alt=""></a>
 						</div>
 						<div class="title-text">
-							<h3>Sign in to To Your Account</h3>
+							<h3>Inicia sesión en tu cuenta</h3>
 						</div>
 						<form action="{% url 'login' %}" method="post">
               {% csrf_token %}
@@ -66,11 +66,11 @@
               <!-- Password -->
               <input class="form-control main" type="password" placeholder="Password" id="id_password" name="password" required>
               <!-- Submit Button -->
-              <button type="submit" class="btn btn-main-sm">Sign In</button>
+              <button type="submit" class="btn btn-main-sm">Iniciar Sesión</button>
           </form>
           <div class="new-acount">
-              <a href="{% url 'password_reset' %}">Forgot your password?</a>
-              <p>Don't have an account? <a style="color: blue;" href="{% url 'register' %}">SIGN UP</a></p>
+              <a href="#">¿Olvidaste tu contraseña?</a>
+              <p>¿No tienes cuenta?<a style="color: blue;" href="{% url 'register' %}">REGISTRARSE</a></p>
           </div>
 						</div>
 					</div>
