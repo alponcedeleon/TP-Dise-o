@@ -8,6 +8,9 @@ from .requests import obtener_localidades, obtener_provincias
 from django.contrib.auth.decorators import login_required, user_passes_test
 import logging
 
+
+
+
 # Create your views here.
 def register(request):
     data = {
@@ -113,3 +116,47 @@ def perfil_usuario(request):
     logging.info(request.path)
 
     return render(request, 'perfil.html', context)
+
+import pymongo
+from django.conf import settings
+my_client = pymongo.MongoClient(settings.DB_NAME)
+
+# First define the database name
+dbname = my_client['dds2023']
+
+# Now get/create collection name (remember that you will see the database in your mongodb cluster only after you create a collection)
+collection_name = dbname["incidente"]
+
+#let's create two documents
+incidente = {
+    "incidenteId": "0000001",
+    "servicio" : "Baño hombres",
+    "comunidad" : "Silla de rueda",
+    "departamento" : "test1",
+    "provincia": "test1",
+    "usuarioReportador" : "2",
+    "solucionado" : "False",
+    "fechaCreado" : "07/01/2024 13:59",
+    "fechaCierre" : "",
+}
+incidente2 = {
+    "incidenteId": "0000002",
+    "servicio" : "Baño mujeres",
+    "comunidad" : "Silla de rueda",
+    "departamento" : "test2",
+    "provincia": "test2",
+    "usuarioReportador" : "2",
+    "solucionado" : "False",
+    "fechaCreado" : "07/01/2024 13:59",
+    "fechaCierre" : "",
+}
+
+collection_name.insert_many([incidente,incidente2])
+
+med_details = collection_name.find({})
+
+for r in med_details:
+    print(r["departamento"])
+
+update_data = collection_name.update_one({'incidenteId':'0000001'}, {'$set':{'departamento':'test3'}})
+
