@@ -1,42 +1,103 @@
-<!-- login.html -->
+{% load static %}
 <!DOCTYPE html>
+
+<!--
+ // WEBSITE: https://themefisher.com
+ // TWITTER: https://twitter.com/themefisher
+ // FACEBOOK: https://www.facebook.com/themefisher
+ // GITHUB: https://github.com/themefisher/
+-->
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Login</title>
-  <!-- Bootstrap CSS CDN link -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <!-- Basic Page Needs
+  ================================================== -->
+  <meta charset="utf-8">
+  <title>Monitoreo</title>
+
+  <!-- Mobile Specific Metas
+  ================================================== -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Bootstrap App Landing Template">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="author" content="Themefisher">
+  <meta name="generator" content="Themefisher Small Apps Template v1.0">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/favicon.png' %}" />
+  
+  <!-- PLUGINS CSS STYLE -->
+  <link rel="stylesheet" href="{% static 'plugins/bootstrap/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'plugins/themify-icons/themify-icons.css' %}">
+  <link rel="stylesheet" href="{% static 'plugins/slick/slick.css' %}">
+  <link rel="stylesheet" href="{% static 'plugins/slick/slick-theme.css' %}">
+  <link rel="stylesheet" href="{% static 'plugins/fancybox/jquery.fancybox.min.css' %}">
+  <link rel="stylesheet" href="{% static 'plugins/aos/aos.css' %}">
+
+  <!-- CUSTOM CSS -->
+  <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
 </head>
-<body>
-  <div class="container mt-5">
-    <div class="row justify-content-center">
-      <div class="col-md-6">
-        <div class="card">
-          <div class="card-header">
-            Login
-          </div>
-          <div class="card-body">
-            <form method="post">
+
+<body class="body-wrapper" data-spy="scroll" data-target=".privacy-nav">
+
+
+<section class="user-login section">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="block">
+					<!-- Image -->
+					<div class="image align-self-center"><img class="img-fluid" src="{% static 'images/Login/login-photo.jpg' %}"
+							alt="desk-image"></div>
+					<!-- Content -->
+					<div class="content text-center">
+						<div class="logo">
+							<a href="#"><img src="{% static 'images/logo1.png' %}" alt=""></a>
+						</div>
+						<div class="title-text">
+							<h3>Inicia sesión en tu cuenta</h3>
+						</div>
+						<form action="{% url 'login' %}" method="post">
               {% csrf_token %}
-              <div class="form-group">
-                <label for="id_username">Username</label>
-                <input type="text" name="username" class="form-control" id="id_username" required>
-              </div>
-              <div class="form-group">
-                <label for="id_password">Password</label>
-                <input type="password" name="password" class="form-control" id="id_password" required>
-              </div>
-              <button type="submit" class="btn btn-primary">Login</button>
-              <a  href="{% url 'register' %}">Crear Cuenta</a>
-            </form>
+              <!-- Username -->
+              <input class="form-control main" type="text" placeholder="Username" id="id_username" name="username" required>
+              <!-- Password -->
+              <input class="form-control main" type="password" placeholder="Password" id="id_password" name="password" required>
+              <!-- Submit Button -->
+              <button type="submit" class="btn btn-main-sm">Iniciar Sesión</button>
+          </form>
+          <div class="new-acount">
+              <a href="#">¿Olvidaste tu contraseña?</a>
+              <p>¿No tienes cuenta?<a style="color: blue;" href="{% url 'register' %}">REGISTRARSE</a></p>
           </div>
-        </div>
-      </div>
-    </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+  <!-- To Top -->
+  <div class="scroll-top-to">
+    <i class="ti-angle-up"></i>
   </div>
-  <!-- Bootstrap JS and jQuery CDN links -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+  <!-- JAVASCRIPTS -->
+  <script src="{% static 'plugins/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'plugins/bootstrap/bootstrap.min.js' %}"></script>
+  <script src="{% static 'plugins/slick/slick.min.js' %}"></script>
+  <script src="{% static 'plugins/fancybox/jquery.fancybox.min.js' %}"></script>
+  <script src="{% static 'plugins/syotimer/jquery.syotimer.min.js' %}"></script>
+  <script src="{% static 'plugins/aos/aos.js' %}"></script>
+  <!-- google map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgeuuDfRlweIs7D6uo4wdIHVvJ0LonQ6g"></script>
+  <script src="{% static 'plugins/google-map/gmap.js' %}"></script>
+  
+  <script src="{% static 'js/script.js' %}"></script>
 </body>
+
 </html>
