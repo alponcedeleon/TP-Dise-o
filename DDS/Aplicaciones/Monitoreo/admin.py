@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Estacion, LineaTransporte, Servicio, PrestacionServicio, Categoria, Comunidad, Perfil, ComunidadPerfil, Sucursal, Organizacion, Establecimiento
+from .models import Estacion, LineaTransporte, Servicio, PrestacionServicio, Categoria, Comunidad, Perfil, ComunidadPerfil, Sucursal, Organizacion, Establecimiento, OrganismoExterno
 from django import forms
 import requests 
 
@@ -63,5 +63,5 @@ admin.site.register(Perfil)
 admin.site.register(Categoria)
 admin.site.register(ComunidadPerfil)
 admin.site.register(Comunidad)
-
+admin.site.register(OrganismoExterno)
 

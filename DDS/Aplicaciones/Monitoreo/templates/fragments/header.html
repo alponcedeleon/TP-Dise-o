@@ -1,45 +1,93 @@
+{% load static %}
 <!-- Barra de navegación -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="/">Mi Sitio Web</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+<nav class="navbar main-nav navbar-expand-lg px-2 px-sm-0 py-2 py-lg-0">
+  <div class="container">
+    <a class="navbar-brand" href="/"><img src="{% static 'images/logo1.png' %}" alt="logo"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="ti-menu"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto">
-        {% if 'ComunidadAdmin' in groups or 'Usuario' in groups %}
-        <li class="nav-item {% if request.path == '/perfil/' %}active{% endif %}">
-            <a class="nav-link" href="{% url 'perfil_usuario' %}">Perfil</a>
-          </li>
-        <li class="nav-item {% if request.path == '/servicios/' %}active{% endif %}">
-          <a class="nav-link" href="/servicios">Tus servicios <span class="sr-only">(current)</span></a>
+        <li class="nav-item dropdown active">
+          <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Home
+            <span><i class="ti-angle-down"></i></span>
+          </a>
+          <!-- Dropdown list -->
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item active" href="#">Homepage</a></li>
+            <li><a class="dropdown-item" href="#">Homepage 2</a></li>
+            <li><a class="dropdown-item active3" href="#">Homepage 3</a></li>
+
+            <li class="dropdown dropdown-submenu dropright">
+              <a class="dropdown-item dropdown-toggle" href="#!" id="dropdown0301" role="button"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sub Menu</a>
+
+              <ul class="dropdown-menu" aria-labelledby="dropdown0301">
+                <li><a class="dropdown-item" href="#">Submenu 11</a></li>
+                <li><a class="dropdown-item" href="#">Submenu 12</a></li>
+              </ul>
+            </li>
+          </ul>
         </li>
-        <li class="nav-item {% if request.path == '/comunidades/' %}active{% endif %}">
-          <a class="nav-link" href="/comunidades">Tus Comunidades</a>
+        <li class="nav-item dropdown @@pages">
+          <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Pages
+            <span><i class="ti-angle-down"></i></span>
+          </a>
+          <!-- Dropdown list -->
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item @@team" href="#">Team</a></li>
+            <li><a class="dropdown-item @@career" href="#">Career</a></li>
+            <li><a class="dropdown-item @@blog" href="#">Blog</a></li>
+            <li><a class="dropdown-item @@blogSingle" href="#">Blog Single</a></li>
+            <li><a class="dropdown-item @@privacy" href="#">Privacy</a></li>
+            <li><a class="dropdown-item @@faq" href="#">FAQ</a></li>
+            <li><a class="dropdown-item" href="#">Sign In</a></li>
+            <li><a class="dropdown-item" href="#">Sign Up</a></li>
+            <li><a class="dropdown-item" href="#">404</a></li>
+            <li><a class="dropdown-item" href="#">Coming Soon</a></li>
+
+            <li class="dropdown dropdown-submenu dropleft">
+              <a class="dropdown-item dropdown-toggle" href="#!" id="dropdown0501" role="button"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sub Menu</a>
+
+              <ul class="dropdown-menu" aria-labelledby="dropdown0501">
+                <li><a class="dropdown-item" href="#">Submenu 21</a></li>
+                <li><a class="dropdown-item" href="#">Submenu 22</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        
+        <li class="nav-item @@about">
+          <a class="nav-link" href="#">About</a>
+        </li> 
+        {% if 'ComunidadAdmin' in groups or 'Usuario' in groups %}
+        <li class="nav-item @@perfil">
+          <a class="nav-link" href="/perfil">Perfil</a>
+        </li>
+        <li class="nav-item @@servicios">
+          <a class="nav-link" href="/buscar/servicios">Servicios</a>
+        </li>
+        <li class="nav-item @@comunidades">
+          <a class="nav-link" href="/buscar/comunidades">Comunidades</a>
         </li>
         {% endif%}
         {% if 'ComunidadAdmin' in groups %}
-        <li class="nav-item {% if request.path == '/comunidades/administrar' %}active{% endif %}">
-          <a class="nav-link" href="/comunidades/administrar">Administrar Comunidad</a>
+        <li class="nav-item @@administrarComunidades">
+          <a class="nav-link" href="/buscar/comunidades">Administrar Comunidad</a>
         </li>
         {% endif%}
         {% if 'Organismo' in groups %}
-        <li class="nav-item {% if request.path == '/informes/' %}active{% endif %}">
+        <li class="nav-item @@informes">
           <a class="nav-link" href="/informes">Informes</a>
         </li>
         {% endif%}
-        {% if user.is_authenticated %}
-  <li class="nav-item">
-    <form action="{% url 'logout' %}" method="post">
-      {% csrf_token %}
-      <button type="submit" class="btn btn-link nav-link">Cerrar sesión</button>
-    </form>
-  </li>
-  
-{% else %}
-  <li class="nav-item">
-    <a class="nav-link" href="{% url 'login' %}">Iniciar sesión</a>
-  </li>
-{% endif %}
-    </ul>
-</div>
+        <a href="{% url 'login' %}" class="btn btn-rounded-icon bg-blue" >
+          Iniciar Sesión
+        </a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </nav>

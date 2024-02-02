@@ -1,0 +1,74 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function () {
+    var direccionActual = $("#direccion").val();
+    console.log(direccionActual);
+    var dep = $("#departamento").val();
+    console.log(dep);
+    if(direccionActual){
+        $.ajax({
+        url: "https://apis.datos.gob.ar/georef/api/departamentos?provincia=" + direccionActual +"&max=1000" ,
+        type: "GET",
+        dataType: "json",
+        success: function (data) {
+            var campoRelacionadoSelect = $("#departamento");
+            campoRelacionadoSelect.empty();
+            $.each(data.departamentos, function (index, value) {
+            var perfil_usuario = dep;
+
+            if(value.nombre == dep){
+                console.log(dep)
+                console.log(value.nombre)
+                campoRelacionadoSelect.append(
+                '<option value="' + value.nombre + ' "selected>' + value.nombre + "</option>"
+                );
+            }else{
+                
+                campoRelacionadoSelect.append(
+                '<option value="' + value.nombre + '">' + value.nombre + "</option>"
+                );
+            }
+            });
+        },
+        error: function (xhr, status, error) {
+            console.error("Error al obtener datos: " + error);
+        },
+        });
+        
+    }
+    $("#direccion").change(function () {
+        var selectedValue = $(this).val();
+        $.ajax({
+        url: "https://apis.datos.gob.ar/georef/api/departamentos?provincia=" + selectedValue +"&max=1000" ,
+        type: "GET",
+        dataType: "json",
+        success: function (data) {
+            var campoRelacionadoSelect = $("#departamento");
+            campoRelacionadoSelect.empty();
+            $.each(data.departamentos, function (index, value) {
+            var perfil_usuario = $('#perfil');
+
+            console.log(perfil_usuario)
+            console.log(value.nombre)
+            
+            if(value.nombre == perfil_usuario.departamento){
+                campoRelacionadoSelect.append(
+                '<option value="' + value.nombre + ' "selected>' + value.nombre + "</option>"
+                );
+            }else{
+                
+                campoRelacionadoSelect.append(
+                '<option value="' + value.nombre + '">' + value.nombre + "</option>"
+                );
+            }
+            });
+        },
+        error: function (xhr, status, error) {
+            console.error("Error al obtener datos: " + error);
+        },
+        });
+    });
+    });
+</script>

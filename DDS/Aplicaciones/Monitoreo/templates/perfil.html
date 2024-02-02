@@ -1,31 +1,8 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Perfil de Usuario</title>
-    <!-- Agregar enlaces a los archivos CSS de Bootstrap -->
-    <link
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <style>
-      /* Estilos personalizados */
-      .profile-img {
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        object-fit: cover;
-      }
-      .profile-details {
-        margin-top: 20px;
-      }
-      .list-group-item {
-        background-color: transparent;
-        border: none;
-      }
-    </style>
-  </head>
-  <body>
+  {% include 'fragments/head.html' %} 
+  <body class="body-wrapper" data-spy="scroll" data-target=".privacy-nav">
     {% include 'fragments/header.html' %} 
     <div class="container mt-5">
       <div class="row">

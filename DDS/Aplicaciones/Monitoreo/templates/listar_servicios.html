@@ -1,0 +1,60 @@
+
+{% load static %}
+
+{% load static %}
+<html lang="es">
+  {% include 'fragments/head.html' %} 
+  <body class="body-wrapper" data-spy="scroll" data-target=".privacy-nav">
+    {% include 'fragments/header.html' %} 
+    <div class="container mt-5">
+      <div class="row column">
+        <h1>Lista de Servicios</h1>
+        <ul>
+            {% for servicio in servicios %}
+            <li>
+                {{ servicio.nombre }}
+                {% if not servicio in listar_servicios %}
+                <form method="post" action="{% url 'listar_servicios' %}">
+                    {% csrf_token %}
+                    <input type="hidden" name="servicio_id" value="{{ servicio.id }}">
+                    <button type="submit" name="agregar_servicio">Agregar a intereses</button>
+                </form>
+                {% else %}
+                    <form method="post" action="{% url 'listar_servicios' %}">
+                        {% csrf_token %}
+                        <input type="hidden" name="servicio_id" value="{{ servicio.id }}">
+                        <button type="submit" name="quitar_servicio">Quitar de intereses</button>
+                    </form>
+                {% endif %}
+            </li>
+            {% endfor %}
+        </ul>
+
+        <h1>Lista de Lineas de Transporte</h1>
+        <ul>
+            {% for linea in lineas %}
+            <li>
+                {{ linea.nombre }}
+                {% if not linea in lineas %}
+                <form method="post" action="{% url 'listar_servicios' %}">
+                    {% csrf_token %}
+                    <input type="hidden" name="linea_id" value="{{ linea.id }}">
+                    <button type="submit" name="agregar_linea">Agregar a intereses</button>
+                </form>
+                {% else %}
+                    <form method="post" action="{% url 'listar_servicios' %}">
+                        {% csrf_token %}
+                        <input type="hidden" name="linea_id" value="{{ linea.id }}">
+                        <button type="submit" name="quitar_linea">Quitar de intereses</button>
+                    </form>
+                {% endif %}
+            </li>
+            {% endfor %}
+        </ul>
+      </div>
+    </div>
+
+    <!-- Agregar los enlaces a los archivos JS de Bootstrap -->
+    {% include 'fragments/scripts.html' %} 
+  </body>
+</html>

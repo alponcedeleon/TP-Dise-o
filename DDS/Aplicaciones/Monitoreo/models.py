@@ -9,7 +9,7 @@ import json
 
 
 # Create your models here.
-
+#############################################################################################
 class Establecimiento(models.Model):
     nombre = models.CharField(max_length=30)
     provincia = models.CharField(max_length=50, null=True)
@@ -30,15 +30,15 @@ class Sucursal(Establecimiento):
 
     def __str__(self):
         return self.nombre
-    
-    
 
+#############################################################################################
 class Entidad(models.Model):
     nombre = models.CharField(max_length=100)
     provincia = models.CharField(max_length=20, null=True)
     class Meta:
         abstract = True
-            
+
+###########   
 class LineaTransporte(Entidad):
     TIPO_CHOICES = (
         ('Subterraneo', 'Subterráneo'),
@@ -51,7 +51,14 @@ class LineaTransporte(Entidad):
 
     def __str__(self):
         return self.nombre
-    
+
+class LineaPerfil(models.Model):
+    linea = models.ForeignKey(LineaTransporte, on_delete=models.CASCADE)
+    perfil = models.ForeignKey('Perfil', on_delete=models.CASCADE)
+    def __str__(self):
+        return 'Usuario '+ self.perfil.user.username + ' esta interesado en ' + self.linea.nombre 
+
+############
 class Organizacion(Entidad):
     TIPO_CHOICES = (
         ('Supermercado', 'Supermercado'),
@@ -63,12 +70,11 @@ class Organizacion(Entidad):
 
     def __str__(self):
         return self.nombre
-
+#############################################################################################   
 class Categoria(models.Model):
     nombre = models.CharField(max_length=100)
     def __str__(self):
         return self.nombre
-    
 class Servicio(models.Model):
     nombre = models.CharField(max_length=100)
     categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE, null=True, blank=True)
@@ -76,14 +82,18 @@ class Servicio(models.Model):
     def __str__(self):
         return self.nombre
 
-
 class PrestacionServicio(models.Model):
     estacion = models.ForeignKey(Estacion, on_delete=models.CASCADE)
     servicio = models.ForeignKey(Servicio, on_delete=models.CASCADE)
     moderador = models.BooleanField(default=True)
 
+class ServicioPerfil(models.Model):
+    servicio = models.ForeignKey(Servicio, on_delete=models.CASCADE)
+    perfil = models.ForeignKey('Perfil', on_delete=models.CASCADE)
+    def __str__(self):
+        return 'Usuario '+ self.perfil.user.username + ' esta interesado en ' + self.servicio.nombre 
 
-
+#############################################################################################   
 class Comunidad(models.Model):
     nombre = models.CharField(max_length=100)
     descripcion = models.CharField(max_length=255, null=True)
@@ -100,6 +110,8 @@ class ComunidadPerfil(models.Model):
     def __str__(self):
         return 'Admin de la comunidad'+ self.comunidad.nombre + '-' + self.perfil.user.username  if self.esAdmin else  'Miembro de la comunidad' + self.comunidad.nombre + ' - ' + self.perfil.user.username 
 
+#############################################################################################   
+
 class Perfil(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     nombre = models.CharField(max_length=100)
@@ -108,11 +120,13 @@ class Perfil(models.Model):
     direccion = models.CharField(max_length=100, blank=True, null=True)
     departamento = models.CharField(max_length=100, blank=True, null=True)
     comunidades = models.ManyToManyField(Comunidad, through=ComunidadPerfil, related_name='comunidades', blank=True)
+    servicios = models.ManyToManyField(Servicio, through=ServicioPerfil, related_name='servicios', blank=True)
+    lineas = models.ManyToManyField(LineaTransporte, through=LineaPerfil, related_name='lineas', blank=True)
     profile_picture = models.ImageField(upload_to='profile_pics/', blank=True, null=True)
 
     def __str__(self):
         return self.user.username
-  ####################################################################  
+####################################################################  
   
 class Incidente(models.Model):
     servicio = models.CharField(max_length=30)
@@ -126,6 +140,25 @@ class Incidente(models.Model):
 
     def __str__(self):
         return self.servicio
+    
+####################################################################  
+
+class OrganismoExterno(models.Model):
+    TIPO_CHOICES = (
+        ('Entidad prestadora', 'Entidad prestadora'),
+        ('Organismo de Control', 'Organismo de Control'),
+    )
+    nombre = models.CharField(max_length=100)
+    tipo_organismo = models.CharField(max_length=20, choices=TIPO_CHOICES)
+    lineas = models.ManyToManyField(LineaTransporte, related_name='lineas_org')
+    organizaciones = models.ManyToManyField(Organizacion, related_name='organizaciones_org')
+
+    def __str__(self):
+        return self.nombre
+
+####################################################################  
+
+####################################################################  
 
 def crear_perfil (sender, instance, created, **kwargs):
     if created:

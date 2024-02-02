@@ -3,7 +3,7 @@ from django.contrib.auth.forms import AuthenticationForm , UserCreationForm
 from django.contrib.auth import authenticate, login
 from django.contrib import messages
 from .forms import CustomUserCreationForm , UserProfileForm
-from .models import Perfil, Comunidad
+from .models import Perfil, Comunidad, Servicio, LineaTransporte
 from .requests import obtener_localidades, obtener_provincias
 from django.contrib.auth.decorators import login_required, user_passes_test
 import logging
@@ -28,8 +28,15 @@ def register(request):
 
     return render(request, 'registration/register.html',data)
 
+def requestGroups(request):
+    user = request.user
+    user_groups = user.groups.all()
+    group_names = [group.name for group in user_groups]
+    return group_names
+
 @login_required
 def listar_comunidades(request):
+    group_names = requestGroups(request)
     comunidades = Comunidad.objects.all()
     perfil = Perfil.objects.get(user=request.user)
 
@@ -47,16 +54,62 @@ def listar_comunidades(request):
                 perfil.save()
 
     perfil_comunidades = perfil.comunidades.all()
+    context = {
+        'request':request,
+        'groups':group_names,
+        'comunidades': comunidades, 
+        'perfil': perfil, 
+        'perfil_comunidades': perfil_comunidades
+    }
 
-    return render(request, 'listar_comunidades.html', {'comunidades': comunidades, 'perfil': perfil, 'perfil_comunidades': perfil_comunidades})
+    return render(request, 'listar_comunidades.html', context)
+
+@login_required
+def listar_servicios(request):
+    group_names = requestGroups(request)
+    servicios = Servicio.objects.all()
+    lineas = LineaTransporte.objects.all()
+    perfil = Perfil.objects.get(user=request.user)
+
+    if request.method == 'POST':
+        servicio_id = request.POST.get('servicio_id')
+        servicio = Servicio.objects.get(id=servicio_id)
+
+        if 'agregar' in request.POST:
+            if servicio not in perfil.servicios.all():
+                perfil.servicios.add(servicio)
+                perfil.save()
+        elif 'quitar' in request.POST:
+            if servicio in perfil.servicios.all():
+                perfil.servicios.remove(servicio)
+                perfil.save()
+        elif 'agregar' in request.POST:
+            if servicio not in perfil.servicios.all():
+                perfil.servicios.add(servicio)
+                perfil.save()
+        elif 'quitar' in request.POST:
+            if servicio in perfil.servicios.all():
+                perfil.servicios.remove(servicio)
+                perfil.save()
+
+    perfil_servicios = perfil.servicios.all()
+    context = {
+        'request':request,
+        'groups':group_names,
+        'servicios': servicios, 
+        'perfil': perfil, 
+        'perfil_servicios': perfil_servicios , 
+        'lineas':lineas
+    }
+
+    return render(request, 'listar_servicios.html', context)
 
 @login_required
 @user_passes_test(lambda u: not u.is_superuser, login_url='/admin/')
 def home_view(request):
     # Obtener grupos a los que pertenece el usuario
-    user = request.user
-    user_groups = user.groups.all()
-    group_names = [group.name for group in user_groups]
+
+    group_names = requestGroups(request)
     
     # Obtener el perfil del usuario actual, si existe
     perfil_usuario = get_object_or_404(Perfil, user=request.user)
@@ -64,10 +117,11 @@ def home_view(request):
     # Contexto con los datos del perfil para pasar a la plantilla
     context = {
         'request':request,
-        'perfil_usuario': perfil_usuario,
-        'groups':group_names
+        'groups':group_names,
+        'perfil_usuario': perfil_usuario
     }
     logging.info(request.path)
+    logging.info(context) 
     return render(request, 'index.html', context)
 
 
@@ -87,9 +141,7 @@ def perfil_usuario(request):
 @login_required
 def perfil_usuario(request):
     # Obtener grupos a los que pertenece el usuario
-    user = request.user
-    user_groups = user.groups.all()
-    group_names = [group.name for group in user_groups]
+    group_names = requestGroups(request)
     
     # Obtener el perfil del usuario actual, si existe
     perfil_usuario = get_object_or_404(Perfil, user=request.user)

@@ -9,120 +9,11 @@
 -->
 
 <html lang="en">
-<head>
-
-  <!-- Basic Page Needs
-  ================================================== -->
-  <meta charset="utf-8">
-  <title>Monitoreo</title>
-
-  <!-- Mobile Specific Metas
-  ================================================== -->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="Bootstrap App Landing Template">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-  <meta name="author" content="Themefisher">
-  <meta name="generator" content="Themefisher Small Apps Template v1.0">
-  
-  <!-- theme meta -->
-  <meta name="theme-name" content="small-apps" />
-
-  <!-- Favicon -->
-  <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/favicon.png' %}" />
-  
-  <!-- PLUGINS CSS STYLE -->
-  <link rel="stylesheet" href="{% static 'plugins/bootstrap/bootstrap.min.css' %}">
-  <link rel="stylesheet" href="{% static 'plugins/themify-icons/themify-icons.css' %}">
-  <link rel="stylesheet" href="{% static 'plugins/slick/slick.css' %}">
-  <link rel="stylesheet" href="{% static 'plugins/slick/slick-theme.css' %}">
-  <link rel="stylesheet" href="{% static 'plugins/fancybox/jquery.fancybox.min.css' %}">
-  <link rel="stylesheet" href="{% static 'plugins/aos/aos.css' %}">
-
-  <!-- CUSTOM CSS -->
-  <link href="{% static 'css/style.css' %}" rel="stylesheet">
-
-</head>
+{% include 'fragments/head.html' %} 
 
 <body class="body-wrapper" data-spy="scroll" data-target=".privacy-nav">
 
-	{% comment %} 
-	migrar header a un fragmento para reutilizarlo
-	{% include 'fragments/header.html' %}  
-	{% endcomment %}
-<nav class="navbar main-nav navbar-expand-lg px-2 px-sm-0 py-2 py-lg-0">
-  <div class="container">
-    <a class="navbar-brand" href="index.html"><img src="{% static 'images/logo1.png' %}" alt="logo"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="ti-menu"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item dropdown active">
-          <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Home
-            <span><i class="ti-angle-down"></i></span>
-          </a>
-          <!-- Dropdown list -->
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item active" href="#">Homepage</a></li>
-            <li><a class="dropdown-item" href="#">Homepage 2</a></li>
-            <li><a class="dropdown-item active3" href="#">Homepage 3</a></li>
-
-            <li class="dropdown dropdown-submenu dropright">
-              <a class="dropdown-item dropdown-toggle" href="#!" id="dropdown0301" role="button"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sub Menu</a>
-
-              <ul class="dropdown-menu" aria-labelledby="dropdown0301">
-                <li><a class="dropdown-item" href="#">Submenu 11</a></li>
-                <li><a class="dropdown-item" href="#">Submenu 12</a></li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li class="nav-item dropdown @@pages">
-          <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Pages
-            <span><i class="ti-angle-down"></i></span>
-          </a>
-          <!-- Dropdown list -->
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item @@team" href="#">Team</a></li>
-            <li><a class="dropdown-item @@career" href="#">Career</a></li>
-            <li><a class="dropdown-item @@blog" href="#">Blog</a></li>
-            <li><a class="dropdown-item @@blogSingle" href="#">Blog Single</a></li>
-            <li><a class="dropdown-item @@privacy" href="#">Privacy</a></li>
-            <li><a class="dropdown-item @@faq" href="#">FAQ</a></li>
-            <li><a class="dropdown-item" href="#">Sign In</a></li>
-            <li><a class="dropdown-item" href="#">Sign Up</a></li>
-            <li><a class="dropdown-item" href="#">404</a></li>
-            <li><a class="dropdown-item" href="#">Coming Soon</a></li>
-
-            <li class="dropdown dropdown-submenu dropleft">
-              <a class="dropdown-item dropdown-toggle" href="#!" id="dropdown0501" role="button"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sub Menu</a>
-
-              <ul class="dropdown-menu" aria-labelledby="dropdown0501">
-                <li><a class="dropdown-item" href="#">Submenu 21</a></li>
-                <li><a class="dropdown-item" href="#">Submenu 22</a></li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li class="nav-item @@about">
-          <a class="nav-link" href="#">About</a>
-        </li>
-        <li class="nav-item @@contact">
-          <a class="nav-link" href="#">Contact</a>
-        </li>
-		<li>
-		<a href="{% url 'login' %}" class="btn btn-rounded-icon bg-blue" >
-			
-			Iniciar Sesión
-		</a>
-	</li>
-      </ul>
-    </div>
-  </div>
-</nav>
+	{% include 'fragments/header.html' %} 
 
 <!--====================================
 =            Hero Section            =
@@ -285,7 +176,7 @@
 			<div class="col-lg-6 align-self-center">
 				<!-- Feature Image -->
 				<div class="service-thumb left" data-aos="fade-right">
-					<img class="img-fluid" src="images/feature/iphone-ipad.jpg" alt="iphone-ipad">
+					<img class="img-fluid" src= "{% static 'images/feature/iphone-ipad.jpg' %}" alt="iphone-ipad">
 				</div>
 			</div>
 			<div class="col-lg-5 mr-auto align-self-center">
@@ -389,7 +280,7 @@
 							</p>
 							<!-- Person Thumb -->
 							<div class="image">
-								<img src="images/testimonial/feature-testimonial-thumb.jpg" alt="image">
+								<img src="{% static 'images/testimonial/feature-testimonial-thumb.jpg' %}" alt="image">
 							</div>
 							<!-- Name and Company -->
 							<cite>Abraham Linkon , Themefisher.com</cite>
@@ -497,7 +388,7 @@
       <div class="row">
         <div class="col-lg-4 col-md-12 m-md-auto align-self-center">
           <div class="block">
-            <a href="index.html"><img src="images/logo-alt.png" alt="footer-logo"></a>
+            <a href="index.html"><img src="{% static 'images/logo-alt.png' %}" alt="footer-logo"></a>
             <!-- Social Site Icons -->
             <ul class="social-icon list-inline">
               <li class="list-inline-item">
