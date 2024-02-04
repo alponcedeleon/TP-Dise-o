@@ -41,12 +41,34 @@
 		<div class="row align-items-center">
 			<div class="col-md-6 order-2 order-md-1 text-center text-md-left">
 				<h1 class="text-white font-weight-bold mb-4">MONITOREA TUS NECESIDADES</h1>
-				<p class="text-white mb-5">Consulta si hay los servicios públicos que necesitas en tu destino!</p>
+				<p class="text-white mb-5">Consulta si existen los servicios públicos que necesitas en tu destino!</p>
 				<a href="{% url 'login' %}" class="btn btn-rounded-icon bg-blue">Iniciar Sesión</a>
 			</div>
 			<div class="col-md-6 text-center order-1 order-md-2">
 				<img class="img-fluid" src="{% static 'images/mobile.png' %}" alt="screenshot">
 			</div>
+			
+
+			<!--====  barra de busqueda  ====-->
+			<div class="col-md-12 text-center order-1 order-md-2 bg-white rounded" style="padding: 0px;">
+				<form method="get" style="width: 100%;">
+				<div class="input-group" style="height: 100%;">
+					
+						
+							<input type="text" class="form-control" style="height: 100%;" placeholder="Buscar..."  name="buscar" value="{{ request.GET.buscar}}">
+					
+						<div class="input-group-append">
+						<button type="submit" class="btn btn-primary" style="height: 100%; padding-left: 10px;">
+							<i class="ti-search h1" style="font-size: 1rem;"></i>
+						</button>
+					
+						</div>
+					
+				</div>
+			</form>
+			</div>
+		<!--====  barra de busqueda  ====-->
+
 		</div>
 	</div>
 </section>
@@ -55,184 +77,106 @@
 <section class="section pt-0 position-relative pull-top">
 	<div class="container">
 		<div class="rounded shadow p-5 bg-white">
+			<!--====  LINEAS ====-->
+			{% if lineas  %}
+			<h3 class="mt-4 text-capitalize h5 ">Ferrocarriles y Subterráneos</h3>
 			<div class="row">
-				<div class="col-lg-4 col-md-6 mt-5 mt-md-0 text-center">
-					<i class="ti-paint-bucket text-primary h1"></i>
-					<h3 class="mt-4 text-capitalize h5 ">themes made easy</h3>
-					<p class="regular text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam non, recusandae
-						tempore ipsam dignissimos molestias.</p>
-				</div>
-				<div class="col-lg-4 col-md-6 mt-5 mt-md-0 text-center">
-					<i class="ti-shine text-primary h1"></i>
-					<h3 class="mt-4 text-capitalize h5 ">powerful design</h3>
-					<p class="regular text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam non, recusandae
-						tempore ipsam dignissimos molestias.</p>
-				</div>
-				<div class="col-lg-4 col-md-12 mt-5 mt-lg-0 text-center">
-					<i class="ti-thought text-primary h1"></i>
-					<h3 class="mt-4 text-capitalize h5 ">creative content</h3>
-					<p class="regular text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam non, recusandae
-						tempore ipsam dignissimos molestias.</p>
-					</p>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-
-<!--==================================
-=            Feature Grid            =
-===================================-->
-<section class="feature section pt-0">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-6 ml-auto justify-content-center">
-				<!-- Feature Mockup -->
-				<div class="image-content" data-aos="fade-right">
-					<img class="img-fluid" src="{% static 'images/feature/feature-new-01.jpg' %}" alt="iphone">
-				</div>
-			</div>
-			<div class="col-lg-6 mr-auto align-self-center">
-				<div class="feature-content">
-					<!-- Feature Title -->
-					<h2>Increase your productivity with <a
-							href="https://themefisher.com/products/small-apps-free-app-landing-page-template/">Small Apps</a></h2>
-					<!-- Feature Description -->
-					<p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-						labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-						aliquip ex ea commodo consequat.</p>
-				</div>
-				<!-- Testimonial Quote -->
-				<div class="testimonial">
-					<p>
-						"InVision is a window into everything that's being designed at Twitter. It gets all of our best work in one
-						place."
-					</p>
-					<ul class="list-inline meta">
-						<li class="list-inline-item">
-							<img src="{% static 'images/testimonial/feature-testimonial-thumb.jpg' %}" alt="">
-						</li>
-						<li class="list-inline-item">Jonathon Andrew , Themefisher.com</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-
-<section class="feature section pt-0">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-6 ml-auto align-self-center">
-				<div class="feature-content">
-					<!-- Feature Title -->
-					<h2>Increase your productivity with <a
-							href="https://themefisher.com/products/small-apps-free-app-landing-page-template/">Small Apps</a></h2>
-					<!-- Feature Description -->
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-						dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-						ea commodo consequat.</p>
-				</div>
-				<!-- Testimonial Quote -->
-				<div class="testimonial">
-					<p>
-						"InVision is a window into everything that's being designed at Twitter. It gets all of our best work in one
-						place."
-					</p>
-					<ul class="list-inline meta">
-						<li class="list-inline-item">
-							<img src="{% static 'images/testimonial/feature-testimonial-thumb.jpg' %}" alt="">
-						</li>
-						<li class="list-inline-item">Jonathon Andrew , Themefisher.com</li>
-					</ul>
-				</div>
-			</div>
-			<div class="col-lg-6 mr-auto justify-content-center">
-				<!-- Feature mockup -->
-				<div class="image-content" data-aos="fade-left">
-					<img class="img-fluid" src="{% static 'images/feature/feature-new-02.jpg' %}" alt="ipad">
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-<!--====  End of Feature Grid  ====-->
-
-<!--==============================
-=            Services            =
-===============================-->
-<section class="service section bg-gray">
-	<div class="container-fluid p-0">
-		<div class="row">
-			<div class="col-lg-12">
-				<div class="section-title">
-					<h2>An Interface For Lifestyle</h2>
-					<p><a href="https://themefisher.com/products/small-apps-free-app-landing-page-template/">Small Apps</a> makes
-						it easy to stay on top of your Life Style. No late tasks. No gimmicks.</p>
-				</div>
-			</div>
-		</div>
-		<div class="row no-gutters">
-			<div class="col-lg-6 align-self-center">
-				<!-- Feature Image -->
-				<div class="service-thumb left" data-aos="fade-right">
-					<img class="img-fluid" src= "{% static 'images/feature/iphone-ipad.jpg' %}" alt="iphone-ipad">
-				</div>
-			</div>
-			<div class="col-lg-5 mr-auto align-self-center">
-				<div class="service-box">
-					<div class="row align-items-center">
-						<div class="col-md-6 col-xs-12">
-							<!-- Service 01 -->
-							<div class="service-item">
-								<!-- Icon -->
-								<i class="ti-bookmark"></i>
-								<!-- Heading -->
-								<h3>Easy Prototyping</h3>
-								<!-- Description -->
-								<p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Curabitur aliquet quam id dui</p>
-							</div>
-						</div>
-						<div class="col-md-6 col-xs-12">
-							<!-- Service 01 -->
-							<div class="service-item">
-								<!-- Icon -->
-								<i class="ti-pulse"></i>
-								<!-- Heading -->
-								<h3>Sensor Bridge</h3>
-								<!-- Description -->
-								<p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Curabitur aliquet quam id dui</p>
-							</div>
-						</div>
-						<div class="col-md-6 col-xs-12">
-							<!-- Service 01 -->
-							<div class="service-item">
-								<!-- Icon -->
-								<i class="ti-bar-chart"></i>
-								<!-- Heading -->
-								<h3>Strategist</h3>
-								<!-- Description -->
-								<p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Curabitur aliquet quam id dui</p>
-							</div>
-						</div>
-						<div class="col-md-6 col-xs-12">
-							<!-- Service 01 -->
-							<div class="service-item">
-								<!-- Icon -->
-								<i class="ti-panel"></i>
-								<!-- Heading -->
-								<h3>Art Direction</h3>
-								<!-- Description -->
-								<p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Curabitur aliquet quam id dui</p>
-							</div>
-						</div>
+								
+				{% for linea in  lineas %}
+					<div class="col-lg-4 col-md-6 mt-5 mt-md-0 text-center" style="border: 0.5px solid #e0e0e0; padding: 5px;margin: 0px;" >
+						<i class="ti-car text-primary h1"></i>
+						<h3 class="mt-4 text-capitalize h5 ">{{  linea.nombre }}</h3>
+						<p class="regular text-muted ">
+							<ul class="text-md-left">
+								<li><small>Tipo: {{ linea.tipo_transporte}}</small></li>
+								<li><small>Provincia: {{ linea.provincia}}</small></li>
+								
+							</ul>
+						</p>
+						<a href="#" class="btn btn-rounded-icon "><i class="ti-info-alt text-primary h1"></i></a>
 					</div>
+				{% endfor %}
+			</div>
+				{% endif %}
+			
+
+				<!--====  ORGANIZACIONES  ====-->
+				{% if organizaciones  %}
+				<h3 class="mt-4 text-capitalize h5 ">Organizaciones</h3>
+				<div class="row">
+				
+				{% for organizacion in organizaciones %}
+						<div class="col-lg-4 col-md-6 mt-5 mt-md-0 text-center" style="border: 0.5px solid #e0e0e0; padding: 5px;margin: 0px;">
+							<i class="ti-home text-primary h1"></i>
+							<h3 class="mt-4 text-capitalize h5 ">{{  organizacion.nombre }}</h3>
+							<p class="regular text-muted ">
+								<ul class="text-md-left">
+									<li><Small>Tipo: {{ organizacion.tipo_organizacion}}</Small></li>
+									<li><small>Provincia: {{ organizacion.provincia}}</small></li>
+									
+								</ul>
+							</p>
+								<a href="#" class="btn btn-rounded-icon "><i class="ti-info-alt text-primary h1"></i></a>
+						</div>
+				{% endfor %}
 				</div>
+				{% endif %}
+				
+
+				<!--====  ESTACIONES  ====-->
+				{% if estaciones  %}
+				<h3 class="mt-4 text-capitalize h5 ">Estaciones</h3>
+				<div class="row">
+				
+				{% for estacion in estaciones %}
+						<div class="col-lg-4 col-md-6 mt-5 mt-md-0 text-center" style="border: 0.5px solid #e0e0e0; padding: 5px;margin: 0px;">
+							<i class="ti-home text-primary h1"></i>
+							<h3 class="mt-4 text-capitalize h5 ">{{  estacion.nombre }}</h3>
+							<p class="regular text-muted ">
+								<ul class="text-md-left">
+									<li><small>Provincia: {{ estacion.provincia}}</small></li>
+									<li><small>Departamento: {{ estacion.departamento}}</small></li>
+									<li><small>Dirección: {{ estacion.ubicacion_geografica}}</small></li>
+								</ul>
+							</p>
+								<a href="#" class="btn btn-rounded-icon "><i class="ti-info-alt text-primary h1"></i></a>
+						</div>
+				{% endfor %}
+				</div>
+				{% endif %}
+
+				<!--====  SUCURSALES  ====-->
+				{% if sucursales  %}
+				<h3 class="mt-4 text-capitalize h5 ">Sucursales</h3>
+				<div class="row">
+				
+				{% for sucursal in sucursales %}
+						<div class="col-lg-4 col-md-6 mt-5 mt-md-0 text-center" style="border: 0.5px solid #e0e0e0; padding: 5px;margin: 0px;">
+							<i class="ti-home text-primary h1"></i>
+							<h3 class="mt-4 text-capitalize h5 ">{{  sucursal.nombre }}</h3>
+							<ul class="text-md-left">
+								
+								<li><small>Provincia: {{ sucursal.provincia}}</small></li>
+								<li><small>Departamento: {{ sucursal.departamento}}</small></li>
+								<li><small>Dirección: {{ sucursalS.ubicacion_geografica}}</small></li>
+							
+							</ul>
+								<a href="#" class="btn btn-rounded-icon "><i class="ti-info-alt text-primary h1"></i></a>
+						</div>
+				{% endfor %}
+				</div>
+				{% endif %}
+
+
+
+
+				
 			</div>
 		</div>
-	</div>
+	
 </section>
-<!--====  End of Services  ====-->
+
+
 
 
 <!--=================================

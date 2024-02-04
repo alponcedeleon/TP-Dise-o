@@ -3,11 +3,11 @@ from django.contrib.auth.forms import AuthenticationForm , UserCreationForm
 from django.contrib.auth import authenticate, login
 from django.contrib import messages
 from .forms import CustomUserCreationForm , UserProfileForm
-from .models import Perfil, Comunidad, Servicio, LineaTransporte
+from .models import Perfil, Comunidad, Servicio, LineaTransporte, Organizacion, Estacion, Sucursal
 from .requests import obtener_localidades, obtener_provincias
 from django.contrib.auth.decorators import login_required, user_passes_test
 import logging
-
+from django.db.models import Q
 
 
 
@@ -107,6 +107,29 @@ def listar_servicios(request):
 @login_required
 @user_passes_test(lambda u: not u.is_superuser, login_url='/admin/')
 def home_view(request):
+    print(request.GET)
+    queryset = request.GET.get("buscar")
+    lineas = LineaTransporte.objects.all()[:6]
+    organizaciones = Organizacion.objects.all()[:6]
+    estaciones = Estacion.objects.all()[:6]
+    sucursales = Sucursal.objects.all()[:6]
+    if queryset:
+        lineas = LineaTransporte.objects.filter(
+            Q(nombre__icontains = queryset)| Q(provincia__icontains = queryset) | Q(tipo_transporte__icontains = queryset)
+        ).distinct
+        organizaciones = Organizacion.objects.filter(
+             Q(nombre__icontains = queryset)| Q(provincia__icontains = queryset) | Q(tipo_organizacion__icontains = queryset)
+        ).distinct
+        estaciones = Estacion.objects.filter(
+            Q(nombre__icontains = queryset) | Q(provincia__icontains = queryset) | Q(departamento__icontains = queryset) | Q(ubicacion_geografica__icontains = queryset)
+        ).distinct
+        sucursales = Sucursal.objects.filter(
+            Q(nombre__icontains = queryset) | Q(provincia__icontains = queryset) | Q(departamento__icontains = queryset) | Q(ubicacion_geografica__icontains = queryset)
+        ).distinct
+
+
+
+
     # Obtener grupos a los que pertenece el usuario
 
     group_names = requestGroups(request)
@@ -118,7 +141,12 @@ def home_view(request):
     context = {
         'request':request,
         'groups':group_names,
-        'perfil_usuario': perfil_usuario
+        'perfil_usuario': perfil_usuario,
+        'lineas':lineas,
+        'organizaciones':organizaciones,
+        'estaciones':estaciones,
+        'sucursales':sucursales
+
     }
     logging.info(request.path)
     logging.info(context) 
