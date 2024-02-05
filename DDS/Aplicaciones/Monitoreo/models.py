@@ -35,6 +35,7 @@ class Sucursal(Establecimiento):
 class Entidad(models.Model):
     nombre = models.CharField(max_length=100)
     provincia = models.CharField(max_length=20, null=True)
+    foto = models.ImageField(upload_to='profile_pics/', blank=True, null=True)
     class Meta:
         abstract = True
 

@@ -28,6 +28,8 @@ def register(request):
 
     return render(request, 'registration/register.html',data)
 
+
+
 def requestGroups(request):
     user = request.user
     user_groups = user.groups.all()
@@ -128,8 +130,6 @@ def home_view(request):
         ).distinct
 
 
-
-
     # Obtener grupos a los que pertenece el usuario
 
     group_names = requestGroups(request)
@@ -152,20 +152,34 @@ def home_view(request):
     logging.info(context) 
     return render(request, 'index.html', context)
 
+@login_required
+def establecimientos(request,id,tipo):
+    print(id)
+    print(tipo)
+    lineas = None
+    estaciones_intermedias = None
+    estacion_origen = None
+    estacion_destino = None
+    if tipo =='lineatransporte':
+        lineas = get_object_or_404(LineaTransporte, id=id)
+        datos_tabla_intermedia = LineaTransporte.estaciones_intermedias.through.objects.filter(lineatransporte_id=id)
+        ids_estaciones_intermedias = [datos.estacion_id for datos in datos_tabla_intermedia]
+        estaciones_intermedias = Estacion.objects.filter(id__in=ids_estaciones_intermedias)
+        estacion_origen = Estacion.objects.get(id = lineas.estacion_origen_id)
+        estacion_destino = Estacion.objects.get(id = lineas.estacion_destino_id)
+        
 
-"""
-def perfil_usuario(request):
-    
-    # Obtener el perfil del usuario actual, si existe
-    perfil_usuario = get_object_or_404(Perfil, user=request.user)
-
-    # Contexto con los datos del perfil para pasar a la plantilla
     context = {
-        'perfil_usuario': perfil_usuario,
-    }
+        'estaciones_intermedias' : estaciones_intermedias,
+        'lineas': lineas,
+        'estacion_origen':estacion_origen,
+        'estacion_destino':estacion_destino
 
-    return render(request, 'perfil.html', context)
-    """
+
+    }
+    return render(request, 'establecimientos.html',context)
+
+
 @login_required
 def perfil_usuario(request):
     # Obtener grupos a los que pertenece el usuario
