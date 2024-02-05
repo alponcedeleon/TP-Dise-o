@@ -25,11 +25,7 @@ class Estacion(Establecimiento):
     def __str__(self):
         return self.nombre
     
-class Sucursal(Establecimiento):
-    ubicacion_geografica = models.CharField(max_length=30)
 
-    def __str__(self):
-        return self.nombre
 
 #############################################################################################
 class Entidad(models.Model):
@@ -66,8 +62,14 @@ class Organizacion(Entidad):
         ('Centro Comunal', 'Centro Comunal'),
         ('Banco', 'Banco'),
     )
-    sucursales = models.ManyToManyField(Sucursal, related_name='sucursales')
     tipo_organizacion = models.CharField(max_length=20, choices=TIPO_CHOICES)
+
+    def __str__(self):
+        return self.nombre
+    
+class Sucursal(Establecimiento):
+    ubicacion_geografica = models.CharField(max_length=30)
+    organizacion = models.ForeignKey(Organizacion, on_delete=models.CASCADE, related_name='organizacion')
 
     def __str__(self):
         return self.nombre

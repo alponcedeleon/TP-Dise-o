@@ -33,9 +33,16 @@
           <a class="nav-link" href="/informes">Informes</a>
         </li>
         {% endif%}
+        <li class="nav-item">
+          <form action="{% url 'logout' %}" method="post">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-link nav-link">Cerrar sesión</button>
+          </form>
+        </li>
         
         </li>
       </ul>
     </div>
   </div>
 </nav>
+<hr style="margin: 0px;">

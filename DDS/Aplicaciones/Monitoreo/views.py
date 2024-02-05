@@ -160,6 +160,8 @@ def establecimientos(request,id,tipo):
     estaciones_intermedias = None
     estacion_origen = None
     estacion_destino = None
+    organizaciones = None
+    sucursales = None
     if tipo =='lineatransporte':
         lineas = get_object_or_404(LineaTransporte, id=id)
         datos_tabla_intermedia = LineaTransporte.estaciones_intermedias.through.objects.filter(lineatransporte_id=id)
@@ -167,9 +169,13 @@ def establecimientos(request,id,tipo):
         estaciones_intermedias = Estacion.objects.filter(id__in=ids_estaciones_intermedias)
         estacion_origen = Estacion.objects.get(id = lineas.estacion_origen_id)
         estacion_destino = Estacion.objects.get(id = lineas.estacion_destino_id)
-        
-
+    else:
+        organizaciones =  get_object_or_404(Organizacion, id=id)  
+        sucursales = Sucursal.objects.filter(organizacion_id=id)
     context = {
+        'tipo':tipo,
+        'organizaciones':organizaciones,
+        'sucursales':sucursales,
         'estaciones_intermedias' : estaciones_intermedias,
         'lineas': lineas,
         'estacion_origen':estacion_origen,
