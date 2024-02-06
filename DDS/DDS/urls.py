@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from Aplicaciones.Monitoreo.views import register, home_view, perfil_usuario, listar_comunidades, listar_servicios, establecimientos
+from Aplicaciones.Monitoreo.views import register, home_view, perfil_usuario, listar_comunidades, listar_servicios, entidad,establecimiento
 from django.urls import include
 from django.contrib.auth.views import logout_then_login
 from django.conf import settings
@@ -32,7 +32,8 @@ urlpatterns = [
     path('perfil/',perfil_usuario, name = "perfil_usuario"),
     path('buscar/comunidades',listar_comunidades, name = "listar_comunidades"),
     path('buscar/servicios',listar_servicios, name = "listar_servicios"),
-    path('establecimientos/<int:id>/<str:tipo>/',establecimientos, name = "establecimientos"),
+    path('entidad/<int:id>/<str:tipo>/',entidad, name = "entidad"),
+    path('establecimiento/<int:id>/<str:tipo>/',establecimiento, name = "establecimiento"),
 ]
  
 if settings.DEBUG:

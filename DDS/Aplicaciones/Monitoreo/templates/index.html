@@ -96,7 +96,7 @@
 								
 							</ul>
 						</p>
-						<a href="{% url 'establecimientos' id=linea.id tipo='lineatransporte' %}" class="btn btn-rounded-icon "><i class="ti-info-alt text-primary h1"></i></a>
+						<a href="{% url 'entidad' id=linea.id tipo='lineatransporte' %}" class="btn btn-rounded-icon "><i class="ti-info-alt text-primary h1"></i></a>
 					</div>
 				{% endfor %}
 			</div>
@@ -119,7 +119,7 @@
 									
 								</ul>
 							</p>
-								<a href="{% url 'establecimientos' id=organizacion.id tipo='organizacion' %}" class="btn btn-rounded-icon "><i class="ti-info-alt text-primary h1"></i></a>
+								<a href="{% url 'entidad' id=organizacion.id tipo='organizacion' %}" class="btn btn-rounded-icon "><i class="ti-info-alt text-primary h1"></i></a>
 						</div>
 				{% endfor %}
 				</div>
@@ -142,7 +142,7 @@
 									<li><small>Dirección: {{ estacion.ubicacion_geografica}}</small></li>
 								</ul>
 							</p>
-								<a href="#" class="btn btn-rounded-icon "><i class="ti-info-alt text-primary h1"></i></a>
+								<a href="{% url 'establecimiento' id=estacion.id tipo='estacion' %}" class="btn btn-rounded-icon "><i class="ti-info-alt text-primary h1"></i></a>
 						</div>
 				{% endfor %}
 				</div>

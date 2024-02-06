@@ -3,7 +3,7 @@ from django.contrib.auth.forms import AuthenticationForm , UserCreationForm
 from django.contrib.auth import authenticate, login
 from django.contrib import messages
 from .forms import CustomUserCreationForm , UserProfileForm
-from .models import Perfil, Comunidad, Servicio, LineaTransporte, Organizacion, Estacion, Sucursal
+from .models import Perfil, Comunidad, Servicio, LineaTransporte, Organizacion, Estacion, Sucursal, PrestacionServicioEstacion, PrestacionServicioSucursal
 from .requests import obtener_localidades, obtener_provincias
 from django.contrib.auth.decorators import login_required, user_passes_test
 import logging
@@ -153,9 +153,7 @@ def home_view(request):
     return render(request, 'index.html', context)
 
 @login_required
-def establecimientos(request,id,tipo):
-    print(id)
-    print(tipo)
+def entidad(request,id,tipo):
     lineas = None
     estaciones_intermedias = None
     estacion_origen = None
@@ -183,7 +181,25 @@ def establecimientos(request,id,tipo):
 
 
     }
-    return render(request, 'establecimientos.html',context)
+    return render(request, 'entidad.html',context)
+
+@login_required
+def establecimiento(request,id,tipo):
+    estacion = get_object_or_404(Estacion,id=id)
+    prestaciones_servicio = PrestacionServicioEstacion.objects.filter(estacion=estacion)
+    detalles_servicios = []
+    for prestacion in prestaciones_servicio:
+        servicio = prestacion.servicio
+        actividad = 'Activo' if prestacion.actividad else 'Inactivo'
+        detalles_servicios.append({'servicio': servicio, 'actividad': actividad})
+
+    context = {
+        'estacion': estacion,
+        'detalles_servicios': detalles_servicios,
+    }
+    
+    return render(request, 'establecimiento.html', context)
+
 
 
 @login_required

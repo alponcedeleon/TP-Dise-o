@@ -21,7 +21,7 @@ class Establecimiento(models.Model):
 class Estacion(Establecimiento):
     """ solo queda ubicacion geografica para rellenar """
     ubicacion_geografica = models.CharField(max_length=30)
-
+    foto = models.ImageField(upload_to='profile_pics/', blank=True, null=True)
     def __str__(self):
         return self.nombre
     
@@ -85,10 +85,22 @@ class Servicio(models.Model):
     def __str__(self):
         return self.nombre
 
-class PrestacionServicio(models.Model):
+class PrestacionServicioEstacion(models.Model):
     estacion = models.ForeignKey(Estacion, on_delete=models.CASCADE)
     servicio = models.ForeignKey(Servicio, on_delete=models.CASCADE)
-    moderador = models.BooleanField(default=True)
+    actividad = models.BooleanField(default=True)
+    def __str__(self):
+        estado = 'Activo' if self.actividad else 'Inactivo'
+        return f"{self.estacion.nombre}: {self.servicio.nombre} | estado -> {estado}"
+
+class PrestacionServicioSucursal(models.Model):
+    sucursal = models.ForeignKey(Sucursal, on_delete=models.CASCADE)
+    servicio = models.ForeignKey(Servicio, on_delete=models.CASCADE)
+    actividad = models.BooleanField(default=True)
+    def __str__(self):
+        estado = 'Activo' if self.actividad else 'Inactivo'
+        return f"{self.sucursal.nombre}: {self.servicio.nombre} | estado -> {estado}"
+    
 
 class ServicioPerfil(models.Model):
     servicio = models.ForeignKey(Servicio, on_delete=models.CASCADE)

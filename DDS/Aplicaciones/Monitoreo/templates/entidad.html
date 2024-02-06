@@ -27,7 +27,7 @@
 			<div class="col-md-12">
 				<article class="featured">
 					<!-- Image -->
-          {% if tipo == lineatransporte %}
+          {% if tipo == 'lineatransporte' %}
 					<div class="image">
 						<a href="blog-single.html"><img class="img-fluid" src="{{ lineas.foto.url }}" alt="featured-article"></a>
 					</div>
@@ -35,8 +35,8 @@
 					<div class="content">						
 						<h2><a href="blog-single.html">{{lineas.nombre}}</a></h2>						
 						<ul class="text-md-left">
-                            <li>Tipo: {{ lineas.tipo_transporte}}</li>
-                            <li>Provincia: {{ lineas.provincia}}</li>
+                            <li>Tipo: {{ lineas.tipo_transporte }}</li>
+                            <li>Provincia: {{ lineas.provincia }}</li>
                             
                         </ul>
                         </div>
@@ -62,7 +62,7 @@
 </section>
 
 <!--====  End of Featured Article  ====-->
-{% if tipo == lineatransporte %}
+{% if tipo == 'lineatransporte' %}
 <div class="container mt-5" style="margin-bottom: 20px;">
     <div class="row">
       <!-- Contenedor para Ambas Columnas -->
@@ -80,7 +80,7 @@
       <div class="col-lg-4 mt-3 mt-lg-0">
         <!-- Columna Pequeña para el Botón -->
         <div class="d-flex flex-column" style="height: 100%;">
-          <button type="button" class="btn btn-primary flex-grow-1 p-2">Detalle</button>
+          <a  href="{% url 'establecimiento' id=estacion_origen.id tipo='estacion' %}" class="btn btn-primary flex-grow-1 p-2" >Detalle</a>
         </div>
       </div>
     </div>
@@ -104,7 +104,7 @@
       <div class="col-lg-4 mt-3 mt-lg-0">
         <!-- Columna Pequeña para el Botón -->
         <div class="d-flex flex-column" style="height: 100%;">
-          <button type="button" class="btn btn-primary flex-grow-1 p-2">Detalle</button>
+          <a  href="{% url 'establecimiento' id=estacion.id tipo='estacion' %}" class="btn btn-primary flex-grow-1 p-2" >Detalle</a>
         </div>
       </div>
     </div>
@@ -126,7 +126,7 @@
       <div class="col-lg-4 mt-3 mt-lg-0">
         <!-- Columna Pequeña para el Botón -->
         <div class="d-flex flex-column" style="height: 100%;">
-          <button type="button" class="btn btn-primary flex-grow-1 p-2">Detalle</button>
+          <a  href="{% url 'establecimiento' id=estacion_destino.id tipo='estacion' %}" class="btn btn-primary flex-grow-1 p-2" >Detalle</a>
         </div>
       </div>
     </div>
