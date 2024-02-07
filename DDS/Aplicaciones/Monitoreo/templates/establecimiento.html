@@ -29,15 +29,15 @@
 				<article class="featured">
 					
             <div class="image">
-              <a href="blog-single.html"><img class="img-fluid" src="{{ estacion.foto.url }}" alt="featured-article"></a>
+              <a href="blog-single.html"><img class="img-fluid" src="{{ establecimiento.foto.url }}" alt="featured-article"></a>
             </div>
             
             <div class="content">						
-              <h2>{{ estacion.nombre }}</h2>						
+              <h2>{{ establecimiento.nombre }}</h2>						
               <ul class="text-md-left">
-                <li>Provincia: {{ estacion.provincia}}</li>
-                <li>Departamento: {{ estacion.departamento}}</li>
-                <li>Dirección: {{ estacion.ubicacion_geografica}}</li>
+                <li>Provincia: {{ establecimiento.provincia}}</li>
+                <li>Departamento: {{ establecimiento.departamento}}</li>
+                <li>Dirección: {{ establecimiento.ubicacion_geografica}}</li>
               </ul>
 
 					</div>
@@ -83,11 +83,11 @@
               {% endif %}
               {% if detalle.suscrito %}
               <td style="text-align: center;">                
-                <a href="{% url 'eliminar_servicio_perfil_estacion' servicio_id=detalle.servicio.id  estacion_id=estacion.id tipo=tipo %} " class="btn btn-primary " style="background-color: red;">Desuscribirse</a>
+                <a href="{% url 'eliminar_servicio_perfil_estacion' servicio_id=detalle.servicio.id  establecimiento_id=establecimiento.id tipo=tipo %} " class="btn btn-primary " style="background-color: red;">Desuscribirse</a>
               </td>
                 {% else %}
                 <td style="text-align: center;">
-                <a href="{% url 'servicio_perfil_estacion' servicio_id=detalle.servicio.id  estacion_id=estacion.id tipo=tipo %} " class="btn btn-primary" style="background-color: green;">Suscribirse</a>
+                <a href="{% url 'servicio_perfil_estacion' servicio_id=detalle.servicio.id  establecimiento_id=establecimiento.id tipo=tipo %} " class="btn btn-primary" style="background-color: green;">Suscribirse</a>
               </td>
                 {% endif %}
               

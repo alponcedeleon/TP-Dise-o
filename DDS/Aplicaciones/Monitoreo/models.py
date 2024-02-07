@@ -14,14 +14,14 @@ class Establecimiento(models.Model):
     nombre = models.CharField(max_length=30)
     provincia = models.CharField(max_length=50, null=True)
     departamento = models.CharField(max_length=50, null=True)
-    
+    foto = models.ImageField(upload_to='profile_pics/', blank=True, null=True)
     class Meta:
         abstract = True
 #############################################################################################           
 class Estacion(Establecimiento):
     """ solo queda ubicacion geografica para rellenar """
     ubicacion_geografica = models.CharField(max_length=30)
-    foto = models.ImageField(upload_to='profile_pics/', blank=True, null=True)
+    
     def __str__(self):
         return self.nombre
     

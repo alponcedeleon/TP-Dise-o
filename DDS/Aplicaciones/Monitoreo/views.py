@@ -3,7 +3,7 @@ from django.contrib.auth.forms import AuthenticationForm , UserCreationForm
 from django.contrib.auth import authenticate, login
 from django.contrib import messages
 from .forms import CustomUserCreationForm , UserProfileForm
-from .models import Perfil, Comunidad, Servicio, LineaTransporte, Organizacion, Estacion, Sucursal, PrestacionServicioEstacion, PrestacionServicioSucursal, ServicioPerfilEstacion
+from .models import Perfil, Comunidad, Servicio, LineaTransporte, Organizacion, Estacion, Sucursal, PrestacionServicioEstacion, PrestacionServicioSucursal, ServicioPerfilEstacion, ServicioPerfilSucursal
 from .requests import obtener_localidades, obtener_provincias
 from django.contrib.auth.decorators import login_required, user_passes_test
 import logging
@@ -11,7 +11,7 @@ from django.db.models import Q
 
 
 
-# Create your views here.
+########################################################################################################################################################
 def register(request):
     data = {
         'form': CustomUserCreationForm()
@@ -35,7 +35,7 @@ def requestGroups(request):
     user_groups = user.groups.all()
     group_names = [group.name for group in user_groups]
     return group_names
-
+########################################################################################################################################################
 @login_required
 def listar_comunidades(request):
     group_names = requestGroups(request)
@@ -66,50 +66,12 @@ def listar_comunidades(request):
 
     return render(request, 'listar_comunidades.html', context)
 
-@login_required
-def listar_servicios(request):
-    group_names = requestGroups(request)
-    servicios = Servicio.objects.all()
-    lineas = LineaTransporte.objects.all()
-    perfil = Perfil.objects.get(user=request.user)
 
-    if request.method == 'POST':
-        servicio_id = request.POST.get('servicio_id')
-        servicio = Servicio.objects.get(id=servicio_id)
-
-        if 'agregar' in request.POST:
-            if servicio not in perfil.servicios.all():
-                perfil.servicios.add(servicio)
-                perfil.save()
-        elif 'quitar' in request.POST:
-            if servicio in perfil.servicios.all():
-                perfil.servicios.remove(servicio)
-                perfil.save()
-        elif 'agregar' in request.POST:
-            if servicio not in perfil.servicios.all():
-                perfil.servicios.add(servicio)
-                perfil.save()
-        elif 'quitar' in request.POST:
-            if servicio in perfil.servicios.all():
-                perfil.servicios.remove(servicio)
-                perfil.save()
-
-    perfil_servicios = perfil.servicios.all()
-    context = {
-        'request':request,
-        'groups':group_names,
-        'servicios': servicios, 
-        'perfil': perfil, 
-        'perfil_servicios': perfil_servicios , 
-        'lineas':lineas
-    }
-
-    return render(request, 'listar_servicios.html', context)
-
+########################################################################################################################################################
 @login_required
 @user_passes_test(lambda u: not u.is_superuser, login_url='/admin/')
 def home_view(request):
-    print(request.GET)
+    
     queryset = request.GET.get("buscar")
     lineas = LineaTransporte.objects.all()[:6]
     organizaciones = Organizacion.objects.all()[:6]
@@ -151,7 +113,7 @@ def home_view(request):
     logging.info(request.path)
     logging.info(context) 
     return render(request, 'index.html', context)
-
+########################################################################################################################################################
 @login_required
 def entidad(request,id,tipo):
     lineas = None
@@ -182,44 +144,64 @@ def entidad(request,id,tipo):
 
     }
     return render(request, 'entidad.html',context)
-
+########################################################################################################################################################
 @login_required
-def servicio_perfil_estacion(request, servicio_id, estacion_id,tipo):
+def servicio_perfil_estacion(request, servicio_id, establecimiento_id,tipo):
     # Crear el nuevo registro
     perfil = Perfil.objects.get(user=request.user)
-    servicio = PrestacionServicioEstacion.objects.get(servicio_id=servicio_id,estacion_id=estacion_id)
-    nuevo_registro = ServicioPerfilEstacion(servicio=servicio, perfil=perfil)
+    nuevo_registro = None
+    if tipo == 'estacion':
+        servicio = PrestacionServicioEstacion.objects.get(servicio_id=servicio_id,estacion_id=establecimiento_id)
+        nuevo_registro = ServicioPerfilEstacion(servicio=servicio, perfil=perfil)
+    else:
+        servicio = PrestacionServicioSucursal.objects.get(servicio_id=servicio_id,sucursal_id=establecimiento_id)
+        nuevo_registro = ServicioPerfilSucursal(servicio=servicio, perfil=perfil)
+        
+    
     nuevo_registro.save()
      
-    return redirect('establecimiento', id=estacion_id, tipo=tipo)
-
+    return redirect('establecimiento', id=establecimiento_id, tipo=tipo)
+########################################################################################################################################################
 @login_required
-def eliminar_servicio_perfil_estacion(request, servicio_id, estacion_id,tipo):
+def eliminar_servicio_perfil_estacion(request, servicio_id, establecimiento_id,tipo):
     perfil = Perfil.objects.get(user=request.user)
-    servicio = PrestacionServicioEstacion.objects.get(servicio_id=servicio_id,estacion_id=estacion_id)
-    servicio_perfil_estacion = get_object_or_404(ServicioPerfilEstacion,servicio=servicio,perfil=perfil)
-    
-    # Eliminar el registro
-    servicio_perfil_estacion.delete()
+    if tipo == 'estacion':
+        servicio = PrestacionServicioEstacion.objects.get(servicio_id=servicio_id,estacion_id=establecimiento_id)
+        servicio_perfil_estacion = get_object_or_404(ServicioPerfilEstacion,servicio=servicio,perfil=perfil)
+        servicio_perfil_estacion.delete()
+    else:
+        servicio = PrestacionServicioSucursal.objects.get(servicio_id=servicio_id,sucursal_id=establecimiento_id)
+        servicio_perfil_sucursal = get_object_or_404(ServicioPerfilSucursal,servicio=servicio,perfil=perfil)
+        servicio_perfil_sucursal.delete()    
         
-    return redirect('establecimiento', id=estacion_id, tipo=tipo)
-
+    return redirect('establecimiento', id=establecimiento_id, tipo=tipo)
+########################################################################################################################################################
 
 
 @login_required
 def establecimiento(request,id,tipo):
     perfil = Perfil.objects.get(user=request.user)
-    estacion = get_object_or_404(Estacion,id=id)
-    prestaciones_servicio = PrestacionServicioEstacion.objects.filter(estacion=estacion)
+    establecimiento=None
     detalles_servicios = []
-    for prestacion in prestaciones_servicio:
-        servicio = prestacion.servicio
-        actividad = 'Activo' if prestacion.actividad else 'Inactivo'
-        suscrito = ServicioPerfilEstacion.objects.filter(servicio=prestacion, perfil=perfil).exists()
-        detalles_servicios.append({'servicio': servicio, 'actividad': actividad, 'suscrito': suscrito})
+    if tipo == 'estacion':
+        establecimiento = get_object_or_404(Estacion,id=id)
+        prestaciones_servicio = PrestacionServicioEstacion.objects.filter(estacion=establecimiento)
+        for prestacion in prestaciones_servicio:
+            servicio = prestacion.servicio
+            actividad = 'Activo' if prestacion.actividad else 'Inactivo'
+            suscrito = ServicioPerfilEstacion.objects.filter(servicio=prestacion, perfil=perfil).exists()
+            detalles_servicios.append({'servicio': servicio, 'actividad': actividad, 'suscrito': suscrito})
+    else:
+        establecimiento = get_object_or_404(Sucursal,id=id)
+        prestaciones_servicio = PrestacionServicioSucursal.objects.filter(sucursal=establecimiento)
+        for prestacion in prestaciones_servicio:
+            servicio = prestacion.servicio
+            actividad = 'Activo' if prestacion.actividad else 'Inactivo'
+            suscrito = ServicioPerfilSucursal.objects.filter(servicio=prestacion, perfil=perfil).exists()
+            detalles_servicios.append({'servicio': servicio, 'actividad': actividad, 'suscrito': suscrito})
 
     context = {
-        'estacion': estacion,
+        'establecimiento': establecimiento,
         'detalles_servicios': detalles_servicios,  
         'tipo':tipo      
     }
@@ -227,7 +209,7 @@ def establecimiento(request,id,tipo):
     return render(request, 'establecimiento.html', context)
 
 
-
+########################################################################################################################################################
 @login_required
 def perfil_usuario(request):
     # Obtener grupos a los que pertenece el usuario
@@ -258,7 +240,7 @@ def perfil_usuario(request):
     logging.info(request.path)
 
     return render(request, 'perfil.html', context)
-
+########################################################################################################################################################
 import pymongo
 from django.conf import settings
 my_client = pymongo.MongoClient(settings.DB_NAME)

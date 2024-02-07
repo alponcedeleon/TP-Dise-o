@@ -161,10 +161,10 @@
 								
 								<li><small>Provincia: {{ sucursal.provincia}}</small></li>
 								<li><small>Departamento: {{ sucursal.departamento}}</small></li>
-								<li><small>Dirección: {{ sucursalS.ubicacion_geografica}}</small></li>
+								<li><small>Dirección: {{ sucursal.ubicacion_geografica}}</small></li>
 							
 							</ul>
-								<a href="#" class="btn btn-rounded-icon "><i class="ti-info-alt text-primary h1"></i></a>
+								<a href="{% url 'establecimiento' id=sucursal.id tipo='sucursal' %}" class="btn btn-rounded-icon "><i class="ti-info-alt text-primary h1"></i></a>
 						</div>
 				{% endfor %}
 				</div>
