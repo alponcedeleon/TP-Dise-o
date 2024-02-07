@@ -3,7 +3,7 @@ from django.contrib.auth.forms import AuthenticationForm , UserCreationForm
 from django.contrib.auth import authenticate, login
 from django.contrib import messages
 from .forms import CustomUserCreationForm , UserProfileForm
-from .models import Perfil, Comunidad, Servicio, LineaTransporte, Organizacion, Estacion, Sucursal, PrestacionServicioEstacion, PrestacionServicioSucursal
+from .models import Perfil, Comunidad, Servicio, LineaTransporte, Organizacion, Estacion, Sucursal, PrestacionServicioEstacion, PrestacionServicioSucursal, ServicioPerfilEstacion
 from .requests import obtener_localidades, obtener_provincias
 from django.contrib.auth.decorators import login_required, user_passes_test
 import logging
@@ -184,18 +184,44 @@ def entidad(request,id,tipo):
     return render(request, 'entidad.html',context)
 
 @login_required
+def servicio_perfil_estacion(request, servicio_id, estacion_id,tipo):
+    # Crear el nuevo registro
+    perfil = Perfil.objects.get(user=request.user)
+    servicio = PrestacionServicioEstacion.objects.get(servicio_id=servicio_id,estacion_id=estacion_id)
+    nuevo_registro = ServicioPerfilEstacion(servicio=servicio, perfil=perfil)
+    nuevo_registro.save()
+     
+    return redirect('establecimiento', id=estacion_id, tipo=tipo)
+
+@login_required
+def eliminar_servicio_perfil_estacion(request, servicio_id, estacion_id,tipo):
+    perfil = Perfil.objects.get(user=request.user)
+    servicio = PrestacionServicioEstacion.objects.get(servicio_id=servicio_id,estacion_id=estacion_id)
+    servicio_perfil_estacion = get_object_or_404(ServicioPerfilEstacion,servicio=servicio,perfil=perfil)
+    
+    # Eliminar el registro
+    servicio_perfil_estacion.delete()
+        
+    return redirect('establecimiento', id=estacion_id, tipo=tipo)
+
+
+
+@login_required
 def establecimiento(request,id,tipo):
+    perfil = Perfil.objects.get(user=request.user)
     estacion = get_object_or_404(Estacion,id=id)
     prestaciones_servicio = PrestacionServicioEstacion.objects.filter(estacion=estacion)
     detalles_servicios = []
     for prestacion in prestaciones_servicio:
         servicio = prestacion.servicio
         actividad = 'Activo' if prestacion.actividad else 'Inactivo'
-        detalles_servicios.append({'servicio': servicio, 'actividad': actividad})
+        suscrito = ServicioPerfilEstacion.objects.filter(servicio=prestacion, perfil=perfil).exists()
+        detalles_servicios.append({'servicio': servicio, 'actividad': actividad, 'suscrito': suscrito})
 
     context = {
         'estacion': estacion,
-        'detalles_servicios': detalles_servicios,
+        'detalles_servicios': detalles_servicios,  
+        'tipo':tipo      
     }
     
     return render(request, 'establecimiento.html', context)

@@ -17,7 +17,7 @@ class Establecimiento(models.Model):
     
     class Meta:
         abstract = True
-        
+#############################################################################################           
 class Estacion(Establecimiento):
     """ solo queda ubicacion geografica para rellenar """
     ubicacion_geografica = models.CharField(max_length=30)
@@ -35,7 +35,7 @@ class Entidad(models.Model):
     class Meta:
         abstract = True
 
-###########   
+#############################################################################################      
 class LineaTransporte(Entidad):
     TIPO_CHOICES = (
         ('Subterraneo', 'Subterráneo'),
@@ -48,14 +48,14 @@ class LineaTransporte(Entidad):
 
     def __str__(self):
         return self.nombre
-
+#############################################################################################   
 class LineaPerfil(models.Model):
     linea = models.ForeignKey(LineaTransporte, on_delete=models.CASCADE)
     perfil = models.ForeignKey('Perfil', on_delete=models.CASCADE)
     def __str__(self):
         return 'Usuario '+ self.perfil.user.username + ' esta interesado en ' + self.linea.nombre 
 
-############
+#############################################################################################   
 class Organizacion(Entidad):
     TIPO_CHOICES = (
         ('Supermercado', 'Supermercado'),
@@ -66,7 +66,7 @@ class Organizacion(Entidad):
 
     def __str__(self):
         return self.nombre
-    
+ #############################################################################################      
 class Sucursal(Establecimiento):
     ubicacion_geografica = models.CharField(max_length=30)
     organizacion = models.ForeignKey(Organizacion, on_delete=models.CASCADE, related_name='organizacion')
@@ -84,7 +84,7 @@ class Servicio(models.Model):
 
     def __str__(self):
         return self.nombre
-
+#############################################################################################   
 class PrestacionServicioEstacion(models.Model):
     estacion = models.ForeignKey(Estacion, on_delete=models.CASCADE)
     servicio = models.ForeignKey(Servicio, on_delete=models.CASCADE)
@@ -92,7 +92,7 @@ class PrestacionServicioEstacion(models.Model):
     def __str__(self):
         estado = 'Activo' if self.actividad else 'Inactivo'
         return f"{self.estacion.nombre}: {self.servicio.nombre} | estado -> {estado}"
-
+#############################################################################################   
 class PrestacionServicioSucursal(models.Model):
     sucursal = models.ForeignKey(Sucursal, on_delete=models.CASCADE)
     servicio = models.ForeignKey(Servicio, on_delete=models.CASCADE)
@@ -101,12 +101,19 @@ class PrestacionServicioSucursal(models.Model):
         estado = 'Activo' if self.actividad else 'Inactivo'
         return f"{self.sucursal.nombre}: {self.servicio.nombre} | estado -> {estado}"
     
-
-class ServicioPerfil(models.Model):
-    servicio = models.ForeignKey(Servicio, on_delete=models.CASCADE)
+#############################################################################################   
+class ServicioPerfilEstacion(models.Model):
+    servicio = models.ForeignKey(PrestacionServicioEstacion, on_delete=models.CASCADE)
     perfil = models.ForeignKey('Perfil', on_delete=models.CASCADE)
     def __str__(self):
-        return 'Usuario '+ self.perfil.user.username + ' esta interesado en ' + self.servicio.nombre 
+        return 'Usuario '+ self.perfil.user.username + ' esta interesado en ' + self.servicio.servicio.nombre  + ' de ' + self.servicio.estacion.nombre
+    
+#############################################################################################   
+class ServicioPerfilSucursal(models.Model):
+    servicio = models.ForeignKey(PrestacionServicioSucursal, on_delete=models.CASCADE)
+    perfil = models.ForeignKey('Perfil', on_delete=models.CASCADE)
+    def __str__(self):
+        return 'Usuario '+ self.perfil.user.username + ' esta interesado en ' + self.servicio.servicio.nombre + ' de ' + self.servicio.sucursal.nombre
 
 #############################################################################################   
 class Comunidad(models.Model):
@@ -115,7 +122,7 @@ class Comunidad(models.Model):
 
     def __str__(self):
         return self.nombre
-
+############################################################################################# 
 class ComunidadPerfil(models.Model):
     comunidad = models.ForeignKey(Comunidad, on_delete=models.CASCADE)
     perfil = models.ForeignKey('Perfil', on_delete=models.CASCADE)
@@ -135,7 +142,6 @@ class Perfil(models.Model):
     direccion = models.CharField(max_length=100, blank=True, null=True)
     departamento = models.CharField(max_length=100, blank=True, null=True)
     comunidades = models.ManyToManyField(Comunidad, through=ComunidadPerfil, related_name='comunidades', blank=True)
-    servicios = models.ManyToManyField(Servicio, through=ServicioPerfil, related_name='servicios', blank=True)
     lineas = models.ManyToManyField(LineaTransporte, through=LineaPerfil, related_name='lineas', blank=True)
     profile_picture = models.ImageField(upload_to='profile_pics/', blank=True, null=True)
 
@@ -171,7 +177,6 @@ class OrganismoExterno(models.Model):
     def __str__(self):
         return self.nombre
 
-####################################################################  
 
 ####################################################################  
 

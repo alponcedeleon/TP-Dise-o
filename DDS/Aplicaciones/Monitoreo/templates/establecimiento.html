@@ -81,10 +81,18 @@
                 <i class="text-danger fas fa-times"></i>
               </td>
               {% endif %}
-              <td style="text-align: center;">
-                <button class="btn btn-primary">Suscribirse</button>
-                  
+              {% if detalle.suscrito %}
+              <td style="text-align: center;">                
+                <a href="{% url 'eliminar_servicio_perfil_estacion' servicio_id=detalle.servicio.id  estacion_id=estacion.id tipo=tipo %} " class="btn btn-primary " style="background-color: red;">Desuscribirse</a>
               </td>
+                {% else %}
+                <td style="text-align: center;">
+                <a href="{% url 'servicio_perfil_estacion' servicio_id=detalle.servicio.id  estacion_id=estacion.id tipo=tipo %} " class="btn btn-primary" style="background-color: green;">Suscribirse</a>
+              </td>
+                {% endif %}
+              
+               
+              
           </tr>
           {% endfor %}
  <!-- 
