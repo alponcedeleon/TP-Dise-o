@@ -8,8 +8,11 @@ from .requests import obtener_localidades, obtener_provincias
 from django.contrib.auth.decorators import login_required, user_passes_test
 import logging
 from django.db.models import Q
+from django.core.mail import send_mail
+from django.http import HttpResponse
 
 
+            
 
 ########################################################################################################################################################
 def register(request):
@@ -20,10 +23,12 @@ def register(request):
         formulario = CustomUserCreationForm(data=request.POST)
         if formulario.is_valid():
             formulario.save()
-            user = authenticate(username=formulario.cleaned_data['username'], password=formulario.cleaned_data['password1'],)
+            username = formulario.cleaned_data['username']
+            user = authenticate(username=username, password=formulario.cleaned_data['password1'],)
             login(request,user)
             messages.success(request,"Te has registrado correctamente")
             return redirect(to='index')
+            
         data["form"] = formulario
 
     return render(request, 'registration/register.html',data)
@@ -217,13 +222,21 @@ def perfil_usuario(request):
     
     # Obtener el perfil del usuario actual, si existe
     perfil_usuario = get_object_or_404(Perfil, user=request.user)
-
     provincias = obtener_provincias()
-
+    
     if request.method == 'POST':
         form = UserProfileForm(request.POST, request.FILES, instance=perfil_usuario)
         if form.is_valid():
             form.save()
+            if(perfil_usuario.email != 'email@monitoreo.com'):
+                print('envio de mail en progreso')
+                send_mail(
+                    '¡Actualizaste tu mail!',
+                    f'Hola {perfil_usuario.nombre},\n\nTodas las actualizaciones de tus servicios publicos favoritos llegaran a este correo.\n\nAtentamente,\nEl equipo de nuestra aplicación',
+                    'alejo.poncedleon@gmail.com',  # Tu dirección de correo electrónico
+                    [f'{perfil_usuario.email}'],  # Lista de direcciones de correo electrónico de destino
+                    fail_silently=False,
+                )
             # Redirigir a la página del perfil o a donde sea necesario después de guardar los cambios
             return redirect('index')  # Cambia 'perfil' por el nombre de la URL de tu vista de perfil
     else:
