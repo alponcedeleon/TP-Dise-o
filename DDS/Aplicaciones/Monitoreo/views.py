@@ -11,6 +11,8 @@ from django.db.models import Q
 import csv
 import io 
 from django.shortcuts import render
+from django.core.mail import send_mail
+from django.http import HttpResponse
 
 from .forms import CSVUploadForm
 
@@ -80,33 +82,6 @@ def cargar_datos_desde_csv(request):
         'formServicios': formServicios,
     }
     return render(request, 'cargar_datos.html', context)
-
-""" def cargar_datos_desde_csv(request):
-    if request.method == 'POST':
-        formCsv = CSVUploadForm(request.POST, request.FILES)
-        if formCsv.is_valid():
-            archivo_csv = request.FILES['archivo_csv']
-            # Procesar el archivo CSV y guardar los datos en la base de datos
-            resultados_nuevos = procesar_csv(archivo_csv)
-            group_names = requestGroups(request)
-            context = {
-                'request':request,
-                'groups':group_names,
-                'perfil_usuario': perfil_usuario,
-                'resultados_nuevos': resultados_nuevos
-            }
-            return render(request, 'carga_exitosa.html',context)
-    else:
-        formCsv = CSVUploadForm()
-    group_names = requestGroups(request)
-    
-    context = {
-        'request':request,
-        'groups':group_names,
-        'perfil_usuario': perfil_usuario,
-        'formCsv': formCsv
-    }
-    return render(request, 'cargar_datos.html', context) """
 
 def procesar_csv_establecimiento(archivo_csv):
     # Aquí colocarías el código para procesar el archivo CSV y guardar los datos en la base de datos
@@ -238,10 +213,12 @@ def register(request):
         formulario = CustomUserCreationForm(data=request.POST)
         if formulario.is_valid():
             formulario.save()
-            user = authenticate(username=formulario.cleaned_data['username'], password=formulario.cleaned_data['password1'],)
+            username = formulario.cleaned_data['username']
+            user = authenticate(username=username, password=formulario.cleaned_data['password1'],)
             login(request,user)
             messages.success(request,"Te has registrado correctamente")
             return redirect(to='index')
+            
         data["form"] = formulario
 
     return render(request, 'registration/register.html',data)
@@ -289,19 +266,7 @@ def listar_comunidades(request):
 @login_required
 @user_passes_test(lambda u: not u.is_superuser, login_url='/admin/')
 def home_view(request):
-    user_ip = request.META.get('REMOTE_ADDR')
-    
-    if request.method == 'POST':
-        formCsv = CSVUploadForm(request.POST, request.FILES)
-        if formCsv.is_valid():
-            archivo_csv = request.FILES['archivo_csv']
-            # Procesar el archivo CSV y guardar los datos en la base de datos
-            procesar_csv(archivo_csv)
-            return render(request, 'carga_exitosa.html')
-    else:
-        formCsv = CSVUploadForm()
-        
-        
+
     queryset = request.GET.get("buscar")
     lineas = LineaTransporte.objects.all()[:6]
     organizaciones = Organizacion.objects.all()[:6]
@@ -338,7 +303,6 @@ def home_view(request):
         'organizaciones':organizaciones,
         'estaciones':estaciones,
         'sucursales':sucursales,
-        'formCsv': formCsv
     }
     return render(request, 'index.html', context)
 ########################################################################################################################################################
@@ -452,13 +416,21 @@ def perfil_usuario(request):
     
     # Obtener el perfil del usuario actual, si existe
     perfil_usuario = get_object_or_404(Perfil, user=request.user)
-
     provincias = obtener_provincias()
-
+    
     if request.method == 'POST':
         form = UserProfileForm(request.POST, request.FILES, instance=perfil_usuario)
         if form.is_valid():
             form.save()
+            if(perfil_usuario.email != 'email@monitoreo.com'):
+                print('envio de mail en progreso')
+                send_mail(
+                    '¡Actualizaste tu mail!',
+                    f'Hola {perfil_usuario.nombre},\n\nTodas las actualizaciones de tus servicios publicos favoritos llegaran a este correo.\n\nAtentamente,\nEl equipo de nuestra aplicación',
+                    'alejo.poncedleon@gmail.com',  # Tu dirección de correo electrónico
+                    [f'{perfil_usuario.email}'],  # Lista de direcciones de correo electrónico de destino
+                    fail_silently=False,
+                )
             # Redirigir a la página del perfil o a donde sea necesario después de guardar los cambios
             return redirect('index')  # Cambia 'perfil' por el nombre de la URL de tu vista de perfil
     else:

@@ -181,3 +181,10 @@ LOGGING = {
         'level': 'DEBUG',
     },
 }
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587  # Puerto TLS de Gmail
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'alejo.poncedleon@gmail.com'  # Tu dirección de Gmail
+EMAIL_HOST_PASSWORD = 'nxdclkmmdxzywthr'  # La contraseña de tu cuenta de Gmail o la contraseña de la aplicación
