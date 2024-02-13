@@ -13,3 +13,6 @@ class UserProfileForm(forms.ModelForm):
        # widgets = {
        #     'comunidades': forms.CheckboxSelectMultiple()  # Esto es un ejemplo, puedes cambiar el widget según tu necesidad
        # }
+
+class CSVUploadForm(forms.Form):
+    archivo_csv = forms.FileField(widget=forms.FileInput(attrs={'class': 'boton-fileupload'}))

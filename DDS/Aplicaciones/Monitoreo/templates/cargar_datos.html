@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+
+<!--
+ // WEBSITE: https://themefisher.com
+ // TWITTER: https://twitter.com/themefisher
+ // FACEBOOK: https://www.facebook.com/themefisher
+ // GITHUB: https://github.com/themefisher/
+-->
+
+<html lang="en">
+{% include 'fragments/head.html' %} 
+
+<body class="body-wrapper" data-spy="scroll" data-target=".privacy-nav">
+
+	{% include 'fragments/header.html' %} 
+
+<!--====================================
+=            Hero Section            =
+=====================================-->
+<section class="section gradient-banner">
+	<div class="container">
+		<div class="row align-items-center">
+			<div class="col-md-6 order-2 order-md-1 text-center text-md-left">
+				<h1 class="text-white font-weight-bold mb-4">Cargar Datos desde CSV</h1>
+        
+				<form method="post" enctype="multipart/form-data" class="custom-form">
+					{% csrf_token %}
+          <h2 class="text-white font-weight-bold mb-4">Cargar Establecimientos</h2>
+					{{ formEstablecimientos.as_p }}
+          <h2 class="text-white font-weight-bold mb-4">Cargar Servicios Prestados</h2>
+          {{ formServicios.as_p }}
+					<button class="btn btn-primary" type="submit">Cargar</button>
+				</form>
+        
+
+			</div>
+		</div>
+    </div>
+  <!-- To Top -->
+  <div class="scroll-top-to">
+    <i class="ti-angle-up"></i>
+  </div>
+  
+  <!-- JAVASCRIPTS -->
+  <script src="{% static 'plugins/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'plugins/bootstrap/bootstrap.min.js' %}"></script>
+  <script src="{% static 'plugins/slick/slick.min.js' %}"></script>
+  <script src="{% static 'plugins/fancybox/jquery.fancybox.min.js' %}"></script>
+  <script src="{% static 'plugins/syotimer/jquery.syotimer.min.js' %}"></script>
+  <script src="{% static 'plugins/aos/aos.js' %}"></script>
+  <!-- google map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgeuuDfRlweIs7D6uo4wdIHVvJ0LonQ6g"></script>
+  <script src="{% static 'plugins/google-map/gmap.js' %}"></script>
+  
+  <script src="{% static 'js/script.js' %}"></script>
+</body>
+
+</html>

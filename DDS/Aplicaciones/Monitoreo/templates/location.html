@@ -1,0 +1,31 @@
+<!-- location.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Client Coordinates</title>
+</head>
+<body>
+    <p>Please wait while we retrieve your location...</p>
+    
+    <script>
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(sendLocation);
+            } else {
+                alert("Geolocation is not supported by this browser.");
+            }
+        }
+
+        function sendLocation(position) {
+            var latitude = position.coords.latitude;
+            var longitude = position.coords.longitude;
+            window.location.href = "{% url 'process_location' %}?lat=" + latitude + "&lng=" + longitude;
+        }
+
+        getLocation();
+    </script>
+</body>
+</html>
