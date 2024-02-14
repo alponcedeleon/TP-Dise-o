@@ -13,3 +13,8 @@ class UserProfileForm(forms.ModelForm):
        # widgets = {
        #     'comunidades': forms.CheckboxSelectMultiple()  # Esto es un ejemplo, puedes cambiar el widget según tu necesidad
        # }
+
+class FormularioComunidad(forms.Form):
+    nombre = forms.CharField(label='Nombre de la comunidad', max_length=100)
+    descripcion = forms.CharField(label='Descripción', widget=forms.Textarea, max_length=255)
+

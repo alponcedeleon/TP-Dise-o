@@ -2,8 +2,8 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.forms import AuthenticationForm , UserCreationForm
 from django.contrib.auth import authenticate, login
 from django.contrib import messages
-from .forms import CustomUserCreationForm , UserProfileForm
-from .models import Perfil, Comunidad, Servicio, LineaTransporte, Organizacion, Estacion, Sucursal, PrestacionServicioEstacion, PrestacionServicioSucursal, ServicioPerfilEstacion, ServicioPerfilSucursal
+from .forms import CustomUserCreationForm , UserProfileForm, FormularioComunidad
+from .models import Perfil, Comunidad, ComunidadPerfil, Servicio, LineaTransporte, Organizacion, Estacion, Sucursal, PrestacionServicioEstacion, PrestacionServicioSucursal, ServicioPerfilEstacion, ServicioPerfilSucursal
 from .requests import obtener_localidades, obtener_provincias
 from django.contrib.auth.decorators import login_required, user_passes_test
 import logging
@@ -70,6 +70,50 @@ def listar_comunidades(request):
     }
 
     return render(request, 'listar_comunidades.html', context)
+
+def listar_comunidades_perfil(request):
+    group_names = requestGroups(request)
+    perfil = Perfil.objects.get(user=request.user)
+    comunidades_admin = ComunidadPerfil.objects.filter(perfil=perfil,esAdmin=True)
+    comunidades_no_admin = ComunidadPerfil.objects.filter(perfil=perfil,esAdmin=False)
+    context = {
+        'request':request,
+        'groups':group_names,
+        'perfil': perfil,
+        'comunidades_admin': comunidades_admin,
+        'comunidades_no_admin': comunidades_no_admin
+    }
+
+    return render(request, 'mis_comunidades.html', context)
+
+def crear_comunidad(request):
+    group_names = requestGroups(request)
+    perfil = Perfil.objects.get(user=request.user)
+    if request.method == 'POST':
+        form = FormularioComunidad(request.POST)
+        if form.is_valid():
+            comunidad = Comunidad(
+                nombre=form.cleaned_data['nombre'],
+                descripcion=form.cleaned_data['descripcion']
+            )
+            comunidad.save()
+            perfil.comunidades.add(comunidad)
+            comunidad_perfil = ComunidadPerfil.objects.get(comunidad=comunidad, perfil=perfil)
+            comunidad_perfil.esAdmin = True
+            comunidad_perfil.save()
+            perfil.save()
+
+            return redirect('listar_comunidades')
+    else:
+        form = FormularioComunidad()
+        perfil_comunidades = perfil.comunidades.all()
+        context = {
+            'request': request,
+            'groups': group_names,
+            'perfil': perfil,
+            'form' :form
+        }
+    return render(request, 'crear_comunidad.html', context)
 
 
 ########################################################################################################################################################

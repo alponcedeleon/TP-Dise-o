@@ -19,8 +19,15 @@
         <li class="nav-item @@servicios">
           <a class="nav-link" href="/buscar/servicios">Servicios</a>
         </li>
-        <li class="nav-item @@comunidades">
-          <a class="nav-link" href="/buscar/comunidades">Comunidades</a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Comunidades
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a href="/buscar/comunidades" class="dropdown-item">Explorar comunidades</a>
+            <a href="/mis-comunidades" class="dropdown-item">Mis comunidades</a>
+            <a href="/crear-comunidad" class="dropdown-item">Crear una comunidad</a>
+          </div>
         </li>
         {% endif%}
         {% if 'ComunidadAdmin' in groups %}
