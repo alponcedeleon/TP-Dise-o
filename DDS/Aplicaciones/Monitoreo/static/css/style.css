@@ -2223,3 +2223,18 @@ hr {
 .column {
   flex-flow: column;
 }
+
+.boton-fileupload {
+  /* Estilos personalizados para el botón de carga de archivos */
+  appearance: none;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 8px 12px;
+  color: #333;
+  cursor: pointer;
+}
+
+.table-nowrap {
+  white-space: nowrap;
+}

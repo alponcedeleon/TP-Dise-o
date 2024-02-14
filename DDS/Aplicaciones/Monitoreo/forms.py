@@ -18,3 +18,5 @@ class FormularioComunidad(forms.Form):
     nombre = forms.CharField(label='Nombre de la comunidad', max_length=100)
     descripcion = forms.CharField(label='Descripción', widget=forms.Textarea, max_length=255)
 
+class CSVUploadForm(forms.Form):
+    archivo_csv = forms.FileField(widget=forms.FileInput(attrs={'class': 'boton-fileupload'}))

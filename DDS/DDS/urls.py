@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from Aplicaciones.Monitoreo.views import register, home_view, perfil_usuario, listar_comunidades, listar_comunidades_perfil,  entidad,establecimiento,servicio_perfil_estacion,eliminar_servicio_perfil_estacion,crear_comunidad
+from Aplicaciones.Monitoreo import views
 from django.urls import include
 from django.contrib.auth.views import logout_then_login
 from django.conf import settings
@@ -26,17 +26,20 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('django.contrib.auth.urls')),
-    path('register/',register, name = "register"),
-    path('', home_view, name='index'),
+    path('register/',views.register, name = "register"),
+    path('', views.home_view, name='index'),
     path('logout/',logout_then_login,name='logout'),
-    path('perfil/',perfil_usuario, name = "perfil_usuario"),
-    path('buscar/comunidades',listar_comunidades, name = "listar_comunidades"),
-    path('crear-comunidad/', crear_comunidad, name='crear_comunidad'),
-    path('mis-comunidades/', listar_comunidades_perfil, name='listar_comunidades_perfil'),
-    path('entidad/<int:id>/<str:tipo>/',entidad, name = "entidad"),
-    path('establecimiento/<int:id>/<str:tipo>/',establecimiento, name = "establecimiento"),
-    path('servicio-perfil-estacion/<int:servicio_id>/<int:establecimiento_id>/<str:tipo>/', servicio_perfil_estacion, name='servicio_perfil_estacion'),
-    path('eliminar_servicio_perfil_estacion/<int:servicio_id>/<int:establecimiento_id>/<str:tipo>/', eliminar_servicio_perfil_estacion, name='eliminar_servicio_perfil_estacion'),
+    path('perfil/',views.perfil_usuario, name = "perfil_usuario"),
+    path('buscar/comunidades',views.listar_comunidades, name = "listar_comunidades"),
+    path('crear-comunidad/', views.crear_comunidad, name='crear_comunidad'),
+    path('mis-comunidades/', views.listar_comunidades_perfil, name='listar_comunidades_perfil'),
+    path('entidad/<int:id>/<str:tipo>/',views.entidad, name = "entidad"),
+    path('establecimiento/<int:id>/<str:tipo>/',views.establecimiento, name = "establecimiento"),
+    path('servicio-perfil-estacion/<int:servicio_id>/<int:establecimiento_id>/<str:tipo>/', views.servicio_perfil_estacion, name='servicio_perfil_estacion'),
+    path('get-location/', views.get_location, name='get_location'),
+    path('process-location/', views.process_location, name='process_location'),
+    path('eliminar_servicio_perfil_estacion/<int:servicio_id>/<int:establecimiento_id>/<str:tipo>/', views.eliminar_servicio_perfil_estacion, name='eliminar_servicio_perfil_estacion'),
+    path('cargar-datos/', views.cargar_datos_desde_csv, name='cargar_datos'),
 ]
  
 if settings.DEBUG:

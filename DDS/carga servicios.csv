@@ -1,0 +1,9 @@
+tipo,establecimiento,servicio,prestacion
+Estacion,Plaza de Mayo,Baño Masculino,Si
+Estacion,Plaza de Mayo,Baño Femenino,Si
+Estacion,Plaza de Mayo,Escalera,No
+Estacion,Plaza de Mayo,Escalera Mecánica,No
+Sucursal,Sucursal A,Baño Masculino,Si
+Sucursal,Sucursal A,Baño Femenino,Si
+Sucursal,Sucursal A,Escalera,Si
+Sucursal,Sucursal A,Escalera Mecánica,Si
