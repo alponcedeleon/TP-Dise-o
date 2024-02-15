@@ -39,6 +39,8 @@ urlpatterns = [
     path('process-location/', views.process_location, name='process_location'),
     path('eliminar_servicio_perfil_estacion/<int:servicio_id>/<int:establecimiento_id>/<str:tipo>/', views.eliminar_servicio_perfil_estacion, name='eliminar_servicio_perfil_estacion'),
     path('cargar-datos/', views.cargar_datos_desde_csv, name='cargar_datos'),
+    path('calcular-ranking1/', views.entidades_con_mayor_tiempo_promedio_de_tiempo_de_cierre_de_incidentes, name='calcular-ranking1'),
+    path('calcular-ranking2/', views.entidades_con_mayor_incidentes_reportados_en_la_semana, name='calcular-ranking2')
 ]
  
 if settings.DEBUG:
