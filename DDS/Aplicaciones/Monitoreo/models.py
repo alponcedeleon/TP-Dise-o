@@ -144,6 +144,8 @@ class Perfil(models.Model):
     comunidades = models.ManyToManyField(Comunidad, through=ComunidadPerfil, related_name='comunidades', blank=True)
     lineas = models.ManyToManyField(LineaTransporte, through=LineaPerfil, related_name='lineas', blank=True)
     profile_picture = models.ImageField(upload_to='profile_pics/', blank=True, null=True)
+    ultima_latitud = models.FloatField(null=True, blank=True)
+    ultima_longitud = models.FloatField(null=True, blank=True)
 
     def __str__(self):
         return self.user.username

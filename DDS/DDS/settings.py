@@ -154,7 +154,7 @@ STATICFILES_DIRS = [
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = 'get_location'
 LOGOUT_REDIRECT_URL = '/'
 
 MEDIA_URL = '/media/'
@@ -187,3 +187,10 @@ CRONJOBS = [
     ('* * * * *', 'Aplicaciones.Monitoreo.cron.entidades_con_mayor_tiempo_promedio_de_tiempo_de_cierre_de_incidentes'),  # Run entidades_con_mayor_tiempo_promedio_de_tiempo_de_cierre_de_incidentes every Sunday at midnight
     ('0 0 * * 0', 'Aplicaciones.Monitoreo.cron.entidades_con_mayor_incidentes_reportados_en_la_semana'),  # Run entidades_con_mayor_incidentes_reportados_en_la_semana every Sunday at midnight
 ]
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587  # Puerto TLS de Gmail
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'alejo.poncedleon@gmail.com'  # Tu dirección de Gmail
+EMAIL_HOST_PASSWORD = 'nxdclkmmdxzywthr'  # La contraseña de tu cuenta de Gmail o la contraseña de la aplicación
