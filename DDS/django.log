@@ -1233,3 +1233,141 @@ Not Found: /entidad/1/organizacion/images/logo-alt.png
 Not Found: /entidad/1/lineatransporte/images/logo-alt.png
 Not Found: /media/profile_pics/subte_linea_A.jpg
 Not Found: /establecimiento/3/estacion/images/logo-alt.png
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Starting new HTTPS connection (1): apis.datos.gob.ar:443
+https://apis.datos.gob.ar:443 "GET /georef/api/provincias?campos=nombre&max=1000 HTTP/1.1" 200 None
+Starting new HTTPS connection (1): apis.datos.gob.ar:443
+https://apis.datos.gob.ar:443 "GET /georef/api/provincias?campos=nombre&max=1000 HTTP/1.1" 200 None
+Starting new HTTPS connection (1): apis.datos.gob.ar:443
+https://apis.datos.gob.ar:443 "GET /georef/api/provincias?campos=nombre&max=1000 HTTP/1.1" 200 None
+Starting new HTTPS connection (1): apis.datos.gob.ar:443
+https://apis.datos.gob.ar:443 "GET /georef/api/provincias?campos=nombre&max=1000 HTTP/1.1" 200 None
+Starting new HTTPS connection (1): apis.datos.gob.ar:443
+https://apis.datos.gob.ar:443 "GET /georef/api/provincias?campos=nombre&max=1000 HTTP/1.1" 200 None
+Starting new HTTPS connection (1): apis.datos.gob.ar:443
+https://apis.datos.gob.ar:443 "GET /georef/api/provincias?campos=nombre&max=1000 HTTP/1.1" 200 None
+C:\Users\alejo\Desktop\TPA-git\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+Starting new HTTPS connection (1): apis.datos.gob.ar:443
+https://apis.datos.gob.ar:443 "GET /georef/api/provincias?campos=nombre&max=1000 HTTP/1.1" 200 None
+Starting new HTTPS connection (1): apis.datos.gob.ar:443
+https://apis.datos.gob.ar:443 "GET /georef/api/provincias?campos=nombre&max=1000 HTTP/1.1" 200 None
+Starting new HTTPS connection (1): apis.datos.gob.ar:443
+https://apis.datos.gob.ar:443 "GET /georef/api/provincias?campos=nombre&max=1000 HTTP/1.1" 200 None
+Starting new HTTPS connection (1): apis.datos.gob.ar:443
+https://apis.datos.gob.ar:443 "GET /georef/api/provincias?campos=nombre&max=1000 HTTP/1.1" 200 None
+C:\Users\alejo\Desktop\TPA-git\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\alejo\Desktop\TPA-git\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+Starting new HTTPS connection (1): apis.datos.gob.ar:443
+https://apis.datos.gob.ar:443 "GET /georef/api/provincias?campos=nombre&max=1000 HTTP/1.1" 200 None
+Starting new HTTPS connection (1): apis.datos.gob.ar:443
+https://apis.datos.gob.ar:443 "GET /georef/api/provincias?campos=nombre&max=1000 HTTP/1.1" 200 None
+Starting new HTTPS connection (1): apis.datos.gob.ar:443
+https://apis.datos.gob.ar:443 "GET /georef/api/provincias?campos=nombre&max=1000 HTTP/1.1" 200 None
+Starting new HTTPS connection (1): apis.datos.gob.ar:443
+https://apis.datos.gob.ar:443 "GET /georef/api/provincias?campos=nombre&max=1000 HTTP/1.1" 200 None
+C:\Users\alejo\Desktop\TPA-git\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+Starting new HTTPS connection (1): apis.datos.gob.ar:443
+https://apis.datos.gob.ar:443 "GET /georef/api/provincias?campos=nombre&max=1000 HTTP/1.1" 200 None
+Starting new HTTPS connection (1): apis.datos.gob.ar:443
+https://apis.datos.gob.ar:443 "GET /georef/api/provincias?campos=nombre&max=1000 HTTP/1.1" 200 None
+Starting new HTTPS connection (1): apis.datos.gob.ar:443
+https://apis.datos.gob.ar:443 "GET /georef/api/provincias?campos=nombre&max=1000 HTTP/1.1" 200 None
+Starting new HTTPS connection (1): apis.datos.gob.ar:443
+https://apis.datos.gob.ar:443 "GET /georef/api/provincias?campos=nombre&max=1000 HTTP/1.1" 200 None
+Watching for file changes with StatReloader
+Starting new HTTPS connection (1): apis.datos.gob.ar:443
+https://apis.datos.gob.ar:443 "GET /georef/api/provincias?campos=nombre&max=1000 HTTP/1.1" 200 None
+Starting new HTTPS connection (1): apis.datos.gob.ar:443
+https://apis.datos.gob.ar:443 "GET /georef/api/provincias?campos=nombre&max=1000 HTTP/1.1" 200 None
+Starting new HTTPS connection (1): apis.datos.gob.ar:443
+https://apis.datos.gob.ar:443 "GET /georef/api/provincias?campos=nombre&max=1000 HTTP/1.1" 200 None
+Starting new HTTPS connection (1): apis.datos.gob.ar:443
+https://apis.datos.gob.ar:443 "GET /georef/api/provincias?campos=nombre&max=1000 HTTP/1.1" 200 None
+C:\Users\alejo\Desktop\TPA-git\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /perfil/
+Traceback (most recent call last):
+  File "C:\Users\alejo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alejo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alejo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alejo\Desktop\TPA-git\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py", line 460, in perfil_usuario
+    nuevo_email = form.cleaned_data['email']
+                  ^^^^
+UnboundLocalError: cannot access local variable 'form' where it is not associated with a value
+Not Found: /favicon.ico
+C:\Users\alejo\Desktop\TPA-git\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+Starting new HTTPS connection (1): apis.datos.gob.ar:443
+https://apis.datos.gob.ar:443 "GET /georef/api/provincias?campos=nombre&max=1000 HTTP/1.1" 200 None
+Starting new HTTPS connection (1): apis.datos.gob.ar:443
+https://apis.datos.gob.ar:443 "GET /georef/api/provincias?campos=nombre&max=1000 HTTP/1.1" 200 None
+Internal Server Error: /perfil/
+Traceback (most recent call last):
+  File "C:\Users\alejo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alejo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alejo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alejo\Desktop\TPA-git\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py", line 468, in perfil_usuario
+    nuevo_email = form.cleaned_data['email']
+                  ^^^^^^^^^^^^^^^^^
+AttributeError: 'UserProfileForm' object has no attribute 'cleaned_data'
+C:\Users\alejo\Desktop\TPA-git\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+Starting new HTTPS connection (1): apis.datos.gob.ar:443
+https://apis.datos.gob.ar:443 "GET /georef/api/provincias?campos=nombre&max=1000 HTTP/1.1" 200 None
+Starting new HTTPS connection (1): apis.datos.gob.ar:443
+https://apis.datos.gob.ar:443 "GET /georef/api/provincias?campos=nombre&max=1000 HTTP/1.1" 200 None
+Starting new HTTPS connection (1): apis.datos.gob.ar:443
+https://apis.datos.gob.ar:443 "GET /georef/api/provincias?campos=nombre&max=1000 HTTP/1.1" 200 None
+Starting new HTTPS connection (1): apis.datos.gob.ar:443
+https://apis.datos.gob.ar:443 "GET /georef/api/provincias?campos=nombre&max=1000 HTTP/1.1" 200 None
+Starting new HTTPS connection (1): apis.datos.gob.ar:443
+https://apis.datos.gob.ar:443 "GET /georef/api/provincias?campos=nombre&max=1000 HTTP/1.1" 200 None
+Starting new HTTPS connection (1): apis.datos.gob.ar:443
+https://apis.datos.gob.ar:443 "GET /georef/api/provincias?campos=nombre&max=1000 HTTP/1.1" 200 None
+Starting new HTTPS connection (1): apis.datos.gob.ar:443
+https://apis.datos.gob.ar:443 "GET /georef/api/provincias?campos=nombre&max=1000 HTTP/1.1" 200 None
+C:\Users\alejo\Desktop\TPA-git\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+Starting new HTTPS connection (1): apis.datos.gob.ar:443
+https://apis.datos.gob.ar:443 "GET /georef/api/provincias?campos=nombre&max=1000 HTTP/1.1" 200 None
+Starting new HTTPS connection (1): apis.datos.gob.ar:443
+https://apis.datos.gob.ar:443 "GET /georef/api/provincias?campos=nombre&max=1000 HTTP/1.1" 200 None
+C:\Users\alejo\Desktop\TPA-git\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+Starting new HTTPS connection (1): apis.datos.gob.ar:443
+https://apis.datos.gob.ar:443 "GET /georef/api/provincias?campos=nombre&max=1000 HTTP/1.1" 200 None
+Starting new HTTPS connection (1): apis.datos.gob.ar:443
+https://apis.datos.gob.ar:443 "GET /georef/api/provincias?campos=nombre&max=1000 HTTP/1.1" 200 None
+C:\Users\alejo\Desktop\TPA-git\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+Starting new HTTPS connection (1): apis.datos.gob.ar:443
+https://apis.datos.gob.ar:443 "GET /georef/api/provincias?campos=nombre&max=1000 HTTP/1.1" 200 None
+Starting new HTTPS connection (1): apis.datos.gob.ar:443
+https://apis.datos.gob.ar:443 "GET /georef/api/provincias?campos=nombre&max=1000 HTTP/1.1" 200 None
+Starting new HTTPS connection (1): apis.datos.gob.ar:443
+https://apis.datos.gob.ar:443 "GET /georef/api/provincias?campos=nombre&max=1000 HTTP/1.1" 200 None
+Starting new HTTPS connection (1): apis.datos.gob.ar:443
+https://apis.datos.gob.ar:443 "GET /georef/api/provincias?campos=nombre&max=1000 HTTP/1.1" 200 None
+Starting new HTTPS connection (1): apis.datos.gob.ar:443
+https://apis.datos.gob.ar:443 "GET /georef/api/provincias?campos=nombre&max=1000 HTTP/1.1" 200 None
+Starting new HTTPS connection (1): apis.datos.gob.ar:443
+https://apis.datos.gob.ar:443 "GET /georef/api/provincias?campos=nombre&max=1000 HTTP/1.1" 200 None
+C:\Users\alejo\Desktop\TPA-git\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader

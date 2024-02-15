@@ -462,19 +462,25 @@ def perfil_usuario(request):
     perfil_usuario = get_object_or_404(Perfil, user=request.user)
     provincias = obtener_provincias()
     
+    
     if request.method == 'POST':
         form = UserProfileForm(request.POST, request.FILES, instance=perfil_usuario)
-        if form.is_valid():
-            form.save()
-            if(perfil_usuario.email != 'email@monitoreo.com'):
+        nuevo_email = request.POST.get('email')
+        antiguo_email = perfil_usuario.email
+        
+        if form.is_valid():           
+            
+            if(nuevo_email != antiguo_email):
                 print('envio de mail en progreso')
+                                    
                 send_mail(
                     '¡Actualizaste tu mail!',
                     f'Hola {perfil_usuario.nombre},\n\nTodas las actualizaciones de tus servicios publicos favoritos llegaran a este correo.\n\nAtentamente,\nEl equipo de nuestra aplicación',
                     'alejo.poncedleon@gmail.com',  # Tu dirección de correo electrónico
-                    [f'{perfil_usuario.email}'],  # Lista de direcciones de correo electrónico de destino
+                    [nuevo_email],  # Lista de direcciones de correo electrónico de destino
                     fail_silently=False,
                 )
+            form.save()
             # Redirigir a la página del perfil o a donde sea necesario después de guardar los cambios
             return redirect('index')  # Cambia 'perfil' por el nombre de la URL de tu vista de perfil
     else:
