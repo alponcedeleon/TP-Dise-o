@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Aplicaciones.Monitoreo',
+    'django_crontab',
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
@@ -95,16 +96,16 @@ DB_NAME = config('DB_MONGO')
 
 
 
-#DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.postgresql',
-#        'NAME': config('DB_NAME'),
-#        'USER': config('DB_USER'),
-#        'PASSWORD': config('DB_PASSWORD'),
-#        'HOST': config('DB_HOST'),
-#        'PORT': config('DB_PORT'),   # Default PostgreSQL port
-#    }
-#}
+DATABASES = {
+   'default': {
+       'ENGINE': 'django.db.backends.postgresql',
+       'NAME': config('DB_NAME'),
+       'USER': config('DB_USER'),
+       'PASSWORD': config('DB_PASSWORD'),
+       'HOST': config('DB_HOST'),
+       'PORT': config('DB_PORT'),   # Default PostgreSQL port
+   }
+}
 
 
 # Password validation
@@ -181,3 +182,8 @@ LOGGING = {
         'level': 'DEBUG',
     },
 }
+
+CRONJOBS = [
+    ('* * * * *', 'Aplicaciones.Monitoreo.cron.entidades_con_mayor_tiempo_promedio_de_tiempo_de_cierre_de_incidentes'),  # Run entidades_con_mayor_tiempo_promedio_de_tiempo_de_cierre_de_incidentes every Sunday at midnight
+    ('0 0 * * 0', 'Aplicaciones.Monitoreo.cron.entidades_con_mayor_incidentes_reportados_en_la_semana'),  # Run entidades_con_mayor_incidentes_reportados_en_la_semana every Sunday at midnight
+]

@@ -152,6 +152,7 @@ class Perfil(models.Model):
 class Incidente(models.Model):
     servicio = models.CharField(max_length=30)
     comunidad = models.CharField(max_length=30)
+    entidad = models.CharField(max_length=50)
     provincia = models.CharField(max_length=50, null=True)
     departamento = models.CharField(max_length=50, null=True)
     usuarioReportador = models.CharField(max_length=20, null=True)

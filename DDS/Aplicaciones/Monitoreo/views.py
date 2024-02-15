@@ -243,6 +243,7 @@ def perfil_usuario(request):
 ########################################################################################################################################################
 import pymongo
 from django.conf import settings
+from datetime import datetime
 my_client = pymongo.MongoClient(settings.DB_NAME)
 
 # First define the database name
@@ -254,33 +255,83 @@ collection_name = dbname["incidente"]
 #let's create two documents
 incidente = {
     "incidenteId": "0000001",
-    "servicio" : "Baño hombres",
+    "entidad": "Entidad A",
+    "servicio" : "Baño hombres A",
     "comunidad" : "Silla de rueda",
     "departamento" : "test1",
     "provincia": "test1",
     "usuarioReportador" : "2",
-    "solucionado" : "False",
-    "fechaCreado" : "07/01/2024 13:59",
-    "fechaCierre" : "",
+    "solucionado" : True,
+    "fechaCreado" : datetime.strptime("07/01/2024 13:59", "%d/%m/%Y %H:%M"),
+    "fechaCierre" : datetime.strptime("07/01/2024 14:59", "%d/%m/%Y %H:%M"),
 }
 incidente2 = {
     "incidenteId": "0000002",
-    "servicio" : "Baño mujeres",
+    "entidad": "Entidad A",
+    "servicio" : "Baño hombres A",
+    "comunidad" : "Silla de rueda",
+    "departamento" : "test1",
+    "provincia": "test1",
+    "usuarioReportador" : "2",
+    "solucionado" : True,
+    "fechaCreado" : datetime.strptime("12/02/2024 13:59", "%d/%m/%Y %H:%M"),
+    "fechaCierre" : datetime.strptime("12/02/2024 15:59", "%d/%m/%Y %H:%M"),
+}
+incidente3 = {
+    "incidenteId": "0000003",
+    "entidad": "Entidad B",
+    "servicio" : "Baño mujeres B",
     "comunidad" : "Silla de rueda",
     "departamento" : "test2",
     "provincia": "test2",
     "usuarioReportador" : "2",
-    "solucionado" : "False",
-    "fechaCreado" : "07/01/2024 13:59",
-    "fechaCierre" : "",
+    "solucionado" : True,
+    "fechaCreado" : datetime.strptime("10/02/2024 13:59", "%d/%m/%Y %H:%M"),
+    "fechaCierre" : datetime.strptime("11/02/2024 18:59", "%d/%m/%Y %H:%M"),
+}
+incidente4 = {
+    "incidenteId": "0000004",
+    "entidad": "Entidad B",
+    "servicio" : "Baño mujeres B",
+    "comunidad" : "Silla de rueda",
+    "departamento" : "test2",
+    "provincia": "test2",
+    "usuarioReportador" : "2",
+    "solucionado" : True,
+    "fechaCreado" : datetime.strptime("10/02/2024 14:59", "%d/%m/%Y %H:%M"),
+    "fechaCierre" : datetime.strptime("11/02/2024 18:59", "%d/%m/%Y %H:%M"),
+}
+incidente5 = {
+    "incidenteId": "0000005",
+    "entidad": "Entidad C",
+    "servicio" : "Baño mujeres C",
+    "comunidad" : "Silla de rueda",
+    "departamento" : "test2",
+    "provincia": "test2",
+    "usuarioReportador" : "2",
+    "solucionado" : True,
+    "fechaCreado" : datetime.strptime("09/02/2024 13:59", "%d/%m/%Y %H:%M"),
+    "fechaCierre" : datetime.strptime("10/02/2024 14:59", "%d/%m/%Y %H:%M"),
+}
+incidente6 = {
+    "incidenteId": "0000006",
+    "entidad": "Entidad C",
+    "servicio" : "Baño mujeres C",
+    "comunidad" : "Silla de rueda",
+    "departamento" : "test2",
+    "provincia": "test2",
+    "usuarioReportador" : "2",
+    "solucionado" : True,
+    "fechaCreado" : datetime.strptime("11/02/2024 13:59", "%d/%m/%Y %H:%M"),
+    "fechaCierre" : datetime.strptime("12/02/2024 14:59", "%d/%m/%Y %H:%M"),
 }
 
-collection_name.insert_many([incidente,incidente2])
+collection_name.insert_many([incidente,incidente2,incidente3,incidente4,incidente5,incidente6])
 
-med_details = collection_name.find({})
+# med_details = collection_name.find({})
 
-for r in med_details:
-    print(r["departamento"])
+# for r in med_details:
+#     print(r["departamento"])
 
-update_data = collection_name.update_one({'incidenteId':'0000001'}, {'$set':{'departamento':'test3'}})
+# update_data = collection_name.update_one({'incidenteId':'0000001'}, {'$set':{'departamento':'test3'}})
 
