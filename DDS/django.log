@@ -1447,3 +1447,70 @@ Traceback (most recent call last):
 NameError: name 'message_perfil' is not defined
 C:\Users\alejo\Desktop\TPA-git\TP-Dise-o\DDS\Aplicaciones\Monitoreo\models.py changed, reloading.
 Watching for file changes with StatReloader
+Starting new HTTPS connection (1): apis.datos.gob.ar:443
+https://apis.datos.gob.ar:443 "GET /georef/api/provincias?campos=nombre&max=1000 HTTP/1.1" 200 None
+Starting new HTTPS connection (1): apis.datos.gob.ar:443
+https://apis.datos.gob.ar:443 "GET /georef/api/provincias?campos=nombre&max=1000 HTTP/1.1" 200 None
+Not Found: /buscar/servicios
+Not Found: /establecimiento/4/estacion/images/logo-alt.png
+Not Found: /establecimiento/4/estacion/profile_pics/San_Pedrito.jpg
+Not Found: /establecimiento/4/estacion/profile_pics/San_Pedrito.jpg
+Not Found: /establecimiento/4/estacion/images/logo-alt.png
+Not Found: /establecimiento/4/estacion/profile_pics/San_Pedrito.jpg
+Not Found: /establecimiento/4/estacion/images/logo-alt.png
+C:\Users\alejo\Desktop\TPA-git\TP-Dise-o\DDS\Aplicaciones\Monitoreo\models.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Not Found: /favicon.ico
+Watching for file changes with StatReloader
+Internal Server Error: /admin/Monitoreo/solicitudcomunidad/add/
+Traceback (most recent call last):
+  File "C:\Users\alejo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alejo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alejo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\contrib\admin\options.py", line 714, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alejo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\utils\decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alejo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\utils\decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alejo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\views\decorators\cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alejo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\contrib\admin\sites.py", line 240, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alejo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\contrib\admin\options.py", line 1941, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alejo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alejo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\utils\decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alejo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\utils\decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alejo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\contrib\admin\options.py", line 1802, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alejo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\contrib\admin\options.py", line 1859, in _changeform_view
+    self.log_addition(request, new_object, change_message)
+  File "C:\Users\alejo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\contrib\admin\options.py", line 952, in log_addition
+    object_repr=str(obj),
+                ^^^^^^^^
+  File "C:\Users\alejo\Desktop\TPA-git\TP-Dise-o\DDS\Aplicaciones\Monitoreo\models.py", line 194, in __str__
+    return 'solicitud ID:'+self.id +' | Comunidad '+self.nombre
+           ~~~~~~~~~~~~~~~^~~~~~~~
+TypeError: can only concatenate str (not "int") to str
+C:\Users\alejo\Desktop\TPA-git\TP-Dise-o\DDS\Aplicaciones\Monitoreo\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\alejo\Desktop\TPA-git\TP-Dise-o\DDS\Aplicaciones\Monitoreo\admin.py changed, reloading.
+Watching for file changes with StatReloader

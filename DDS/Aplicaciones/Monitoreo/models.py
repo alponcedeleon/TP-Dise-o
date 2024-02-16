@@ -121,9 +121,9 @@ class ServicioPerfilSucursal(models.Model):
 class Comunidad(models.Model):
     nombre = models.CharField(max_length=100)
     descripcion = models.CharField(max_length=255, null=True)
-
+    
     def __str__(self):
-        return self.nombre
+        return self.nombre 
 ############################################################################################# 
 class ComunidadPerfil(models.Model):
     comunidad = models.ForeignKey(Comunidad, on_delete=models.CASCADE)
@@ -181,6 +181,17 @@ class OrganismoExterno(models.Model):
     def __str__(self):
         return self.nombre
 
+#################################################################### 
+
+class SolicitudComunidad(models.Model):
+    id = models.AutoField(primary_key=True)
+    nombre = models.CharField(max_length=100)
+    descripcion = models.CharField(max_length=255, null=True)
+    perfil = models.ForeignKey('Perfil', on_delete=models.CASCADE)
+    motivo = models.CharField(max_length=255, null=True)
+
+    def __str__(self):
+        return 'solicitud ID:'+ str(self.id) +' | Comunidad '+self.nombre
 
 ####################################################################  
 

@@ -1,14 +1,14 @@
 from django.contrib import admin
-from .models import Estacion, LineaTransporte, Servicio, Categoria, Comunidad, Perfil, ComunidadPerfil, Sucursal, Organizacion, Establecimiento, OrganismoExterno, PrestacionServicioEstacion,PrestacionServicioSucursal,ServicioPerfilEstacion,ServicioPerfilSucursal
+from .models import Estacion, LineaTransporte, Servicio, Categoria, Comunidad, Perfil, ComunidadPerfil, Sucursal, Organizacion, Establecimiento, OrganismoExterno, PrestacionServicioEstacion,PrestacionServicioSucursal,ServicioPerfilEstacion,ServicioPerfilSucursal, SolicitudComunidad
 from django import forms
 import requests 
-
+##################################################################################
 class CustomChoiceField(forms.ChoiceField):
     def validate(self, value):
         # Override the validation to skip choices validation
         pass
     
-# Register your models here.
+##################################################################################
 class EstablecimientoAdminForm(forms.ModelForm):
     class Meta:
         model = Estacion  # O puedes usar Sucursal si lo prefieres
@@ -39,24 +39,32 @@ class EstablecimientoAdminForm(forms.ModelForm):
     
     class Media:
         js = ('https://code.jquery.com/jquery-3.6.4.min.js','admin/js/establecimiento_admin.js',)
-
+##################################################################################
 class EstacionAdmin(admin.ModelAdmin):
     form = EstablecimientoAdminForm
     list_display = ('nombre', 'provincia', 'ubicacion_geografica')
-
+##################################################################################
 class SucursalAdmin(admin.ModelAdmin):
     form = EstablecimientoAdminForm
     list_display = ('nombre', 'provincia', 'ubicacion_geografica')
 
-# Registra los modelos con sus respectivos administradores
+def aprobar_solicitud(modeladmin,request,queryset):
+    for solicitud in queryset:
+        # Crear un nuevo objeto Comunidad basado en la solicitud
+        comunidad = Comunidad.objects.create(nombre=solicitud.nombre, descripcion=solicitud.descripcion)
+        # Guardar el nuevo objeto Comunidad
+        comunidad.save()
+        # Eliminar la solicitud actual
+        solicitud.delete()
+
+class SolicitudComunidadAdmin(admin.ModelAdmin):
+    actions = [aprobar_solicitud]
+
+admin.site.register(SolicitudComunidad,SolicitudComunidadAdmin)
 admin.site.register(Estacion, EstacionAdmin)
 admin.site.register(Sucursal, SucursalAdmin)
-
 admin.site.register(LineaTransporte)
-
 admin.site.register(Organizacion)
-
-
 admin.site.register(Servicio)
 admin.site.register(PrestacionServicioEstacion)
 admin.site.register(PrestacionServicioSucursal)
@@ -67,4 +75,5 @@ admin.site.register(Categoria)
 admin.site.register(ComunidadPerfil)
 admin.site.register(Comunidad)
 admin.site.register(OrganismoExterno)
+
 
