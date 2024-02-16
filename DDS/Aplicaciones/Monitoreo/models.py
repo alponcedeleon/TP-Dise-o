@@ -6,6 +6,8 @@ from django import forms
 from django.forms import Media
 from django.contrib import admin
 import json
+from django.dispatch import receiver
+from django.core.mail import send_mail
 
 
 # Create your models here.
@@ -195,3 +197,22 @@ def crear_perfil (sender, instance, created, **kwargs):
 
 post_save.connect(crear_perfil, sender=User)
 
+####################################################################  
+@receiver(post_save, sender=PrestacionServicioEstacion)
+def enviar_correo_actualizacion(sender, instance, created, **kwargs):
+    if not created:  # Solo envía el correo si no es una nueva instancia
+        # Obtén todos los perfiles asociados a ServicioPerfilEstacion
+        perfiles = ServicioPerfilEstacion.objects.filter(servicio=instance)
+        print('Estoy en la actializacion de servicios')
+        actividad = 'Activo' if instance.actividad else 'Inactivo'
+        # Configura el contenido del correo electrónico
+        subject = '¡Hubo una actualización en tus servicios!'
+        message = ' '
+        if( actividad == 'Activo'):
+            message = f"El servicio '{instance.servicio.nombre}' de '{instance.estacion.nombre}' se encuentra <span style='color: red;'>ACTIVO</span>!"
+        else:
+            message = f"Lamentamos informar que el servicio '{instance.servicio.nombre}' de '{instance.estacion.nombre}' se encuentra <span style='color: red;'>INACTIVO</span>."
+        for perfil in perfiles:
+            print('Enviar mail a ',{perfil.perfil.nombre})
+            # Envía el correo electrónico al correo asociado al perfil
+            send_mail(subject, message, 'alejo.poncedleon@email.com', [perfil.perfil.email], html_message=message)
