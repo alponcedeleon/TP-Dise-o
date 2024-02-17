@@ -11,10 +11,7 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.RemoveField(
-            model_name='comunidad',
-            name='darAlta',
-        ),
+        
         migrations.CreateModel(
             name='SolicitudComunidad',
             fields=[

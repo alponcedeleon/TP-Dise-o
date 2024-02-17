@@ -6,7 +6,7 @@ from django.contrib import messages
 
 
 
-from .forms import CustomUserCreationForm, FormularioServicio, UserProfileForm, FormularioComunidad,SolicitudComunidadForm
+from .forms import CustomUserCreationForm, FormularioServicio, UserProfileForm, SolicitudComunidadForm
 from .models import Perfil, Categoria, Comunidad, ComunidadPerfil, Servicio, LineaTransporte, Organizacion, Estacion, Sucursal, PrestacionServicioEstacion, PrestacionServicioSucursal, ServicioPerfilEstacion, ServicioPerfilSucursal
 from .requests import obtener_localidades, obtener_provincias, obtener_ubicacion
 from django.contrib.auth.decorators import login_required, user_passes_test

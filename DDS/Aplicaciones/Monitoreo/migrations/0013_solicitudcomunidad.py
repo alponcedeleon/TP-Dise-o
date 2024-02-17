@@ -11,13 +11,5 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.CreateModel(
-            name='SolicitudComunidad',
-            fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('nombre', models.CharField(max_length=100)),
-                ('descripcion', models.CharField(max_length=255, null=True)),
-                ('perfil', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='Monitoreo.perfil')),
-            ],
-        ),
+        
     ]

@@ -10,13 +10,5 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.RemoveField(
-            model_name='estacion',
-            name='servicios',
-        ),
-        migrations.AddField(
-            model_name='comunidad',
-            name='darAlta',
-            field=models.BooleanField(default=False),
-        ),
+        
     ]
