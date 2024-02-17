@@ -8,20 +8,40 @@
     <div class="col-md-6">
       <div class="card">
         <div class="card-body text-center">
-          <h1 class="card-title">Crear una comunidad</h1>
-          <form method="post">
+          <h1 class="card-title">Crear comunidad</h1>
+          <form method="post" enctype="multipart/form-data">
             {% csrf_token %}
-            <div class="form-group">
-              <label for="id_nombre" class="h4">Nombre:</label>
-              {{ form.nombre }}
-            </div>
-            <div class="form-group">
-              <label for="id_descripcion" class="h4">Descripción:</label>
-              {{ form.descripcion }}
-            </div>
-            <div class="text-center">
-            <button type="submit" class="btn btn-primary">Crear</button>
-          </form>
+            <p style="text-align: left;color: #000;">Nombre de la comunidad</p>
+            <input
+                    type="text"
+                    name="nombre"                    
+                    class="form-control mb-2"
+                    placeholder="Ingrese un Nombre para la comunidad"
+                    autocomplete="off"
+                  />
+                  <p style="text-align: left;color: #000;">Descripcion de la comunidad</p>
+                  <textarea
+                  name="descripcion"
+                  class="form-control mb-2"
+                  placeholder="Ingrese una descripción de la comunidad"
+                  rows="4"  
+                  autocomplete="off"
+              ></textarea>
+              <p style="text-align: left;color: #000;">¿Por qué cree que debe crearse la comunidad?</p>
+              <textarea
+              name="motivo"
+              class="form-control mb-2"
+              placeholder="Ingrese un motivo para crear la comunidad"
+              rows="4"
+              autocomplete="off"  
+          ></textarea>
+
+              <input type="hidden" name="perfil"
+              value="{{ request.user.id }}" />
+        
+    
+            <button type="submit" class="btn btn-primary btn-block">Enviar solicitud</button>
+        </form>
         </div>
       </div>
     </div>

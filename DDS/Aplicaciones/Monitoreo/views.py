@@ -1,9 +1,10 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.forms import AuthenticationForm , UserCreationForm
 from django.contrib.auth import authenticate, login
+from django.contrib.auth.models import User
 from django.contrib import messages
-from .forms import CustomUserCreationForm , UserProfileForm, FormularioComunidad
-from .models import Perfil, Comunidad, ComunidadPerfil, Servicio, LineaTransporte, Organizacion, Estacion, Sucursal, PrestacionServicioEstacion, PrestacionServicioSucursal, ServicioPerfilEstacion, ServicioPerfilSucursal
+from .forms import CustomUserCreationForm , UserProfileForm, SolicitudComunidadForm
+from .models import Perfil, Comunidad, ComunidadPerfil, Servicio, LineaTransporte, Organizacion,User, Estacion, Sucursal, PrestacionServicioEstacion, PrestacionServicioSucursal, ServicioPerfilEstacion, ServicioPerfilSucursal
 from .requests import obtener_localidades, obtener_provincias, obtener_ubicacion
 from django.contrib.auth.decorators import login_required, user_passes_test
 import logging
@@ -223,7 +224,7 @@ def register(request):
 
     return render(request, 'registration/register.html',data)
 
-
+########################################################################################################################################################
 
 def requestGroups(request):
     user = request.user
@@ -260,7 +261,7 @@ def listar_comunidades(request):
     }
 
     return render(request, 'listar_comunidades.html', context)
-
+########################################################################################################################################################
 def listar_comunidades_perfil(request):
     group_names = requestGroups(request)
     perfil = Perfil.objects.get(user=request.user)
@@ -275,35 +276,32 @@ def listar_comunidades_perfil(request):
     }
 
     return render(request, 'mis_comunidades.html', context)
-
-def crear_comunidad(request):
-    group_names = requestGroups(request)
-    perfil = Perfil.objects.get(user=request.user)
+########################################################################################################################################################
+def crear_solicitud_comunidad(request):
+    admin = User.objects.get(is_superuser=True)
     if request.method == 'POST':
-        form = FormularioComunidad(request.POST)
+        form = SolicitudComunidadForm(request.POST)
         if form.is_valid():
-            comunidad = Comunidad(
-                nombre=form.cleaned_data['nombre'],
-                descripcion=form.cleaned_data['descripcion']
-            )
-            comunidad.save()
-            perfil.comunidades.add(comunidad)
-            comunidad_perfil = ComunidadPerfil.objects.get(comunidad=comunidad, perfil=perfil)
-            comunidad_perfil.esAdmin = True
-            comunidad_perfil.save()
-            perfil.save()
+            solicitud_comunidad=form.save()
+            nombre = form.cleaned_data['nombre']
+            descripcion = form.cleaned_data['descripcion']
+            motivo = form.cleaned_data['motivo']          
+            objeto_id = solicitud_comunidad.id
+                       
+            send_mail(
+                    'Solicitud de Creación de comunidad',
+                    f'ID Solicitud: {objeto_id}\n\nNombre comunidad: {nombre}\n\nDescripcion: {descripcion}\n\nMotivo: {motivo}',
+                    'alejo.poncedleon@gmail.com',  
+                    [f'{admin.email}'],  # CAMBIAR CORREO ADMIN PARA TESTEAR
+                    fail_silently=False,
+                )
+            
 
-            return redirect('listar_comunidades')
+            # Redirigir a alguna página de éxito
+            return redirect('index')
     else:
-        form = FormularioComunidad()
-        perfil_comunidades = perfil.comunidades.all()
-        context = {
-            'request': request,
-            'groups': group_names,
-            'perfil': perfil,
-            'form' :form
-        }
-    return render(request, 'crear_comunidad.html', context)
+        form = SolicitudComunidadForm()
+    return render(request, 'crear_comunidad.html', {'form': form})
 
 
 ########################################################################################################################################################
