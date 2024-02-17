@@ -11,6 +11,10 @@
           <ul>
             {% for comunidad_perfil in comunidades_admin %}
               <li>{{ comunidad_perfil.comunidad.nombre }}</li>
+              <form method="post" action="{% url 'administrar_comunidad' comunidad_perfil.comunidad.id %}">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-primary">Administrar</button>
+            </form>
             {% endfor %}
           </ul>
         </div>

@@ -3,8 +3,11 @@ from django.contrib.auth.forms import AuthenticationForm , UserCreationForm
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
 from django.contrib import messages
-from .forms import CustomUserCreationForm , UserProfileForm, SolicitudComunidadForm
-from .models import Perfil, Comunidad, ComunidadPerfil, Servicio, LineaTransporte, Organizacion,User, Estacion, Sucursal, PrestacionServicioEstacion, PrestacionServicioSucursal, ServicioPerfilEstacion, ServicioPerfilSucursal
+
+
+
+from .forms import CustomUserCreationForm, FormularioServicio, UserProfileForm, FormularioComunidad,SolicitudComunidadForm
+from .models import Perfil, Categoria, Comunidad, ComunidadPerfil, Servicio, LineaTransporte, Organizacion, Estacion, Sucursal, PrestacionServicioEstacion, PrestacionServicioSucursal, ServicioPerfilEstacion, ServicioPerfilSucursal
 from .requests import obtener_localidades, obtener_provincias, obtener_ubicacion
 from django.contrib.auth.decorators import login_required, user_passes_test
 import logging
@@ -14,6 +17,7 @@ import io
 from django.shortcuts import render
 from django.core.mail import send_mail
 from django.http import HttpResponse
+from django.http import JsonResponse
 
 from .forms import CSVUploadForm
 
@@ -303,6 +307,45 @@ def crear_solicitud_comunidad(request):
         form = SolicitudComunidadForm()
     return render(request, 'crear_comunidad.html', {'form': form})
 
+
+def administrar_comunidad(request, id_comunidad):
+    if request.method == 'POST':
+        form = FormularioServicio(request.POST)
+        if form.is_valid():
+            categoria_id = form.cleaned_data['categoria']
+            servicio = Servicio(
+                nombre = form.cleaned_data['nombre'],
+                categoria = Categoria.objects.get(pk=categoria_id)
+            )
+            servicio.save()
+        
+    comunidad_perfiles = ComunidadPerfil.objects.filter(comunidad=id_comunidad)
+    comunidad = get_object_or_404(Comunidad, pk=id_comunidad)
+    context = { 'comunidad_perfiles': comunidad_perfiles, 'form': form, 'id_comunidad': id_comunidad }
+    form = FormularioServicio()
+
+    return render(request, 'administrar_comunidad.html', context)
+
+def eliminar_miembro(request):
+    miembro_id = request.POST.get('miembro_id')
+    try:
+        miembro = ComunidadPerfil.objects.get(id=miembro_id)
+        miembro.delete()
+        return JsonResponse({'success': True})
+    except ComunidadPerfil.DoesNotExist:
+        return JsonResponse({'success': False, 'error': 'Miembro does not exist'}, status=400)
+
+def designar_admin(request):
+    miembro_id = request.POST.get('miembro_id')
+
+    try:
+        miembro = ComunidadPerfil.objects.get(id=miembro_id)
+        miembro.esAdmin = True  
+        miembro.save()
+        return JsonResponse({'success': True})
+    except ComunidadPerfil.DoesNotExist:
+        return JsonResponse({'success': False, 'error': 'Miembro does not exist'}, status=400)
+    
 
 ########################################################################################################################################################
 @login_required
