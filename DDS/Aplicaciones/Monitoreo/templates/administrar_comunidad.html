@@ -1,0 +1,130 @@
+
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<html lang="es">
+    {% include 'fragments/head.html' %}
+        <body class="body-wrapper" data-spy="scroll" data-target=".privacy-nav">
+            {% include 'fragments/header.html' %}
+
+
+
+    <div class="container">
+        <div class="row justify-content-center mt-5">
+            <div class="col-md-6">
+                <h2 class="text-center">Miembros de la Comunidad</h2>
+                <ul class="list-group">
+                    {% for miembro in comunidad_perfiles %}
+                    <li id="miembro-{{ miembro.id }}" class="list-group-item d-flex justify-content-between align-items-center">
+                        {{ miembro.perfil.nombre }} {{ miembro.perfil.apellido }}
+                        {% if miembro.esAdmin %}
+                        <button type="button" class="btn admin-btn" disabled><em><strong>Admin</strong></em></button>
+                    {% else %}
+                        <button type="button" class="btn btn-secondary set-admin-btn" data-miembro-id="{{ miembro.id }}">Asignar admin</button>
+                    {% endif %}
+                        <button type="button" class="btn btn-primary eliminar-btn" data-miembro-id="{{ miembro.id }}" style="background-color: red;">Eliminar</button>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-center mt-4">
+        <div class="col-md-1">
+            <button type="button" class="btn btn-primary btn-block " data-toggle="modal" data-target="#popupFormModal">
+                Crear servicio
+            </button>
+        </div>
+    </div>
+
+    <div class="modal fade" id="popupFormModal" tabindex="-1" role="dialog" aria-labelledby="popupFormModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="popupFormModalLabel">Crear servicio</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body text-center">
+              <!-- Your form content goes here -->
+              <form method="POST" action="{% url 'administrar_comunidad' id_comunidad %}">
+                  {% csrf_token %}
+                  {{ form.as_p }}
+                  <div class="form-group mt-5">
+                  <button type="submit" class="btn btn-primary">Crear</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+</div>
+{% include 'fragments/scripts.html' %}
+</body>
+</html>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function() {
+    $('.eliminar-btn').click(function() {
+        var miembroId = $(this).data('miembro-id');
+        var listItem = $('#miembro-' + miembroId);
+        var csrftoken = getCookie('csrftoken');
+        $.ajax({
+            type: 'POST',
+            url: "{% url 'eliminar_miembro' %}", // Replace with your actual URL for deleting members
+            data: {
+                'csrfmiddlewaretoken': csrftoken,
+                'miembro_id': miembroId
+            },
+            success: function(response) {
+                if (response.success) {
+                    listItem.remove();
+                }
+            }
+        });
+    });
+
+    $('.set-admin-btn').click(function() {
+        var miembroId = $(this).data('miembro-id');
+        var listItem = $('#miembro-' + miembroId);
+
+        var csrftoken = getCookie('csrftoken');
+
+        $.ajax({
+            type: 'POST',
+            url: "{% url 'designar_admin' %}",
+            data: {
+                'csrfmiddlewaretoken': csrftoken,
+                'miembro_id': miembroId
+            },
+            success: function(response) {
+                if (response.success) {
+                    button.html('<em><strong>Admin</strong></em>').removeClass('set-admin-btn btn-secondary').addClass('admin-btn btn-success').prop('disabled', true);
+                }
+            }
+        });
+});
+})
+
+function getCookie(name) {
+    var cookieValue = null;
+    if (document.cookie && document.cookie !== '') {
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+            var cookie = cookies[i].trim();
+            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
+}
+</script>
