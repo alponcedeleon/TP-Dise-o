@@ -1,4 +1,5 @@
 from django.contrib import admin
+from django.contrib.auth.models import Group
 from .models import Estacion, LineaTransporte, Servicio, Categoria, Comunidad, Perfil, ComunidadPerfil, Sucursal, Organizacion, Establecimiento, OrganismoExterno, PrestacionServicioEstacion,PrestacionServicioSucursal,ServicioPerfilEstacion,ServicioPerfilSucursal, SolicitudComunidad
 from django import forms
 import requests 
@@ -52,8 +53,10 @@ def aprobar_solicitud(modeladmin,request,queryset):
     for solicitud in queryset:
         # Crear un nuevo objeto Comunidad basado en la solicitud
         comunidad = Comunidad.objects.create(nombre=solicitud.nombre, descripcion=solicitud.descripcion)
-        # Guardar el nuevo objeto Comunidad
-        comunidad.save()
+        comunidad_perfil = ComunidadPerfil.objects.create(comunidad=comunidad, perfil=solicitud.perfil, esAdmin=True, observador=False)
+        usuario = solicitud.perfil.user
+        nuevo_grupo = Group.objects.get(name='ComunidadAdmin')  # Reemplaza 'nuevo_grupo' con el nombre del grupo al que deseas agregar al usuario
+        usuario.groups.set([nuevo_grupo])       
         # Eliminar la solicitud actual
         solicitud.delete()
 
