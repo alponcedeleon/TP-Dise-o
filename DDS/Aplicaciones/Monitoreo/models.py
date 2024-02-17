@@ -132,7 +132,7 @@ class ComunidadPerfil(models.Model):
     """ observador, un miembro de la comunidad no afectado por la tematica de la comunidad (usuarios silla de rueda) """
     observador = models.BooleanField(default=True)
     def __str__(self):
-        return 'Admin de la comunidad'+ self.comunidad.nombre + '-' + self.perfil.user.username  if self.esAdmin else  'Miembro de la comunidad' + self.comunidad.nombre + ' - ' + self.perfil.user.username 
+        return 'Admin de la comunidad '+ self.comunidad.nombre + ' - ' + self.perfil.user.username  if self.esAdmin else  ' Miembro de la comunidad '  + self.comunidad.nombre + ' - ' + self.perfil.user.username 
 
 #############################################################################################   
 
@@ -194,7 +194,14 @@ class SolicitudComunidad(models.Model):
         return 'solicitud ID:'+ str(self.id) +' | Comunidad '+self.nombre
 
 ####################################################################  
-
+    
+@receiver(post_save, sender=User)
+def asignar_grupo_usuario(sender, instance, created, **kwargs):
+    if created:  # Verifica si el usuario es recién creado
+        grupo_por_defecto = Group.objects.get(name='Usuario')  
+        instance.groups.add(grupo_por_defecto)    
+####################################################################  
+@receiver(post_save, sender=User)
 def crear_perfil (sender, instance, created, **kwargs):
     if created:
         Perfil.objects.create(
@@ -204,9 +211,12 @@ def crear_perfil (sender, instance, created, **kwargs):
             email = "email@monitoreo.com",
             direccion = "Dirección",
             profile_picture = 'profile_pics/profile_Default.jpg'
-            )
+        )
+        asignar_grupo_usuario(sender, instance, created, **kwargs)
 
 post_save.connect(crear_perfil, sender=User)
+
+
 
 ####################################################################  
 @receiver(post_save, sender=PrestacionServicioEstacion)
