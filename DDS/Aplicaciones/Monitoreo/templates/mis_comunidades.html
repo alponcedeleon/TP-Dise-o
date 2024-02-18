@@ -64,7 +64,7 @@
               <span>{{ comunidad_perfil.comunidad.nombre }}</span>
               <div>
                   <a href=""><button class="btn btn-sm btn-admin mr-2">Ver</button></a>
-                <a href="{% url 'salir_comunidad' comunidad_id=comunidad_perfil.comunidad.id  pag_redirect='mis_comunidades' %}"><button class="btn btn-sm btn-delete">Salirse</button></a>
+                <a href="{% url 'salir_comunidad' comunidad_id=comunidad_perfil.comunidad.id  pag_redirect='mis_comunidades' tipo='usuario'%}"><button class="btn btn-sm btn-delete">Salirse</button></a>
               </div>
             </li>
             {% endfor %}

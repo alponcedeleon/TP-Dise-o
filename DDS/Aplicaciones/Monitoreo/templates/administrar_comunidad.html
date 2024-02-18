@@ -86,8 +86,13 @@
                 <button type="button" class=" btn-primary" data-toggle="modal" data-target="#popupServicio">Solicitar Servicio</button>                
               </div>
               <div class="d-flex justify-content-end mt-3">
-                <button type="button" class=" btn-primary" data-toggle="modal" data-target="#popupEliminar">Eliminar Comunidad</button>
+                <button type="button" class=" btn-primary" data-toggle="modal" data-target="#popupEliminar" style="background-color: red;border-color: red;">Eliminar Comunidad</button>
               </div>
+              {% if comunidad_perfiles %}
+              <div class="d-flex justify-content-end mt-3">
+                <a href="{% url 'salir_comunidad' comunidad_id=comunidad.id  pag_redirect='mis_comunidades' tipo='admin' %}"><button type="button" class=" btn-primary" style="background-color: red;border-color: red;">Salir de Comunidad</button></a>
+              </div>
+              {% endif %}
           </div>
         </div>
         <br>

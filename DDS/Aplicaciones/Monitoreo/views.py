@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.forms import AuthenticationForm , UserCreationForm
 from django.contrib.auth import authenticate, login
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User,Group
 from django.contrib import messages
 
 
@@ -340,20 +340,36 @@ def administrar_comunidad(request, id_comunidad):
 ########################################################################################################################################################
 def eliminar_miembro(request,perfil_id,comunidad_id):
     miembro = get_object_or_404(ComunidadPerfil,perfil_id=perfil_id,comunidad_id=comunidad_id)
-    miembro.delete()
+    miembro.delete()    
     return redirect('administrar_comunidad',id_comunidad=comunidad_id)
 ########################################################################################################################################################
 def designar_admin(request,perfil_id,comunidad_id):
+    perfil = Perfil.objects.get(id=perfil_id)
+    usuario= perfil.user
+    grupo_usuario = usuario.groups.first()
+    nuevo_grupo = Group.objects.get(name="ComunidadAdmin")
     miembro = get_object_or_404(ComunidadPerfil,perfil_id=perfil_id,comunidad_id=comunidad_id)
     miembro.esAdmin = True
     miembro.save()
+    
+    if grupo_usuario.name == 'Usuario':
+        usuario.groups.set([nuevo_grupo])
+
     return redirect('administrar_comunidad',id_comunidad=comunidad_id)
 
 ########################################################################################################################################################    
 def sacar_admin(request,perfil_id,comunidad_id):
+    perfil = Perfil.objects.get(id=perfil_id)
+    usuario= perfil.user
+    nuevo_grupo = Group.objects.get(name="Usuario")
     miembro = get_object_or_404(ComunidadPerfil,perfil_id=perfil_id,comunidad_id=comunidad_id)
     miembro.esAdmin = False
     miembro.save()
+    otras_comunidades =  ComunidadPerfil.objects.filter(perfil=perfil,esAdmin=True)
+    if not otras_comunidades.exists():
+        print('no es admin de otro grupo')
+        usuario.groups.set([nuevo_grupo])
+    
     return redirect('administrar_comunidad',id_comunidad=comunidad_id)
 
 ########################################################################################################################################################
@@ -455,13 +471,35 @@ def servicio_perfil_estacion(request, servicio_id, establecimiento_id,tipo):
 
 ########################################################################################################################################################
 @login_required
-def salir_comunidad(request, comunidad_id, pag_redirect ):
-    # Crear el nuevo registro
+def salir_comunidad(request, comunidad_id, pag_redirect,tipo ):
+    
     perfil = Perfil.objects.get(user=request.user)
-    salida = get_object_or_404(ComunidadPerfil,comunidad_id=comunidad_id,perfil=perfil)  
-    salida.delete()
-     
-    return redirect('listar_comunidades_perfil')
+    salida=None
+    if tipo=='usuario':
+        
+        salida = get_object_or_404(ComunidadPerfil,comunidad_id=comunidad_id,perfil=perfil)  
+        salida.delete()
+        return redirect('listar_comunidades_perfil')
+
+    else:
+        comunidad_perfiles = ComunidadPerfil.objects.filter(comunidad=comunidad_id).exclude(perfil=perfil).filter(esAdmin=True)
+        if comunidad_perfiles.exists():
+            print('Hay otro admin')
+            salida = get_object_or_404(ComunidadPerfil,comunidad_id=comunidad_id,perfil=perfil)  
+            salida.delete()
+        else:
+            print('No hay otro admin')
+            comunidad_perfiles = ComunidadPerfil.objects.filter(comunidad=comunidad_id).exclude(perfil=perfil).filter(esAdmin=False)
+            primer_registro = comunidad_perfiles.first()
+            primer_registro.esAdmin = True
+            primer_registro.save()
+            salida = get_object_or_404(ComunidadPerfil,comunidad_id=comunidad_id,perfil=perfil)  
+            salida.delete()            
+
+
+        return redirect('listar_comunidades_perfil') 
+
+    
 
 ########################################################################################################################################################
 @login_required

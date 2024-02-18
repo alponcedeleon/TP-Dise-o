@@ -44,7 +44,7 @@ urlpatterns = [
     path('process-location/', views.process_location, name='process_location'),
     path('eliminar_servicio_perfil_estacion/<int:servicio_id>/<int:establecimiento_id>/<str:tipo>/', views.eliminar_servicio_perfil_estacion, name='eliminar_servicio_perfil_estacion'),
     path('cargar-datos/', views.cargar_datos_desde_csv, name='cargar_datos'),
-    path('salir_comunidad/<int:comunidad_id>/<str:pag_redirect>/', views.salir_comunidad, name='salir_comunidad'),
+    path('salir_comunidad/<int:comunidad_id>/<str:pag_redirect>/<str:tipo>/', views.salir_comunidad, name='salir_comunidad'),
 ]
  
 if settings.DEBUG:
