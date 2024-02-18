@@ -63,101 +63,62 @@
 
 <!--====  End of Featured Article  ====-->
 {% if tipo == 'lineatransporte' %}
-<div class="container mt-5" style="margin-bottom: 20px;">
-    <div class="row">
-      <!-- Contenedor para Ambas Columnas -->
-      <div class="col-lg-8">
-        <div class="card">
-          <div class="card-body">
 
 
-            
-            <p class="card-text">{{estacion_origen.nombre}}</p>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col-lg-4 mt-3 mt-lg-0">
-        <!-- Columna Pequeña para el Botón -->
-        <div class="d-flex flex-column" style="height: 100%;">
-          <a  href="{% url 'establecimiento' id=estacion_origen.id tipo='estacion' %}" class="btn btn-primary flex-grow-1 p-2" >Detalle</a>
-        </div>
-      </div>
+<div class="container mt-5">
+  <ul class="list-group member-list">
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+    <span>{{estacion_origen.nombre}}</span>
+    <div>
+        <a href="{% url 'establecimiento' id=estacion_origen.id tipo='estacion' %}"><button class="btn btn-sm btn-admin mr-2">Detalle</button></a>
+       
     </div>
-  </div>
+  </li>
+
 
 
 {% for estacion in estaciones_intermedias %}
 
-<div class="container mt-5" style="margin-bottom: 20px;">
-    <div class="row">
-      <!-- Contenedor para Ambas Columnas -->
-      <div class="col-lg-8">
-        <div class="card">
-          <div class="card-body">
-            
-            <p class="card-text">{{estacion.nombre}}</p>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col-lg-4 mt-3 mt-lg-0">
-        <!-- Columna Pequeña para el Botón -->
-        <div class="d-flex flex-column" style="height: 100%;">
-          <a  href="{% url 'establecimiento' id=estacion.id tipo='estacion' %}" class="btn btn-primary flex-grow-1 p-2" >Detalle</a>
-        </div>
-      </div>
-    </div>
+<li class="list-group-item d-flex justify-content-between align-items-center">
+  <span>{{estacion.nombre}}</span>
+  <div>
+      <a href="{% url 'establecimiento' id=estacion.id tipo='estacion' %}"><button class="btn btn-sm btn-admin mr-2">Detalle</button></a>
+     
   </div>
+</li>
+
 {% endfor %}
-
-<div class="container mt-5" style="margin-bottom: 20px;">
-    <div class="row">
-      <!-- Contenedor para Ambas Columnas -->
-      <div class="col-lg-8">
-        <div class="card">
-          <div class="card-body">
-            
-            <p class="card-text">{{estacion_destino.nombre}}</p>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col-lg-4 mt-3 mt-lg-0">
-        <!-- Columna Pequeña para el Botón -->
-        <div class="d-flex flex-column" style="height: 100%;">
-          <a  href="{% url 'establecimiento' id=estacion_destino.id tipo='estacion' %}" class="btn btn-primary flex-grow-1 p-2" >Detalle</a>
-        </div>
-      </div>
-    </div>
+<li class="list-group-item d-flex justify-content-between align-items-center">
+  <span>{{estacion_destino.nombre}}</span>
+  <div>
+      <a href="{% url 'establecimiento' id=estacion_destino.id tipo='estacion' %}"><button class="btn btn-sm btn-admin mr-2">Detalle</button></a>
+     
   </div>
+</li>
 
+</ul>
+</div>
   
   {% else %}
+
+  <div class="container mt-5">
+  <ul class="list-group member-list">
+
   {% for sucursal in sucursales %}
 
-<div class="container mt-5" style="margin-bottom: 20px;">
-    <div class="row">
-      <!-- Contenedor para Ambas Columnas -->
-      <div class="col-lg-8">
-        <div class="card">
-          <div class="card-body">
-            
-            <p class="card-text">{{sucursal.nombre}}</p>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col-lg-4 mt-3 mt-lg-0">
-        <!-- Columna Pequeña para el Botón -->
-        <div class="d-flex flex-column" style="height: 100%;">
-          <a  href="{% url 'establecimiento' id=sucursal.id tipo='sucursal' %}" class="btn btn-primary flex-grow-1 p-2" >Detalle</a>
-        </div>
-      </div>
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+    <span>{{sucursal.nombre}}</span>
+    <div>
+        <a href="{% url 'establecimiento' id=sucursal.id tipo='sucursal' %}"><button class="btn btn-sm btn-admin mr-2">Detalle</button></a>
+       
     </div>
-  </div>
+  </li>
+  
 {% endfor %}
+  </ul>
+</div>
 {% endif %}
+
 <!--============================
 =            Footer            =
 =============================-->
