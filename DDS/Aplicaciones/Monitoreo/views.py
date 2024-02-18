@@ -309,7 +309,8 @@ def crear_solicitud_comunidad(request):
 ########################################################################################################################################################
 
 def administrar_comunidad(request, id_comunidad):
-    if request.method == 'POST':
+    
+    if request.method == 'POST': 
         form = FormularioServicio(request.POST)
         if form.is_valid():
             categoria_id = form.cleaned_data['categoria']
@@ -318,34 +319,42 @@ def administrar_comunidad(request, id_comunidad):
                 categoria = Categoria.objects.get(pk=categoria_id)
             )
             servicio.save()
-        
-    comunidad_perfiles = ComunidadPerfil.objects.filter(comunidad=id_comunidad)
+    perfil = Perfil.objects.get(user=request.user)
+    comunidad_perfiles = ComunidadPerfil.objects.filter(comunidad=id_comunidad).exclude(perfil=perfil)
+    cantidad_miembros = comunidad_perfiles.count()
+    group_names = requestGroups(request)
     comunidad = get_object_or_404(Comunidad, pk=id_comunidad)
-    context = { 'comunidad_perfiles': comunidad_perfiles, 'form': form, 'id_comunidad': id_comunidad }
+    
     form = FormularioServicio()
+    context = { 'comunidad_perfiles': comunidad_perfiles, 
+               'form': form, 
+               'id_comunidad': id_comunidad,
+               'comunidad':comunidad,
+               'groups':group_names,
+               'cantidad_miembros':cantidad_miembros,
+               
+               }
+    
 
     return render(request, 'administrar_comunidad.html', context)
 ########################################################################################################################################################
-def eliminar_miembro(request):
-    miembro_id = request.POST.get('miembro_id')
-    try:
-        miembro = ComunidadPerfil.objects.get(id=miembro_id)
-        miembro.delete()
-        return JsonResponse({'success': True})
-    except ComunidadPerfil.DoesNotExist:
-        return JsonResponse({'success': False, 'error': 'Miembro does not exist'}, status=400)
+def eliminar_miembro(request,perfil_id,comunidad_id):
+    miembro = get_object_or_404(ComunidadPerfil,perfil_id=perfil_id,comunidad_id=comunidad_id)
+    miembro.delete()
+    return redirect('administrar_comunidad',id_comunidad=comunidad_id)
 ########################################################################################################################################################
-def designar_admin(request):
-    miembro_id = request.POST.get('miembro_id')
+def designar_admin(request,perfil_id,comunidad_id):
+    miembro = get_object_or_404(ComunidadPerfil,perfil_id=perfil_id,comunidad_id=comunidad_id)
+    miembro.esAdmin = True
+    miembro.save()
+    return redirect('administrar_comunidad',id_comunidad=comunidad_id)
 
-    try:
-        miembro = ComunidadPerfil.objects.get(id=miembro_id)
-        miembro.esAdmin = True  
-        miembro.save()
-        return JsonResponse({'success': True})
-    except ComunidadPerfil.DoesNotExist:
-        return JsonResponse({'success': False, 'error': 'Miembro does not exist'}, status=400)
-    
+########################################################################################################################################################    
+def sacar_admin(request,perfil_id,comunidad_id):
+    miembro = get_object_or_404(ComunidadPerfil,perfil_id=perfil_id,comunidad_id=comunidad_id)
+    miembro.esAdmin = False
+    miembro.save()
+    return redirect('administrar_comunidad',id_comunidad=comunidad_id)
 
 ########################################################################################################################################################
 @login_required
@@ -443,6 +452,17 @@ def servicio_perfil_estacion(request, servicio_id, establecimiento_id,tipo):
     nuevo_registro.save()
      
     return redirect('establecimiento', id=establecimiento_id, tipo=tipo)
+
+########################################################################################################################################################
+@login_required
+def salir_comunidad(request, comunidad_id, pag_redirect ):
+    # Crear el nuevo registro
+    perfil = Perfil.objects.get(user=request.user)
+    salida = get_object_or_404(ComunidadPerfil,comunidad_id=comunidad_id,perfil=perfil)  
+    salida.delete()
+     
+    return redirect('listar_comunidades_perfil')
+
 ########################################################################################################################################################
 @login_required
 def eliminar_servicio_perfil_estacion(request, servicio_id, establecimiento_id,tipo):

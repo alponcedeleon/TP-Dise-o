@@ -34,8 +34,9 @@ urlpatterns = [
     path('crear-comunidad/', views.crear_solicitud_comunidad, name='crear_comunidad'),
     path('mis-comunidades/', views.listar_comunidades_perfil, name='listar_comunidades_perfil'),
     path('administrar-comunidad/<int:id_comunidad>', views.administrar_comunidad, name='administrar_comunidad'),
-    path('eliminar_miembro/', views.eliminar_miembro, name='eliminar_miembro'),
-    path('designar_admin/', views.designar_admin, name='designar_admin'),
+    path('eliminar_miembro/<int:perfil_id>/<int:comunidad_id>/', views.eliminar_miembro, name='eliminar_miembro'),
+    path('designar_admin/<int:perfil_id>/<int:comunidad_id>/', views.designar_admin, name='designar_admin'),
+    path('sacar_admin/<int:perfil_id>/<int:comunidad_id>/', views.sacar_admin, name='sacar_admin'),
     path('entidad/<int:id>/<str:tipo>/',views.entidad, name = "entidad"),
     path('establecimiento/<int:id>/<str:tipo>/',views.establecimiento, name = "establecimiento"),
     path('servicio-perfil-estacion/<int:servicio_id>/<int:establecimiento_id>/<str:tipo>/', views.servicio_perfil_estacion, name='servicio_perfil_estacion'),
@@ -43,6 +44,7 @@ urlpatterns = [
     path('process-location/', views.process_location, name='process_location'),
     path('eliminar_servicio_perfil_estacion/<int:servicio_id>/<int:establecimiento_id>/<str:tipo>/', views.eliminar_servicio_perfil_estacion, name='eliminar_servicio_perfil_estacion'),
     path('cargar-datos/', views.cargar_datos_desde_csv, name='cargar_datos'),
+    path('salir_comunidad/<int:comunidad_id>/<str:pag_redirect>/', views.salir_comunidad, name='salir_comunidad'),
 ]
  
 if settings.DEBUG:

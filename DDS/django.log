@@ -2115,3 +2115,223 @@ C:\Users\alejo\Desktop\TPA-git\TP-Dise-o\DDS\Aplicaciones\Monitoreo\admin.py cha
 Watching for file changes with StatReloader
 C:\Users\alejo\Desktop\TPA-git\TP-Dise-o\DDS\Aplicaciones\Monitoreo\admin.py changed, reloading.
 Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Not Found: /establecimiento/4/estacion/profile_pics/San_Pedrito.jpg
+Not Found: /establecimiento/4/estacion/images/logo-alt.png
+Not Found: /establecimiento/4/estacion/profile_pics/San_Pedrito.jpg
+Not Found: /establecimiento/4/estacion/images/logo-alt.png
+Not Found: /establecimiento/4/estacion/images/logo-alt.png
+Not Found: /establecimiento/4/estacion/profile_pics/San_Pedrito.jpg
+Not Found: /establecimiento/4/estacion/images/logo-alt.png
+Not Found: /establecimiento/4/estacion/profile_pics/San_Pedrito.jpg
+Not Found: /establecimiento/4/estacion/profile_pics/San_Pedrito.jpg
+Not Found: /establecimiento/4/estacion/images/logo-alt.png
+Watching for file changes with StatReloader
+Starting new HTTPS connection (1): apis.datos.gob.ar:443
+https://apis.datos.gob.ar:443 "GET /georef/api/provincias?campos=nombre&max=1000 HTTP/1.1" 200 None
+Starting new HTTPS connection (1): apis.datos.gob.ar:443
+https://apis.datos.gob.ar:443 "GET /georef/api/provincias?campos=nombre&max=1000 HTTP/1.1" 200 None
+Starting new HTTPS connection (1): apis.datos.gob.ar:443
+https://apis.datos.gob.ar:443 "GET /georef/api/provincias?campos=nombre&max=1000 HTTP/1.1" 200 None
+Starting new HTTPS connection (1): apis.datos.gob.ar:443
+https://apis.datos.gob.ar:443 "GET /georef/api/provincias?campos=nombre&max=1000 HTTP/1.1" 200 None
+Starting new HTTPS connection (1): apis.datos.gob.ar:443
+https://apis.datos.gob.ar:443 "GET /georef/api/provincias?campos=nombre&max=1000 HTTP/1.1" 200 None
+Starting new HTTPS connection (1): apis.datos.gob.ar:443
+https://apis.datos.gob.ar:443 "GET /georef/api/provincias?campos=nombre&max=1000 HTTP/1.1" 200 None
+Starting new HTTPS connection (1): apis.datos.gob.ar:443
+https://apis.datos.gob.ar:443 "GET /georef/api/provincias?campos=nombre&max=1000 HTTP/1.1" 200 None
+C:\Users\alejo\Desktop\TPA-git\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\alejo\Desktop\TPA-git\TP-Dise-o\DDS\DDS\urls.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\alejo\Desktop\TPA-git\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\alejo\Desktop\TPA-git\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /salir_comunidad/1/mis_comunidades/
+Traceback (most recent call last):
+  File "C:\Users\alejo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alejo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alejo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alejo\Desktop\TPA-git\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py", line 457, in salir_comunidad
+    return redirect('mis_comunidades')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alejo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\shortcuts.py", line 48, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alejo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\shortcuts.py", line 179, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alejo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alejo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\urls\resolvers.py", line 848, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'mis_comunidades' not found. 'mis_comunidades' is not a valid view function or pattern name.
+C:\Users\alejo\Desktop\TPA-git\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\alejo\Desktop\TPA-git\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\alejo\Desktop\TPA-git\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\alejo\Desktop\TPA-git\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\alejo\Desktop\TPA-git\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\alejo\Desktop\TPA-git\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\alejo\Desktop\TPA-git\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\alejo\Desktop\TPA-git\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\alejo\Desktop\TPA-git\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\alejo\Desktop\TPA-git\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\alejo\Desktop\TPA-git\TP-Dise-o\DDS\DDS\urls.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\alejo\Desktop\TPA-git\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\alejo\Desktop\TPA-git\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\alejo\Desktop\TPA-git\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /administrar-comunidad/1
+Traceback (most recent call last):
+  File "C:\Users\alejo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alejo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alejo\Desktop\TPA-git\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py", line 337, in administrar_comunidad
+    return render(request, 'administrar_comunidad.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alejo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alejo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alejo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alejo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alejo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alejo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alejo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alejo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alejo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\defaulttags.py", line 478, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alejo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alejo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\urls\resolvers.py", line 848, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'eliminar_miembro' with no arguments not found. 1 pattern(s) tried: ['eliminar_miembro/(?P<perfil_id>[0-9]+)/(?P<comunidad_id>[0-9]+)/\\Z']
+Internal Server Error: /administrar-comunidad/1
+Traceback (most recent call last):
+  File "C:\Users\alejo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alejo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alejo\Desktop\TPA-git\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py", line 337, in administrar_comunidad
+    return render(request, 'administrar_comunidad.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alejo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alejo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alejo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alejo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alejo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alejo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alejo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alejo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alejo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\defaulttags.py", line 478, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alejo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alejo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\urls\resolvers.py", line 848, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'eliminar_miembro' with no arguments not found. 1 pattern(s) tried: ['eliminar_miembro/(?P<perfil_id>[0-9]+)/(?P<comunidad_id>[0-9]+)/\\Z']
+Internal Server Error: /administrar-comunidad/1
+Traceback (most recent call last):
+  File "C:\Users\alejo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alejo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alejo\Desktop\TPA-git\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py", line 329, in administrar_comunidad
+    'form': form,
+           ^^^^
+UnboundLocalError: cannot access local variable 'form' where it is not associated with a value
+C:\Users\alejo\Desktop\TPA-git\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /administrar-comunidad/1
+Traceback (most recent call last):
+  File "C:\Users\alejo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alejo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alejo\Desktop\TPA-git\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py", line 329, in administrar_comunidad
+    'form': form,
+           ^^^^
+UnboundLocalError: cannot access local variable 'form' where it is not associated with a value
+C:\Users\alejo\Desktop\TPA-git\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /eliminar_miembro/3/1/
+Starting new HTTPS connection (1): apis.datos.gob.ar:443
+https://apis.datos.gob.ar:443 "GET /georef/api/provincias?campos=nombre&max=1000 HTTP/1.1" 200 None
+C:\Users\alejo\Desktop\TPA-git\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\alejo\Desktop\TPA-git\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\alejo\Desktop\TPA-git\TP-Dise-o\DDS\DDS\urls.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\alejo\Desktop\TPA-git\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\alejo\Desktop\TPA-git\TP-Dise-o\DDS\DDS\urls.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\alejo\Desktop\TPA-git\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
