@@ -3,6 +3,7 @@ from django.contrib.auth.models import Group
 from .models import Estacion, LineaTransporte, Servicio, Categoria, Comunidad, Perfil, ComunidadPerfil, Sucursal, Organizacion, Establecimiento, OrganismoExterno, PrestacionServicioEstacion,PrestacionServicioSucursal,ServicioPerfilEstacion,ServicioPerfilSucursal, SolicitudComunidad
 from django import forms
 import requests 
+from django.core.mail import send_mail
 ##################################################################################
 class CustomChoiceField(forms.ChoiceField):
     def validate(self, value):
@@ -51,17 +52,41 @@ class SucursalAdmin(admin.ModelAdmin):
 
 def aprobar_solicitud(modeladmin,request,queryset):
     for solicitud in queryset:
-        # Crear un nuevo objeto Comunidad basado en la solicitud
+        
         comunidad = Comunidad.objects.create(nombre=solicitud.nombre, descripcion=solicitud.descripcion)
         comunidad_perfil = ComunidadPerfil.objects.create(comunidad=comunidad, perfil=solicitud.perfil, esAdmin=True, observador=False)
         usuario = solicitud.perfil.user
-        nuevo_grupo = Group.objects.get(name='ComunidadAdmin')  # Reemplaza 'nuevo_grupo' con el nombre del grupo al que deseas agregar al usuario
+        usuario_mail=solicitud.perfil
+        nuevo_grupo = Group.objects.get(name='ComunidadAdmin')  
         usuario.groups.set([nuevo_grupo])       
-        # Eliminar la solicitud actual
+        send_mail(
+                    'Solicitud de Comunidad Aprobada',
+                    f'Hola {usuario_mail.nombre},\n\nTe informamos que tu solicitud para la creacion de la comunidad "{solicitud.nombre}" ha sido aprobada. Ahora al entrar al sistema obtienes acceso al panel de administración de tu comunidad ¡Felicitaciones!\n\nAtentamente,\nEl equipo de nuestra aplicación',
+                   'alejo.poncedleon@gmail.com',  
+                    [f'{usuario_mail.email}'],  
+                   fail_silently=False,
+                )
         solicitud.delete()
 
+def rechazar_solicitud(modeladmin,request,queryset):
+    for solicitud in queryset:
+                
+        usuario = solicitud.perfil        
+        send_mail(
+                    'Solicitud de Comunidad Rechazada',
+                    f'Hola {usuario.nombre},\n\nTe informamos que tu solicitud para la creacion de la comunidad "{solicitud.nombre}" ha sido rechazada.\n\nAtentamente,\nEl equipo de nuestra aplicación',
+                   'alejo.poncedleon@gmail.com',  
+                    [f'{usuario.email}'],  
+                   fail_silently=False,
+                )        
+        solicitud.delete()
+
+
+
 class SolicitudComunidadAdmin(admin.ModelAdmin):
-    actions = [aprobar_solicitud]
+    actions = [aprobar_solicitud,rechazar_solicitud]
+
+
 
 admin.site.register(SolicitudComunidad,SolicitudComunidadAdmin)
 admin.site.register(Estacion, EstacionAdmin)

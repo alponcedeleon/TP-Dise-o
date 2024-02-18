@@ -306,7 +306,7 @@ def crear_solicitud_comunidad(request):
     else:
         form = SolicitudComunidadForm()
     return render(request, 'crear_comunidad.html', {'form': form})
-
+########################################################################################################################################################
 
 def administrar_comunidad(request, id_comunidad):
     if request.method == 'POST':
@@ -325,7 +325,7 @@ def administrar_comunidad(request, id_comunidad):
     form = FormularioServicio()
 
     return render(request, 'administrar_comunidad.html', context)
-
+########################################################################################################################################################
 def eliminar_miembro(request):
     miembro_id = request.POST.get('miembro_id')
     try:
@@ -334,7 +334,7 @@ def eliminar_miembro(request):
         return JsonResponse({'success': True})
     except ComunidadPerfil.DoesNotExist:
         return JsonResponse({'success': False, 'error': 'Miembro does not exist'}, status=400)
-
+########################################################################################################################################################
 def designar_admin(request):
     miembro_id = request.POST.get('miembro_id')
 
