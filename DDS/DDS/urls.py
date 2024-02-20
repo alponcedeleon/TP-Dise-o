@@ -40,6 +40,7 @@ urlpatterns = [
     path('entidad/<int:id>/<str:tipo>/',views.entidad, name = "entidad"),
     path('establecimiento/<int:id>/<str:tipo>/',views.establecimiento, name = "establecimiento"),
     path('servicio-perfil-estacion/<int:servicio_id>/<int:establecimiento_id>/<str:tipo>/', views.servicio_perfil_estacion, name='servicio_perfil_estacion'),
+    path('reportar_incidente/<int:servicio_id>/<int:establecimiento_id>/<str:comunidades_nombres>/<str:tipo>/', views.reportar_incidente, name='reportar_incidente'),
     path('get-location/', views.get_location, name='get_location'),
     path('process-location/', views.process_location, name='process_location'),
     path('eliminar_servicio_perfil_estacion/<int:servicio_id>/<int:establecimiento_id>/<str:tipo>/', views.eliminar_servicio_perfil_estacion, name='eliminar_servicio_perfil_estacion'),

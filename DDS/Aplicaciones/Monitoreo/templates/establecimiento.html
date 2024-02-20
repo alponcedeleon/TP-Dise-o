@@ -58,13 +58,16 @@
 <section>
 <div class="container">
   <h2>Servicios disponibles</h2>
-  <table class="table" >
+  <table class="table table-nowrap" >
       <thead>
           <tr>
               <th style="width: 50%;">Nombre</th>
               
               <th style="text-align: center; width: 30%;">Estado</th> 
               <th style="text-align: center;">Suscripción</th>
+              {% if comunidades %}
+              <th style="text-align: center;">Reportar Incidente</th>
+              {% endif %}
           </tr>
       </thead>
       <tbody>
@@ -85,13 +88,22 @@
               <td style="text-align: center;">                
                 <a href="{% url 'eliminar_servicio_perfil_estacion' servicio_id=detalle.servicio.id  establecimiento_id=establecimiento.id tipo=tipo %} " class="btn btn-primary " style="background-color: red;">Desuscribirse</a>
               </td>
-                {% else %}
-                <td style="text-align: center;">
+              {% else %}
+              <td style="text-align: center;">
                 <a href="{% url 'servicio_perfil_estacion' servicio_id=detalle.servicio.id  establecimiento_id=establecimiento.id tipo=tipo %} " class="btn btn-primary" style="background-color: green;">Suscribirse</a>
               </td>
-                {% endif %}
+              {% endif %}
               
-               
+              {% if comunidades and detalle.servicio.nombre not in incidentes %}
+              </td>
+                <td style="text-align: center;">
+                <a href="{% url 'reportar_incidente' servicio_id=detalle.servicio.id establecimiento_id=establecimiento.id comunidades_nombres=comunidades_nombres tipo=tipo %} " class="btn btn-primary" style="background-color: red;">Reportar Incidente</a>
+              </td>
+              {% else %}
+                <td style="text-align: center;text-wrap: balance;">
+                  Este servicio ya tiene reportado un incidente en alguna de tus comunidades
+                </td>
+              {% endif %}         
               
           </tr>
           {% endfor %}

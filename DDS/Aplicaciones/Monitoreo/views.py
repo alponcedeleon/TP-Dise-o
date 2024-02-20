@@ -21,6 +21,10 @@ from django.http import JsonResponse
 
 from .forms import CSVUploadForm
 
+import pymongo
+from django.conf import settings
+from datetime import datetime
+
 @login_required
 def get_location(request):
     return render(request, 'location.html')
@@ -469,6 +473,57 @@ def servicio_perfil_estacion(request, servicio_id, establecimiento_id,tipo):
      
     return redirect('establecimiento', id=establecimiento_id, tipo=tipo)
 
+@login_required
+def reportar_incidente(request, servicio_id, establecimiento_id, comunidades_nombres, tipo):
+    my_client = pymongo.MongoClient(settings.DB_NAME)
+    # First define the database name
+    dbname = my_client['dds2023']
+    # Now get/create collection name (remember that you will see the database in your mongodb cluster only after you create a collection)
+    collection_name = dbname["incidente"]
+    # Crear el nuevo registro
+    perfil = Perfil.objects.get(user=request.user)
+    lista_comunidades = comunidades_nombres.split('-') 
+    print(servicio_id)
+    print(establecimiento_id)
+    print(comunidades_nombres)
+    print(tipo)
+    
+    establecimiento = None
+    nombre_establecimiento= None
+    nuevo_registro = None
+    if tipo == 'estacion':
+        establecimiento = Estacion.objects.get(id=establecimiento_id)
+        nombre_establecimiento = establecimiento.nombre
+
+    else:
+        establecimiento = Sucursal.objects.get(id=establecimiento_id)
+        nombre_establecimiento = establecimiento.nombre
+        
+    servicio = Servicio.objects.get(id=servicio_id)
+    fecha_actual = datetime.now()
+    fecha_formateada = fecha_actual.strftime("%d/%m/%Y %H:%M")
+    incidentes = [] 
+    
+    for comunidad in lista_comunidades:
+        incidente = {
+            "incidenteId": "0000001",
+            "establecimiento": nombre_establecimiento,
+            "servicio" : servicio.nombre,
+            "comunidad" : comunidad,
+            "departamento" : establecimiento.departamento,
+            "provincia": establecimiento.provincia,
+            "usuarioReportador" : perfil.id,
+            "solucionado" : False,
+            "fechaCreado" : fecha_formateada,
+            "fechaCierre" : None
+        }
+        incidentes.append(incidente)
+        print(incidente)   
+    
+    collection_name.insert_many(incidentes)
+     
+    return redirect('establecimiento', id=establecimiento_id, tipo=tipo)
+
 ########################################################################################################################################################
 @login_required
 def salir_comunidad(request, comunidad_id, pag_redirect,tipo ):
@@ -523,6 +578,7 @@ def establecimiento(request,id,tipo):
     perfil = Perfil.objects.get(user=request.user)
     establecimiento=None
     detalles_servicios = []
+    entidad=None
     if tipo == 'estacion':
         establecimiento = get_object_or_404(Estacion,id=id)
         prestaciones_servicio = PrestacionServicioEstacion.objects.filter(estacion=establecimiento)
@@ -541,11 +597,44 @@ def establecimiento(request,id,tipo):
             detalles_servicios.append({'servicio': servicio, 'actividad': actividad, 'suscrito': suscrito})
     # Obtener grupos a los que pertenece el usuario
     group_names = requestGroups(request)
+    
+    comunidades = ComunidadPerfil.objects.filter(perfil=perfil)
+    for comunidad in comunidades:
+        print(comunidad.comunidad.nombre)
+    nombres_comunidades = [comunidad.comunidad.nombre for comunidad in comunidades]
+    
+    my_client = pymongo.MongoClient(settings.DB_NAME)
+
+    # First define the database name
+    dbname = my_client['dds2023']
+
+    # Now get/create collection name (remember that you will see the database in your mongodb cluster only after you create a collection)
+    collection_name = dbname["incidente"]
+    
+    incidentes = []
+
+    for servicio in detalles_servicios:
+        incidete = []
+        incidente_cursor = collection_name.find({"establecimiento": establecimiento.nombre, "servicio": servicio["servicio"].nombre, "comunidad": {"$in": nombres_comunidades} })
+        incidete.extend(list(incidente_cursor)) 
+        if incidete:
+            logging.info("este entra")
+            incidentes.append(incidete[0]["servicio"])  # Convertir el cursor a una lista de documentos y extender la lista de incidentes
+
+    for incidente in incidentes:
+        logging.info(incidente)
+        
+    comunidades_nombres = '-'.join(comunidad.comunidad.nombre for comunidad in comunidades)
+
+
     context = {
         'establecimiento': establecimiento,
         'detalles_servicios': detalles_servicios,  
         'tipo':tipo,
-        'groups':group_names,      
+        'groups':group_names,   
+        'comunidades':comunidades,  
+        'incidentes':incidentes,
+        'comunidades_nombres':comunidades_nombres
     }
     
     return render(request, 'establecimiento.html', context)
@@ -596,8 +685,7 @@ def perfil_usuario(request):
 
     return render(request, 'perfil.html', context)
 ########################################################################################################################################################
-import pymongo
-from django.conf import settings
+
 my_client = pymongo.MongoClient(settings.DB_NAME)
 
 # First define the database name
@@ -606,36 +694,85 @@ dbname = my_client['dds2023']
 # Now get/create collection name (remember that you will see the database in your mongodb cluster only after you create a collection)
 collection_name = dbname["incidente"]
 
-#let's create two documents
+""" #let's create two documents
 incidente = {
     "incidenteId": "0000001",
-    "servicio" : "Baño hombres",
+    "establecimiento": "Carrefour Flores",
+    "servicio" : "Baño hombres A",
     "comunidad" : "Silla de rueda",
     "departamento" : "test1",
     "provincia": "test1",
     "usuarioReportador" : "2",
-    "solucionado" : "False",
-    "fechaCreado" : "07/01/2024 13:59",
-    "fechaCierre" : "",
+    "solucionado" : True,
+    "fechaCreado" : datetime.strptime("07/01/2024 13:59", "%d/%m/%Y %H:%M"),
+    "fechaCierre" : datetime.strptime("07/01/2024 14:59", "%d/%m/%Y %H:%M"),
 }
 incidente2 = {
     "incidenteId": "0000002",
-    "servicio" : "Baño mujeres",
+    "establecimiento": "Carrefour Flores",
+    "servicio" : "Baño hombres A",
+    "comunidad" : "Silla de rueda",
+    "departamento" : "test1",
+    "provincia": "test1",
+    "usuarioReportador" : "2",
+    "solucionado" : True,
+    "fechaCreado" : datetime.strptime("12/02/2024 13:59", "%d/%m/%Y %H:%M"),
+    "fechaCierre" : datetime.strptime("12/02/2024 15:59", "%d/%m/%Y %H:%M"),
+}
+incidente3 = {
+    "incidenteId": "0000003",
+    "establecimiento": "San Pedrito",
+    "servicio" : "Baño mujeres B",
     "comunidad" : "Silla de rueda",
     "departamento" : "test2",
     "provincia": "test2",
     "usuarioReportador" : "2",
-    "solucionado" : "False",
-    "fechaCreado" : "07/01/2024 13:59",
-    "fechaCierre" : "",
+    "solucionado" : True,
+    "fechaCreado" : datetime.strptime("10/02/2024 13:59", "%d/%m/%Y %H:%M"),
+    "fechaCierre" : datetime.strptime("11/02/2024 18:59", "%d/%m/%Y %H:%M"),
 }
-
-collection_name.insert_many([incidente,incidente2])
+incidente4 = {
+    "incidenteId": "0000004",
+    "establecimiento": "San Pedrito",
+    "servicio" : "Baño mujeres B",
+    "comunidad" : "Silla de rueda",
+    "departamento" : "test2",
+    "provincia": "test2",
+    "usuarioReportador" : "2",
+    "solucionado" : True,
+    "fechaCreado" : datetime.strptime("10/02/2024 14:59", "%d/%m/%Y %H:%M"),
+    "fechaCierre" : datetime.strptime("11/02/2024 18:59", "%d/%m/%Y %H:%M"),
+}
+incidente5 = {
+    "incidenteId": "0000005",
+    "establecimiento": "San Pedrito",
+    "servicio" : "Baño mujeres C",
+    "comunidad" : "Silla de rueda",
+    "departamento" : "test2",
+    "provincia": "test2",
+    "usuarioReportador" : "2",
+    "solucionado" : True,
+    "fechaCreado" : datetime.strptime("09/02/2024 13:59", "%d/%m/%Y %H:%M"),
+    "fechaCierre" : datetime.strptime("10/02/2024 14:59", "%d/%m/%Y %H:%M"),
+}
+incidente6 = {
+    "incidenteId": "0000006",
+    "establecimiento": "San Pedrito",
+    "servicio" : "Baño mujeres C",
+    "comunidad" : "Silla de rueda",
+    "departamento" : "test2",
+    "provincia": "test2",
+    "usuarioReportador" : "2",
+    "solucionado" : True,
+    "fechaCreado" : datetime.strptime("11/02/2024 13:59", "%d/%m/%Y %H:%M"),
+    "fechaCierre" : datetime.strptime("12/02/2024 14:59", "%d/%m/%Y %H:%M"),
+}
+collection_name.insert_many([incidente,incidente2,incidente3,incidente4,incidente5,incidente6]) """
 
 med_details = collection_name.find({})
 
 for r in med_details:
-    print(r["departamento"])
+    print(r["servicio"])
 
-update_data = collection_name.update_one({'incidenteId':'0000001'}, {'$set':{'departamento':'test3'}})
+""" update_data = collection_name.update_one({'incidenteId':'0000001'}, {'$set':{'departamento':'test3'}}) """
 
