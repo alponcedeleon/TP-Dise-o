@@ -5598,3 +5598,1959 @@ Baño Masculino
 Baño Femenino
 Not Found: /establecimiento/4/estacion/profile_pics/San_Pedrito.jpg
 Not Found: /establecimiento/4/estacion/images/logo-alt.png
+Watching for file changes with StatReloader
+Starting new HTTPS connection (1): apis.datos.gob.ar:443
+https://apis.datos.gob.ar:443 "GET /georef/api/provincias?campos=nombre&max=1000 HTTP/1.1" 200 None
+Not Found: /favicon.ico
+Starting new HTTPS connection (1): apis.datos.gob.ar:443
+https://apis.datos.gob.ar:443 "GET /georef/api/provincias?campos=nombre&max=1000 HTTP/1.1" 200 None
+Starting new HTTPS connection (1): apis.datos.gob.ar:443
+https://apis.datos.gob.ar:443 "GET /georef/api/provincias?campos=nombre&max=1000 HTTP/1.1" 200 None
+Starting new HTTPS connection (1): apis.datos.gob.ar:443
+https://apis.datos.gob.ar:443 "GET /georef/api/provincias?campos=nombre&max=1000 HTTP/1.1" 200 None
+Starting new HTTPS connection (1): apis.datos.gob.ar:443
+https://apis.datos.gob.ar:443 "GET /georef/api/provincias?campos=nombre&max=1000 HTTP/1.1" 200 None
+C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+Starting new HTTPS connection (1): apis.datos.gob.ar:443
+https://apis.datos.gob.ar:443 "GET /georef/api/provincias?campos=nombre&max=1000 HTTP/1.1" 200 None
+Not Found: /media/profile_pics/subte_linea_A.jpg
+Not Found: /entidad/1/lineatransporte/images/logo-alt.png
+este entra
+este entra
+este entra
+Baño Masculino
+Baño Femenino
+Ascensor
+Not Found: /establecimiento/4/estacion/profile_pics/San_Pedrito.jpg
+Not Found: /establecimiento/4/estacion/images/logo-alt.png
+Not Found: /entidad/1/lineatransporte/images/logo-alt.png
+Not Found: /media/profile_pics/subte_linea_A.jpg
+este entra
+este entra
+este entra
+Baño Masculino
+Baño Femenino
+Ascensor
+Not Found: /establecimiento/4/estacion/profile_pics/San_Pedrito.jpg
+Not Found: /establecimiento/4/estacion/images/logo-alt.png
+C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+este entra
+este entra
+este entra
+Baño Masculino
+Baño Femenino
+Ascensor
+Not Found: /establecimiento/4/estacion/images/logo-alt.png
+Not Found: /establecimiento/4/estacion/profile_pics/San_Pedrito.jpg
+este entra
+este entra
+este entra
+Baño Masculino
+Baño Femenino
+Ascensor
+Not Found: /establecimiento/4/estacion/profile_pics/San_Pedrito.jpg
+Not Found: /establecimiento/4/estacion/images/logo-alt.png
+Not Found: /establecimiento/5/estacion/images/logo-alt.png
+Not Found: /establecimiento/6/estacion/images/logo-alt.png
+este entra
+este entra
+este entra
+Baño Masculino
+Baño Femenino
+Ascensor
+Not Found: /establecimiento/4/estacion/profile_pics/San_Pedrito.jpg
+Not Found: /establecimiento/4/estacion/images/logo-alt.png
+C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /mis-comunidades/
+Traceback (most recent call last):
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py", line 300, in listar_comunidades_perfil
+    incidentes_count = base_incidentes.count_documents({"comunidad": comunidad.nombre})
+                                                                     ^^^^^^^^^^^^^^^^
+AttributeError: 'ComunidadPerfil' object has no attribute 'nombre'
+C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\DDS\urls.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /mis-comunidades/
+Traceback (most recent call last):
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py", line 319, in listar_comunidades_perfil
+    return render(request, 'mis_comunidades.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 325, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 241, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 478, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 848, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'listar_incidentes_comunidades' with keyword arguments '{'comunidad_id': 17}' not found. 1 pattern(s) tried: ['comunidad/(?P<id_comunidad>[0-9]+)\\Z']
+Internal Server Error: /mis-comunidades/
+Traceback (most recent call last):
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py", line 319, in listar_comunidades_perfil
+    return render(request, 'mis_comunidades.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 325, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 241, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 478, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 848, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'listar_incidentes_comunidades' with keyword arguments '{'comunidad_id': 17}' not found. 1 pattern(s) tried: ['comunidad/(?P<id_comunidad>[0-9]+)\\Z']
+Internal Server Error: /mis-comunidades/
+Traceback (most recent call last):
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py", line 319, in listar_comunidades_perfil
+    return render(request, 'mis_comunidades.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 325, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 241, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 478, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 848, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'listar_incidentes_comunidades' with keyword arguments '{'comunidad_id': 17}' not found. 1 pattern(s) tried: ['comunidad/(?P<id_comunidad>[0-9]+)\\Z']
+Internal Server Error: /mis-comunidades/
+Traceback (most recent call last):
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py", line 319, in listar_comunidades_perfil
+    return render(request, 'mis_comunidades.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 325, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 241, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 478, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 848, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'comunidad' not found. 'comunidad' is not a valid view function or pattern name.
+Internal Server Error: /mis-comunidades/
+Traceback (most recent call last):
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py", line 319, in listar_comunidades_perfil
+    return render(request, 'mis_comunidades.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 325, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 241, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 478, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 848, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'listar_incidentes_comunidades' with keyword arguments '{'comunidad_id': 17}' not found. 1 pattern(s) tried: ['comunidad/(?P<id_comunidad>[0-9]+)\\Z']
+C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /comunidad/17
+Traceback (most recent call last):
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py", line 328, in listar_incidentes_comunidades
+    incidente_cursor = base_incidentes.find({"comunidad": comunidad.comunidad.nombre})
+                                                          ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'QuerySet' object has no attribute 'comunidad'
+C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /comunidad/17
+Traceback (most recent call last):
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py", line 328, in listar_incidentes_comunidades
+    incidente_cursor = base_incidentes.find({"comunidad": comunidad.nombre})
+                                                          ^^^^^^^^^^^^^^^^
+AttributeError: 'QuerySet' object has no attribute 'nombre'
+C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /comunidad/17
+Traceback (most recent call last):
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py", line 328, in listar_incidentes_comunidades
+    incidente_cursor = base_incidentes.find({"comunidad": comunidad["nombre"]})
+                                                          ~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 418, in __getitem__
+    raise TypeError(
+TypeError: QuerySet indices must be integers or slices, not str.
+C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /comunidad/17
+Traceback (most recent call last):
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py", line 329, in listar_incidentes_comunidades
+    incidente_cursor = base_incidentes.find({"comunidad": comunidad.nombre})
+                                                          ^^^^^^^^^^^^^^^^
+AttributeError: 'QuerySet' object has no attribute 'nombre'
+C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+{'_id': ObjectId('65d2c92fe6ae2d0cdbf3944f'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Masculino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 00:21', 'fechaCierre': None}
+{'_id': ObjectId('65d3e0dadf0cdee23fd8c1ec'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Femenino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 20:14', 'fechaCierre': None}
+Internal Server Error: /comunidad/17
+Traceback (most recent call last):
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py", line 340, in listar_incidentes_comunidades
+    'comunidades_admin': comunidades_admin,
+                         ^^^^^^^^^^^^^^^^^
+NameError: name 'comunidades_admin' is not defined
+C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+{'_id': ObjectId('65d2c92fe6ae2d0cdbf3944f'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Masculino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 00:21', 'fechaCierre': None}
+{'_id': ObjectId('65d3e0dadf0cdee23fd8c1ec'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Femenino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 20:14', 'fechaCierre': None}
+{'_id': ObjectId('65d2c92fe6ae2d0cdbf3944f'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Masculino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 00:21', 'fechaCierre': None}
+{'_id': ObjectId('65d3e0dadf0cdee23fd8c1ec'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Femenino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 20:14', 'fechaCierre': None}
+C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+{'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Masculino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 00:21', 'fechaCierre': None}
+{'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Femenino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 20:14', 'fechaCierre': None}
+<MultiValueDict: {'establecimientos-archivo_csv': [<InMemoryUploadedFile: carga establecimientos.csv (text/csv)>], 'servicios-archivo_csv': [<InMemoryUploadedFile: carga servicios.csv (text/csv)>]}>
+Starting new HTTPS connection (1): apis.datos.gob.ar:443
+https://apis.datos.gob.ar:443 "GET /georef/api/ubicacion?lat=-34.60879198510493&lon=+-58.37148867053154 HTTP/1.1" 200 None
+Starting new HTTPS connection (1): apis.datos.gob.ar:443
+https://apis.datos.gob.ar:443 "GET /georef/api/ubicacion?lat=-34.60879198510493&lon=+-58.37148867053154 HTTP/1.1" 200 None
+[]
+asdasd
+asdasd
+<MultiValueDict: {'establecimientos-archivo_csv': [<InMemoryUploadedFile: carga establecimientos.csv (text/csv)>], 'servicios-archivo_csv': [<InMemoryUploadedFile: carga servicios.csv (text/csv)>]}>
+Starting new HTTPS connection (1): apis.datos.gob.ar:443
+https://apis.datos.gob.ar:443 "GET /georef/api/ubicacion?lat=-34.60879198510493&lon=+-58.37148867053154 HTTP/1.1" 200 None
+Starting new HTTPS connection (1): apis.datos.gob.ar:443
+https://apis.datos.gob.ar:443 "GET /georef/api/ubicacion?lat=-34.60879198510493&lon=+-58.37148867053154 HTTP/1.1" 200 None
+[]
+asdasd
+[{'establecimiento': 'Sucursal A', 'servicio': 'Baño Masculino', 'prestacion': 'No'}]
+[{'establecimiento': 'Sucursal A', 'servicio': 'Baño Masculino', 'prestacion': 'No'}, {'establecimiento': 'Sucursal A', 'servicio': 'Baño Femenino', 'prestacion': 'No'}]
+[{'establecimiento': 'Sucursal A', 'servicio': 'Baño Masculino', 'prestacion': 'No'}, {'establecimiento': 'Sucursal A', 'servicio': 'Baño Femenino', 'prestacion': 'No'}, {'establecimiento': 'Sucursal A', 'servicio': 'Escalera', 'prestacion': 'No'}]
+[{'establecimiento': 'Sucursal A', 'servicio': 'Baño Masculino', 'prestacion': 'No'}, {'establecimiento': 'Sucursal A', 'servicio': 'Baño Femenino', 'prestacion': 'No'}, {'establecimiento': 'Sucursal A', 'servicio': 'Escalera', 'prestacion': 'No'}, {'establecimiento': 'Sucursal A', 'servicio': 'Escalera Mecánica', 'prestacion': 'No'}]
+asdasd
+{'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Masculino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 00:21', 'fechaCierre': None}
+{'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Femenino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 20:14', 'fechaCierre': None}
+{'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Masculino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 00:21', 'fechaCierre': None}
+{'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Femenino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 20:14', 'fechaCierre': None}
+{'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Masculino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 00:21', 'fechaCierre': None}
+{'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Femenino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 20:14', 'fechaCierre': None}
+{'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Masculino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 00:21', 'fechaCierre': None}
+{'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Femenino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 20:14', 'fechaCierre': None}
+Internal Server Error: /comunidad/17
+Traceback (most recent call last):
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py", line 349, in listar_incidentes_comunidades
+    return render(request, 'incidentes_comunidad.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 241, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 478, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 848, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'listar_incidentes_comunidades' with keyword arguments '{'id_comunidad': ''}' not found. 1 pattern(s) tried: ['comunidad/(?P<id_comunidad>[0-9]+)\\Z']
+{'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Masculino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 00:21', 'fechaCierre': None}
+{'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Femenino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 20:14', 'fechaCierre': None}
+Internal Server Error: /comunidad/17
+Traceback (most recent call last):
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py", line 349, in listar_incidentes_comunidades
+    return render(request, 'incidentes_comunidad.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 241, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 478, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 848, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'listar_incidentes_comunidades' with no arguments not found. 1 pattern(s) tried: ['comunidad/(?P<id_comunidad>[0-9]+)\\Z']
+{'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Masculino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 00:21', 'fechaCierre': None}
+{'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Femenino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 20:14', 'fechaCierre': None}
+Internal Server Error: /comunidad/17
+Traceback (most recent call last):
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py", line 349, in listar_incidentes_comunidades
+    return render(request, 'incidentes_comunidad.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 241, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 478, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 848, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for '' not found. '' is not a valid view function or pattern name.
+{'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Masculino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 00:21', 'fechaCierre': None}
+{'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Femenino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 20:14', 'fechaCierre': None}
+Internal Server Error: /comunidad/17
+Traceback (most recent call last):
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py", line 349, in listar_incidentes_comunidades
+    return render(request, 'incidentes_comunidad.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 241, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 478, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 848, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'admin' not found. 'admin' is not a valid view function or pattern name.
+{'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Masculino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 00:21', 'fechaCierre': None}
+{'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Femenino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 20:14', 'fechaCierre': None}
+Internal Server Error: /comunidad/17
+Traceback (most recent call last):
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py", line 349, in listar_incidentes_comunidades
+    return render(request, 'incidentes_comunidad.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 241, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 478, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 848, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'home_view' not found. 'home_view' is not a valid view function or pattern name.
+{'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Masculino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 00:21', 'fechaCierre': None}
+{'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Femenino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 20:14', 'fechaCierre': None}
+{'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Masculino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 00:21', 'fechaCierre': None}
+{'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Femenino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 20:14', 'fechaCierre': None}
+{'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Masculino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 00:21', 'fechaCierre': None}
+{'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Femenino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 20:14', 'fechaCierre': None}
+{'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Masculino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 00:21', 'fechaCierre': None}
+{'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Femenino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 20:14', 'fechaCierre': None}
+{'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Masculino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 00:21', 'fechaCierre': None}
+{'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Femenino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 20:14', 'fechaCierre': None}
+Internal Server Error: /mis-comunidades/
+Traceback (most recent call last):
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py", line 319, in listar_comunidades_perfil
+    return render(request, 'mis_comunidades.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 325, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 241, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 478, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 848, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'listar_incidentes_comunidades' with keyword arguments '{'comunidad_id': 1}' not found. 1 pattern(s) tried: ['comunidad/(?P<id_comunidad>[0-9]+)\\Z']
+{'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Masculino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 00:21', 'fechaCierre': None}
+{'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Femenino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 20:14', 'fechaCierre': None}
+{'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Masculino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 00:21', 'fechaCierre': None}
+{'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Femenino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 20:14', 'fechaCierre': None}
+{'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Masculino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 00:21', 'fechaCierre': None}
+{'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Femenino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 20:14', 'fechaCierre': None}
+C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\DDS\urls.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\DDS\urls.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+{'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Masculino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 00:21', 'fechaCierre': None}
+{'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Femenino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 20:14', 'fechaCierre': None}
+Internal Server Error: /comunidad/17
+Traceback (most recent call last):
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 811, in __init__
+    self.literal = float(var)
+                   ^^^^^^^^^^
+ValueError: could not convert string to float: 'incidente._id'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 827, in __init__
+    self.literal = mark_safe(unescape_string_literal(var))
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\functional.py", line 231, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\text.py", line 430, in unescape_string_literal
+    raise ValueError("Not a string literal: %r" % s)
+ValueError: Not a string literal: 'incidente._id'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py", line 350, in listar_incidentes_comunidades
+    return render(request, 'incidentes_comunidad.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 860, in do_for
+    nodelist_loop = parser.parse(
+                    ^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 1394, in url
+    kwargs[name] = parser.compile_filter(value)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 597, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 685, in __init__
+    var_obj = Variable(var)
+              ^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 832, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Variables and attributes may not begin with underscores: 'incidente._id'
+C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+{'_id': ObjectId('65d2c92fe6ae2d0cdbf3944f'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Masculino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 00:21', 'fechaCierre': None}
+{'_id': ObjectId('65d3e0dadf0cdee23fd8c1ec'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Femenino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 20:14', 'fechaCierre': None}
+Internal Server Error: /comunidad/17
+Traceback (most recent call last):
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 811, in __init__
+    self.literal = float(var)
+                   ^^^^^^^^^^
+ValueError: could not convert string to float: 'incidente._id'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 827, in __init__
+    self.literal = mark_safe(unescape_string_literal(var))
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\functional.py", line 231, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\text.py", line 430, in unescape_string_literal
+    raise ValueError("Not a string literal: %r" % s)
+ValueError: Not a string literal: 'incidente._id'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py", line 347, in listar_incidentes_comunidades
+    return render(request, 'incidentes_comunidad.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 860, in do_for
+    nodelist_loop = parser.parse(
+                    ^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 1394, in url
+    kwargs[name] = parser.compile_filter(value)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 597, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 685, in __init__
+    var_obj = Variable(var)
+              ^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 832, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Variables and attributes may not begin with underscores: 'incidente._id'
+{'_id': ObjectId('65d2c92fe6ae2d0cdbf3944f'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Masculino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 00:21', 'fechaCierre': None}
+{'_id': ObjectId('65d3e0dadf0cdee23fd8c1ec'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Femenino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 20:14', 'fechaCierre': None}
+Internal Server Error: /comunidad/17
+Traceback (most recent call last):
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 811, in __init__
+    self.literal = float(var)
+                   ^^^^^^^^^^
+ValueError: could not convert string to float: 'incidente._id'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 827, in __init__
+    self.literal = mark_safe(unescape_string_literal(var))
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\functional.py", line 231, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\text.py", line 430, in unescape_string_literal
+    raise ValueError("Not a string literal: %r" % s)
+ValueError: Not a string literal: 'incidente._id'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py", line 347, in listar_incidentes_comunidades
+    return render(request, 'incidentes_comunidad.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 860, in do_for
+    nodelist_loop = parser.parse(
+                    ^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 1394, in url
+    kwargs[name] = parser.compile_filter(value)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 597, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 685, in __init__
+    var_obj = Variable(var)
+              ^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 832, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Variables and attributes may not begin with underscores: 'incidente._id'
+{'_id': ObjectId('65d2c92fe6ae2d0cdbf3944f'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Masculino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 00:21', 'fechaCierre': None}
+{'_id': ObjectId('65d3e0dadf0cdee23fd8c1ec'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Femenino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 20:14', 'fechaCierre': None}
+Internal Server Error: /comunidad/17
+Traceback (most recent call last):
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 811, in __init__
+    self.literal = float(var)
+                   ^^^^^^^^^^
+ValueError: could not convert string to float: 'incidente._id'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 827, in __init__
+    self.literal = mark_safe(unescape_string_literal(var))
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\functional.py", line 231, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\text.py", line 430, in unescape_string_literal
+    raise ValueError("Not a string literal: %r" % s)
+ValueError: Not a string literal: 'incidente._id'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py", line 347, in listar_incidentes_comunidades
+    return render(request, 'incidentes_comunidad.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 860, in do_for
+    nodelist_loop = parser.parse(
+                    ^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 1394, in url
+    kwargs[name] = parser.compile_filter(value)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 597, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 685, in __init__
+    var_obj = Variable(var)
+              ^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 832, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Variables and attributes may not begin with underscores: 'incidente._id'
+{'_id': ObjectId('65d2c92fe6ae2d0cdbf3944f'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Masculino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 00:21', 'fechaCierre': None}
+{'_id': ObjectId('65d3e0dadf0cdee23fd8c1ec'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Femenino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 20:14', 'fechaCierre': None}
+Internal Server Error: /comunidad/17
+Traceback (most recent call last):
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py", line 347, in listar_incidentes_comunidades
+    return render(request, 'incidentes_comunidad.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 241, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 478, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 848, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'resolver_incidente' with keyword arguments '{'id_incidente': '', 'id_comunidad': 17}' not found. 1 pattern(s) tried: ['resolver_incidente/(?P<id_incidente>[0-9]+)\\Z']
+{'_id': ObjectId('65d2c92fe6ae2d0cdbf3944f'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Masculino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 00:21', 'fechaCierre': None}
+{'_id': ObjectId('65d3e0dadf0cdee23fd8c1ec'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Femenino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 20:14', 'fechaCierre': None}
+Internal Server Error: /comunidad/17
+Traceback (most recent call last):
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 811, in __init__
+    self.literal = float(var)
+                   ^^^^^^^^^^
+ValueError: could not convert string to float: 'incidente._id'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 827, in __init__
+    self.literal = mark_safe(unescape_string_literal(var))
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\functional.py", line 231, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\text.py", line 430, in unescape_string_literal
+    raise ValueError("Not a string literal: %r" % s)
+ValueError: Not a string literal: 'incidente._id'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py", line 347, in listar_incidentes_comunidades
+    return render(request, 'incidentes_comunidad.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 860, in do_for
+    nodelist_loop = parser.parse(
+                    ^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 1394, in url
+    kwargs[name] = parser.compile_filter(value)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 597, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 685, in __init__
+    var_obj = Variable(var)
+              ^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 832, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Variables and attributes may not begin with underscores: 'incidente._id'
+C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+{'_id': ObjectId('65d2c92fe6ae2d0cdbf3944f'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Masculino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 00:21', 'fechaCierre': None, 'id': '65d2c92fe6ae2d0cdbf3944f'}
+{'_id': ObjectId('65d3e0dadf0cdee23fd8c1ec'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Femenino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 20:14', 'fechaCierre': None, 'id': '65d3e0dadf0cdee23fd8c1ec'}
+Internal Server Error: /comunidad/17
+Traceback (most recent call last):
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 811, in __init__
+    self.literal = float(var)
+                   ^^^^^^^^^^
+ValueError: could not convert string to float: 'incidente._id'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 827, in __init__
+    self.literal = mark_safe(unescape_string_literal(var))
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\functional.py", line 231, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\text.py", line 430, in unescape_string_literal
+    raise ValueError("Not a string literal: %r" % s)
+ValueError: Not a string literal: 'incidente._id'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py", line 348, in listar_incidentes_comunidades
+    return render(request, 'incidentes_comunidad.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 860, in do_for
+    nodelist_loop = parser.parse(
+                    ^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 1394, in url
+    kwargs[name] = parser.compile_filter(value)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 597, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 685, in __init__
+    var_obj = Variable(var)
+              ^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 832, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Variables and attributes may not begin with underscores: 'incidente._id'
+{'_id': ObjectId('65d2c92fe6ae2d0cdbf3944f'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Masculino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 00:21', 'fechaCierre': None, 'id': '65d2c92fe6ae2d0cdbf3944f'}
+{'_id': ObjectId('65d3e0dadf0cdee23fd8c1ec'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Femenino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 20:14', 'fechaCierre': None, 'id': '65d3e0dadf0cdee23fd8c1ec'}
+Internal Server Error: /comunidad/17
+Traceback (most recent call last):
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py", line 348, in listar_incidentes_comunidades
+    return render(request, 'incidentes_comunidad.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 241, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 478, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 848, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'resolver_incidente' with keyword arguments '{'id_incidente': '', 'id_comunidad': 17}' not found. 1 pattern(s) tried: ['resolver_incidente/(?P<id_incidente>[0-9]+)\\Z']
+C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\DDS\urls.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+{'_id': ObjectId('65d2c92fe6ae2d0cdbf3944f'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Masculino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 00:21', 'fechaCierre': None, 'id': '65d2c92fe6ae2d0cdbf3944f'}
+{'_id': ObjectId('65d3e0dadf0cdee23fd8c1ec'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Femenino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 20:14', 'fechaCierre': None, 'id': '65d3e0dadf0cdee23fd8c1ec'}
+Internal Server Error: /comunidad/17
+Traceback (most recent call last):
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py", line 348, in listar_incidentes_comunidades
+    return render(request, 'incidentes_comunidad.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 241, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 478, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 848, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'resolver_incidente' with keyword arguments '{'id_incidente': '', 'id_comunidad': 17}' not found. 1 pattern(s) tried: ['resolver_incidente/(?P<id_incidente>[0-9]+)/(?P<id_comunidad>[0-9]+)/\\Z']
+{'_id': ObjectId('65d2c92fe6ae2d0cdbf3944f'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Masculino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 00:21', 'fechaCierre': None, 'id': '65d2c92fe6ae2d0cdbf3944f'}
+{'_id': ObjectId('65d3e0dadf0cdee23fd8c1ec'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Femenino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 20:14', 'fechaCierre': None, 'id': '65d3e0dadf0cdee23fd8c1ec'}
+Internal Server Error: /comunidad/17
+Traceback (most recent call last):
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py", line 348, in listar_incidentes_comunidades
+    return render(request, 'incidentes_comunidad.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 241, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 478, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 848, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'resolver_incidente' with keyword arguments '{'id_incidente': '65d2c92fe6ae2d0cdbf3944f', 'id_comunidad': 17}' not found. 1 pattern(s) tried: ['resolver_incidente/(?P<id_incidente>[0-9]+)/(?P<id_comunidad>[0-9]+)/\\Z']
+{'_id': ObjectId('65d2c92fe6ae2d0cdbf3944f'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Masculino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 00:21', 'fechaCierre': None, 'id': '65d2c92fe6ae2d0cdbf3944f'}
+{'_id': ObjectId('65d3e0dadf0cdee23fd8c1ec'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Femenino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 20:14', 'fechaCierre': None, 'id': '65d3e0dadf0cdee23fd8c1ec'}
+Internal Server Error: /comunidad/17
+Traceback (most recent call last):
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py", line 348, in listar_incidentes_comunidades
+    return render(request, 'incidentes_comunidad.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 241, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 478, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 848, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'resolver_incidente' with keyword arguments '{'id_incidente': '65d2c92fe6ae2d0cdbf3944f', 'id_comunidad': 17}' not found. 1 pattern(s) tried: ['resolver_incidente/(?P<id_incidente>[0-9]+)/(?P<id_comunidad>[0-9]+)/\\Z']
+C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\DDS\urls.py changed, reloading.
+Watching for file changes with StatReloader
+{'_id': ObjectId('65d2c92fe6ae2d0cdbf3944f'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Masculino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 00:21', 'fechaCierre': None, 'id': '65d2c92fe6ae2d0cdbf3944f'}
+{'_id': ObjectId('65d3e0dadf0cdee23fd8c1ec'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Femenino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 20:14', 'fechaCierre': None, 'id': '65d3e0dadf0cdee23fd8c1ec'}
+Internal Server Error: /resolver_incidente/65d3e0dadf0cdee23fd8c1ec/17/
+Traceback (most recent call last):
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py", line 365, in resolver_incidente
+    return redirect('listar_incidente_comunidad',id_comunidad=id_comunidad)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 48, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 179, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 848, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'listar_incidente_comunidad' not found. 'listar_incidente_comunidad' is not a valid view function or pattern name.
+C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+{'_id': ObjectId('65d2c92fe6ae2d0cdbf3944f'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Masculino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 00:21', 'fechaCierre': None, 'id': '65d2c92fe6ae2d0cdbf3944f'}
+{'_id': ObjectId('65d3e0dadf0cdee23fd8c1ec'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Femenino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 20:14', 'fechaCierre': None, 'id': '65d3e0dadf0cdee23fd8c1ec'}
+{'_id': ObjectId('65d2c92fe6ae2d0cdbf3944f'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Masculino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 00:21', 'fechaCierre': None, 'id': '65d2c92fe6ae2d0cdbf3944f'}
+{'_id': ObjectId('65d3e0dadf0cdee23fd8c1ec'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Femenino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 20:14', 'fechaCierre': None, 'id': '65d3e0dadf0cdee23fd8c1ec'}
+C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+{'_id': ObjectId('65d2c92fe6ae2d0cdbf3944f'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Masculino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 00:21', 'fechaCierre': None, 'id': '65d2c92fe6ae2d0cdbf3944f'}
+{'_id': ObjectId('65d3e0dadf0cdee23fd8c1ec'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Femenino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 20:14', 'fechaCierre': None, 'id': '65d3e0dadf0cdee23fd8c1ec'}
+{'_id': ObjectId('65d2c92fe6ae2d0cdbf3944f'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Masculino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 00:21', 'fechaCierre': None, 'id': '65d2c92fe6ae2d0cdbf3944f'}
+{'_id': ObjectId('65d3e0dadf0cdee23fd8c1ec'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Femenino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 20:14', 'fechaCierre': None, 'id': '65d3e0dadf0cdee23fd8c1ec'}
+{'_id': ObjectId('65d2c92fe6ae2d0cdbf3944f'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Masculino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 00:21', 'fechaCierre': None, 'id': '65d2c92fe6ae2d0cdbf3944f'}
+{'_id': ObjectId('65d3e0dadf0cdee23fd8c1ec'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Femenino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 20:14', 'fechaCierre': None, 'id': '65d3e0dadf0cdee23fd8c1ec'}
+C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /resolver_incidente/65d3e0dadf0cdee23fd8c1ec/17/
+Traceback (most recent call last):
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py", line 352, in resolver_incidente
+    incidente = db.collection_name.find_one({"_id": ObjectId("tu_object_id")})
+                ^^
+NameError: name 'db' is not defined
+C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+{'_id': ObjectId('65d2c92fe6ae2d0cdbf3944f'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Masculino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 00:21', 'fechaCierre': None, 'id': '65d2c92fe6ae2d0cdbf3944f'}
+{'_id': ObjectId('65d3e0dadf0cdee23fd8c1ec'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Femenino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 20:14', 'fechaCierre': None, 'id': '65d3e0dadf0cdee23fd8c1ec'}
+Internal Server Error: /resolver_incidente/65d3e0dadf0cdee23fd8c1ec/17/
+Traceback (most recent call last):
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py", line 352, in resolver_incidente
+    incidente = base_incidentes.collection_name.find_one({"_id": ObjectId("tu_object_id")})
+                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\bson\objectid.py", line 103, in __init__
+    self.__validate(oid)
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\bson\objectid.py", line 201, in __validate
+    _raise_invalid_id(oid)
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\bson\objectid.py", line 35, in _raise_invalid_id
+    raise InvalidId(
+bson.errors.InvalidId: 'tu_object_id' is not a valid ObjectId, it must be a 12-byte input or a 24-character hex string
+C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+{'_id': ObjectId('65d2c92fe6ae2d0cdbf3944f'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Masculino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 00:21', 'fechaCierre': None, 'id': '65d2c92fe6ae2d0cdbf3944f'}
+{'_id': ObjectId('65d3e0dadf0cdee23fd8c1ec'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Femenino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 20:14', 'fechaCierre': None, 'id': '65d3e0dadf0cdee23fd8c1ec'}
+{'_id': ObjectId('65d2c92fe6ae2d0cdbf3944f'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Masculino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 00:21', 'fechaCierre': None, 'id': '65d2c92fe6ae2d0cdbf3944f'}
+{'_id': ObjectId('65d3e0dadf0cdee23fd8c1ec'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Femenino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 20:14', 'fechaCierre': None, 'id': '65d3e0dadf0cdee23fd8c1ec'}
+C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+{'_id': ObjectId('65d2c92fe6ae2d0cdbf3944f'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Masculino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 00:21', 'fechaCierre': None, 'id': '65d2c92fe6ae2d0cdbf3944f'}
+{'_id': ObjectId('65d3e0dadf0cdee23fd8c1ec'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Femenino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 20:14', 'fechaCierre': None, 'id': '65d3e0dadf0cdee23fd8c1ec'}
+C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+{'_id': ObjectId('65d2c92fe6ae2d0cdbf3944f'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Masculino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 00:21', 'fechaCierre': None, 'id': '65d2c92fe6ae2d0cdbf3944f'}
+{'_id': ObjectId('65d3e0dadf0cdee23fd8c1ec'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Femenino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 20:14', 'fechaCierre': None, 'id': '65d3e0dadf0cdee23fd8c1ec'}
+{'_id': ObjectId('65d2c92fe6ae2d0cdbf3944f'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Masculino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 00:21', 'fechaCierre': None, 'id': '65d2c92fe6ae2d0cdbf3944f'}
+{'_id': ObjectId('65d3e0dadf0cdee23fd8c1ec'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Femenino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 20:14', 'fechaCierre': None, 'id': '65d3e0dadf0cdee23fd8c1ec'}
+C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+{'_id': ObjectId('65d2c92fe6ae2d0cdbf3944f'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Masculino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 00:21', 'fechaCierre': None, 'id': '65d2c92fe6ae2d0cdbf3944f'}
+{'_id': ObjectId('65d3e0dadf0cdee23fd8c1ec'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Femenino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 20:14', 'fechaCierre': None, 'id': '65d3e0dadf0cdee23fd8c1ec'}
+{'_id': ObjectId('65d2c92fe6ae2d0cdbf3944f'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Masculino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 00:21', 'fechaCierre': None, 'id': '65d2c92fe6ae2d0cdbf3944f'}
+{'_id': ObjectId('65d3e0dadf0cdee23fd8c1ec'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Femenino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 20:14', 'fechaCierre': None, 'id': '65d3e0dadf0cdee23fd8c1ec'}
+C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+{'_id': ObjectId('65d2c92fe6ae2d0cdbf3944f'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Masculino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 00:21', 'fechaCierre': None, 'id': '65d2c92fe6ae2d0cdbf3944f'}
+{'_id': ObjectId('65d3e0dadf0cdee23fd8c1ec'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Femenino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 20:14', 'fechaCierre': None, 'id': '65d3e0dadf0cdee23fd8c1ec'}
+{'_id': ObjectId('65d2c92fe6ae2d0cdbf3944f'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Masculino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 00:21', 'fechaCierre': None, 'id': '65d2c92fe6ae2d0cdbf3944f'}
+{'_id': ObjectId('65d3e0dadf0cdee23fd8c1ec'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Femenino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 20:14', 'fechaCierre': None, 'id': '65d3e0dadf0cdee23fd8c1ec'}
+C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+{'_id': ObjectId('65d2c92fe6ae2d0cdbf3944f'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Masculino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 00:21', 'fechaCierre': None, 'id': '65d2c92fe6ae2d0cdbf3944f'}
+{'_id': ObjectId('65d3e0dadf0cdee23fd8c1ec'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Femenino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 20:14', 'fechaCierre': None, 'id': '65d3e0dadf0cdee23fd8c1ec'}
+{'_id': ObjectId('65d2c92fe6ae2d0cdbf3944f'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Masculino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 00:21', 'fechaCierre': None, 'id': '65d2c92fe6ae2d0cdbf3944f'}
+{'_id': ObjectId('65d3e0dadf0cdee23fd8c1ec'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Femenino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 20:14', 'fechaCierre': None, 'id': '65d3e0dadf0cdee23fd8c1ec'}
+C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+{'_id': ObjectId('65d2c92fe6ae2d0cdbf3944f'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Masculino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 00:21', 'fechaCierre': None, 'id': '65d2c92fe6ae2d0cdbf3944f'}
+{'_id': ObjectId('65d3e0dadf0cdee23fd8c1ec'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Femenino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 20:14', 'fechaCierre': None, 'id': '65d3e0dadf0cdee23fd8c1ec'}
+C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+{'_id': ObjectId('65d2c92fe6ae2d0cdbf3944f'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Masculino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 00:21', 'fechaCierre': None, 'id': '65d2c92fe6ae2d0cdbf3944f'}
+{'_id': ObjectId('65d3e0dadf0cdee23fd8c1ec'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Femenino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 20:14', 'fechaCierre': None, 'id': '65d3e0dadf0cdee23fd8c1ec'}
+{'_id': ObjectId('65d2c92fe6ae2d0cdbf3944f'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Masculino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 00:21', 'fechaCierre': None, 'id': '65d2c92fe6ae2d0cdbf3944f'}
+{'_id': ObjectId('65d3e0dadf0cdee23fd8c1ec'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Femenino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 20:14', 'fechaCierre': None, 'id': '65d3e0dadf0cdee23fd8c1ec'}
+C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+{'_id': ObjectId('65d2c92fe6ae2d0cdbf3944f'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Masculino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 00:21', 'fechaCierre': None, 'id': '65d2c92fe6ae2d0cdbf3944f'}
+{'_id': ObjectId('65d3e0dadf0cdee23fd8c1ec'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Femenino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 20:14', 'fechaCierre': None, 'id': '65d3e0dadf0cdee23fd8c1ec'}
+{'_id': ObjectId('65d2c92fe6ae2d0cdbf3944f'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Masculino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 00:21', 'fechaCierre': None, 'id': '65d2c92fe6ae2d0cdbf3944f'}
+{'_id': ObjectId('65d3e0dadf0cdee23fd8c1ec'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Femenino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 20:14', 'fechaCierre': None, 'id': '65d3e0dadf0cdee23fd8c1ec'}
+C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+{'_id': ObjectId('65d2c92fe6ae2d0cdbf3944f'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Masculino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 00:21', 'fechaCierre': None, 'id': '65d2c92fe6ae2d0cdbf3944f'}
+{'_id': ObjectId('65d3e0dadf0cdee23fd8c1ec'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Femenino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 20:14', 'fechaCierre': None, 'id': '65d3e0dadf0cdee23fd8c1ec'}
+Internal Server Error: /resolver_incidente/65d3e0dadf0cdee23fd8c1ec/17/
+Traceback (most recent call last):
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py", line 358, in resolver_incidente
+    print(incidenteJson)
+          ^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'incidenteJson' where it is not associated with a value
+C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+{'_id': ObjectId('65d2c92fe6ae2d0cdbf3944f'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Masculino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 00:21', 'fechaCierre': None, 'id': '65d2c92fe6ae2d0cdbf3944f'}
+{'_id': ObjectId('65d3e0dadf0cdee23fd8c1ec'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Femenino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 20:14', 'fechaCierre': None, 'id': '65d3e0dadf0cdee23fd8c1ec'}
+C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+{'_id': ObjectId('65d2c92fe6ae2d0cdbf3944f'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Masculino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 00:21', 'fechaCierre': None, 'id': '65d2c92fe6ae2d0cdbf3944f'}
+{'_id': ObjectId('65d3e0dadf0cdee23fd8c1ec'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Femenino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 20:14', 'fechaCierre': None, 'id': '65d3e0dadf0cdee23fd8c1ec'}
+C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+{'_id': ObjectId('65d2c92fe6ae2d0cdbf3944f'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Masculino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 00:21', 'fechaCierre': None, 'id': '65d2c92fe6ae2d0cdbf3944f'}
+{'_id': ObjectId('65d3e0dadf0cdee23fd8c1ec'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Femenino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 20:14', 'fechaCierre': None, 'id': '65d3e0dadf0cdee23fd8c1ec'}
+C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Internal Server Error: /comunidad/17
+Traceback (most recent call last):
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py", line 334, in listar_incidentes_comunidades
+    for incidente in incidente_cursor:
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\pymongo\cursor.py", line 1264, in next
+    if len(self.__data) or self._refresh():
+                           ^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\pymongo\cursor.py", line 1181, in _refresh
+    self.__send_message(q)
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\pymongo\cursor.py", line 1060, in __send_message
+    response = client._run_operation(
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\pymongo\_csot.py", line 107, in csot_wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\pymongo\mongo_client.py", line 1394, in _run_operation
+    return self._retryable_read(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\pymongo\mongo_client.py", line 1492, in _retryable_read
+    return self._retry_internal(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\pymongo\_csot.py", line 107, in csot_wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\pymongo\mongo_client.py", line 1462, in _retry_internal
+    ).run()
+      ^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\pymongo\mongo_client.py", line 2315, in run
+    return self._read() if self._is_read else self._write()
+           ^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\pymongo\mongo_client.py", line 2437, in _read
+    self._server = self._get_server()
+                   ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\pymongo\mongo_client.py", line 2400, in _get_server
+    return self._client._select_server(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\pymongo\mongo_client.py", line 1292, in _select_server
+    topology = self._get_topology()
+               ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\pymongo\mongo_client.py", line 1238, in _get_topology
+    self._topology.open()
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\pymongo\topology.py", line 201, in open
+    self._ensure_opened()
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\pymongo\topology.py", line 652, in _ensure_opened
+    server.open()
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\pymongo\server.py", line 70, in open
+    self._monitor.open()
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\pymongo\monitor.py", line 87, in open
+    self._executor.open()
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\pymongo\periodic_executor.py", line 95, in open
+    thread.start()
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\threading.py", line 992, in start
+    _start_new_thread(self._bootstrap, ())
+RuntimeError: can't create new thread at interpreter shutdown
+Watching for file changes with StatReloader
+{'_id': ObjectId('65d2c92fe6ae2d0cdbf3944f'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Masculino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 00:21', 'fechaCierre': None, 'id': '65d2c92fe6ae2d0cdbf3944f'}
+{'_id': ObjectId('65d3e0dadf0cdee23fd8c1ec'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Femenino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 20:14', 'fechaCierre': None, 'id': '65d3e0dadf0cdee23fd8c1ec'}
+C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+{'_id': ObjectId('65d2c92fe6ae2d0cdbf3944f'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Masculino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 00:21', 'fechaCierre': None, 'id': '65d2c92fe6ae2d0cdbf3944f'}
+{'_id': ObjectId('65d3e0dadf0cdee23fd8c1ec'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Femenino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 20:14', 'fechaCierre': None, 'id': '65d3e0dadf0cdee23fd8c1ec'}
+{'_id': ObjectId('65d2c92fe6ae2d0cdbf3944f'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Masculino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 00:21', 'fechaCierre': None, 'id': '65d2c92fe6ae2d0cdbf3944f'}
+{'_id': ObjectId('65d3e0dadf0cdee23fd8c1ec'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Femenino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 20:14', 'fechaCierre': None, 'id': '65d3e0dadf0cdee23fd8c1ec'}
+C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /comunidad/17
+Traceback (most recent call last):
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py", line 336, in listar_incidentes_comunidades
+    incidente2 = base_incidentes.collection_name.find_one({ObjectId(incidente['_id'])})
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\pymongo\collection.py", line 1506, in find_one
+    for result in cursor.limit(-1):
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\pymongo\cursor.py", line 1264, in next
+    if len(self.__data) or self._refresh():
+                           ^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\pymongo\cursor.py", line 1181, in _refresh
+    self.__send_message(q)
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\pymongo\cursor.py", line 1060, in __send_message
+    response = client._run_operation(
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\pymongo\_csot.py", line 107, in csot_wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\pymongo\mongo_client.py", line 1394, in _run_operation
+    return self._retryable_read(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\pymongo\mongo_client.py", line 1492, in _retryable_read
+    return self._retry_internal(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\pymongo\_csot.py", line 107, in csot_wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\pymongo\mongo_client.py", line 1462, in _retry_internal
+    ).run()
+      ^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\pymongo\mongo_client.py", line 2315, in run
+    return self._read() if self._is_read else self._write()
+           ^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\pymongo\mongo_client.py", line 2445, in _read
+    return self._func(self._session, self._server, conn, read_pref)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\pymongo\mongo_client.py", line 1390, in _cmd
+    return server.run_operation(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\pymongo\helpers.py", line 322, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\pymongo\server.py", line 130, in run_operation
+    message = operation.get_message(read_preference, conn, use_cmd)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\pymongo\message.py", line 426, in get_message
+    request_id, msg, size, _ = _op_msg(
+                               ^^^^^^^^
+  File "C:\Users\javier\AppData\Local\Programs\Python\Python312\Lib\site-packages\pymongo\message.py", line 762, in _op_msg
+    return _op_msg_uncompressed(flags, command, identifier, docs, opts)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bson.errors.InvalidDocument: cannot encode object: {ObjectId('65d2c92fe6ae2d0cdbf3944f')}, of type: <class 'set'>
+C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+{'_id': ObjectId('65d2c92fe6ae2d0cdbf3944f'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Masculino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 00:21', 'fechaCierre': None, 'id': '65d2c92fe6ae2d0cdbf3944f'}
+{'_id': ObjectId('65d3e0dadf0cdee23fd8c1ec'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Femenino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 20:14', 'fechaCierre': None, 'id': '65d3e0dadf0cdee23fd8c1ec'}
+{'_id': ObjectId('65d2c92fe6ae2d0cdbf3944f'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Masculino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 00:21', 'fechaCierre': None, 'id': '65d2c92fe6ae2d0cdbf3944f'}
+{'_id': ObjectId('65d3e0dadf0cdee23fd8c1ec'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Femenino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 20:14', 'fechaCierre': None, 'id': '65d3e0dadf0cdee23fd8c1ec'}
+C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+{'_id': ObjectId('65d2c92fe6ae2d0cdbf3944f'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Masculino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 00:21', 'fechaCierre': None, 'id': '65d2c92fe6ae2d0cdbf3944f'}
+{'_id': ObjectId('65d3e0dadf0cdee23fd8c1ec'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Femenino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 20:14', 'fechaCierre': None, 'id': '65d3e0dadf0cdee23fd8c1ec'}
+C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+{'_id': ObjectId('65d2c92fe6ae2d0cdbf3944f'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Masculino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 00:21', 'fechaCierre': None, 'id': '65d2c92fe6ae2d0cdbf3944f'}
+{'_id': ObjectId('65d3e0dadf0cdee23fd8c1ec'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Femenino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 20:14', 'fechaCierre': None, 'id': '65d3e0dadf0cdee23fd8c1ec'}
+C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+{'_id': ObjectId('65d2c92fe6ae2d0cdbf3944f'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Masculino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 00:21', 'fechaCierre': None, 'id': '65d2c92fe6ae2d0cdbf3944f'}
+{'_id': ObjectId('65d3e0dadf0cdee23fd8c1ec'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Femenino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 20:14', 'fechaCierre': None, 'id': '65d3e0dadf0cdee23fd8c1ec'}
+{'_id': ObjectId('65d2c92fe6ae2d0cdbf3944f'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Masculino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 00:21', 'fechaCierre': None, 'id': '65d2c92fe6ae2d0cdbf3944f'}
+{'_id': ObjectId('65d3e0dadf0cdee23fd8c1ec'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Femenino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 20:14', 'fechaCierre': None, 'id': '65d3e0dadf0cdee23fd8c1ec'}
+C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+{'_id': ObjectId('65d2c92fe6ae2d0cdbf3944f'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Masculino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 00:21', 'fechaCierre': None, 'id': '65d2c92fe6ae2d0cdbf3944f'}
+{'_id': ObjectId('65d3e0dadf0cdee23fd8c1ec'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Femenino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 20:14', 'fechaCierre': None, 'id': '65d3e0dadf0cdee23fd8c1ec'}
+C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+{'_id': ObjectId('65d2c92fe6ae2d0cdbf3944f'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Masculino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 00:21', 'fechaCierre': None, 'id': '65d2c92fe6ae2d0cdbf3944f'}
+{'_id': ObjectId('65d3e0dadf0cdee23fd8c1ec'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Femenino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 20:14', 'fechaCierre': None, 'id': '65d3e0dadf0cdee23fd8c1ec'}
+{'_id': ObjectId('65d2c92fe6ae2d0cdbf3944f'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Masculino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 00:21', 'fechaCierre': None, 'id': '65d2c92fe6ae2d0cdbf3944f'}
+{'_id': ObjectId('65d3e0dadf0cdee23fd8c1ec'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Femenino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 20:14', 'fechaCierre': None, 'id': '65d3e0dadf0cdee23fd8c1ec'}
+C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+{'_id': ObjectId('65d2c92fe6ae2d0cdbf3944f'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Masculino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 00:21', 'fechaCierre': None, 'id': '65d2c92fe6ae2d0cdbf3944f'}
+{'_id': ObjectId('65d3e0dadf0cdee23fd8c1ec'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Femenino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': True, 'fechaCreado': '19/02/2024 20:14', 'fechaCierre': datetime.datetime(2024, 2, 21, 0, 29, 59, 509000), 'id': '65d3e0dadf0cdee23fd8c1ec'}
+C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+{'_id': ObjectId('65d2c92fe6ae2d0cdbf3944f'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Masculino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 00:21', 'fechaCierre': None, 'id': '65d2c92fe6ae2d0cdbf3944f'}
+{'_id': ObjectId('65d3e0dadf0cdee23fd8c1ec'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Femenino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': True, 'fechaCreado': '19/02/2024 20:14', 'fechaCierre': datetime.datetime(2024, 2, 21, 0, 29, 59, 509000), 'id': '65d3e0dadf0cdee23fd8c1ec'}
+{'_id': ObjectId('65d2c92fe6ae2d0cdbf3944f'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Masculino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 00:21', 'fechaCierre': None, 'id': '65d2c92fe6ae2d0cdbf3944f'}
+{'_id': ObjectId('65d3e0dadf0cdee23fd8c1ec'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Femenino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': True, 'fechaCreado': '19/02/2024 20:14', 'fechaCierre': '21/02/2024 00:39', 'id': '65d3e0dadf0cdee23fd8c1ec'}
+C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+{'_id': ObjectId('65d2c92fe6ae2d0cdbf3944f'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Masculino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 00:21', 'fechaCierre': None, 'id': '65d2c92fe6ae2d0cdbf3944f'}
+C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+{'_id': ObjectId('65d2c92fe6ae2d0cdbf3944f'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Masculino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 00:21', 'fechaCierre': None, 'id': '65d2c92fe6ae2d0cdbf3944f'}
+C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\DDS\urls.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\DDS\urls.py changed, reloading.
+Watching for file changes with StatReloader

@@ -32,9 +32,14 @@
             {% for comunidad_perfil in comunidades_admin %}      
 
             <li class="list-group-item d-flex justify-content-between align-items-center">
-            <span>{{ comunidad_perfil.comunidad.nombre }}</span>
+            <span>{{ comunidad_perfil.comunidad.nombre }}</span>        
             <div>
-              <a href=""><button class="btn btn-sm btn-admin mr-2">Ver</button></a>
+              {% for incidente in incidentes %}
+                  {% if incidente.comunidad == comunidad_perfil.comunidad.nombre %}
+                      <span class="badge badge-secondary">Incidentes Activos: {{ incidente.incidentes_count }}</span>
+                  {% endif %}
+              {% endfor %}
+              <a href="{% url 'listar_incidentes_comunidades' id_comunidad=comunidad_perfil.comunidad.id%}"><button class="btn btn-sm btn-admin mr-2">Ver</button></a>
               <form method="post" action="{% url 'administrar_comunidad' comunidad_perfil.comunidad.id %}" class="d-inline">
                 {% csrf_token %}
                 <button type="submit" class="btn btn-sm btn-admin mr-2">Administrar</button>
@@ -62,8 +67,14 @@
             {% for comunidad_perfil in comunidades_no_admin %}
             <li class="list-group-item d-flex justify-content-between align-items-center">
               <span>{{ comunidad_perfil.comunidad.nombre }}</span>
+              
               <div>
-                  <a href=""><button class="btn btn-sm btn-admin mr-2">Ver</button></a>
+                {% for incidente in incidentes %}
+                    {% if incidente.comunidad == comunidad_perfil.comunidad.nombre %}
+                        <span class="badge badge-secondary">Incidentes Activos: {{ incidente.incidentes_count }}</span>
+                    {% endif %}
+                {% endfor %}
+                <a href="{% url 'listar_incidentes_comunidades' id_comunidad=comunidad_perfil.comunidad.id%}"><button class="btn btn-sm btn-admin mr-2">Ver</button></a>
                 <a href="{% url 'salir_comunidad' comunidad_id=comunidad_perfil.comunidad.id  pag_redirect='mis_comunidades' tipo='usuario'%}"><button class="btn btn-sm btn-delete">Salirse</button></a>
               </div>
             </li>

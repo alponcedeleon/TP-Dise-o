@@ -20,10 +20,17 @@ from django.http import HttpResponse
 from django.http import JsonResponse
 
 from .forms import CSVUploadForm
+from bson.objectid import ObjectId
 
 import pymongo
 from django.conf import settings
 from datetime import datetime
+
+my_client = pymongo.MongoClient(settings.DB_NAME)
+# First define the database name
+dbname = my_client['dds2023']
+# Now get/create collection name (remember that you will see the database in your mongodb cluster only after you create a collection)
+base_incidentes = dbname["incidente"]
 
 @login_required
 def get_location(request):
@@ -275,15 +282,90 @@ def listar_comunidades_perfil(request):
     perfil = Perfil.objects.get(user=request.user)
     comunidades_admin = ComunidadPerfil.objects.filter(perfil=perfil,esAdmin=True)
     comunidades_no_admin = ComunidadPerfil.objects.filter(perfil=perfil,esAdmin=False)
+    
+    incidentes = []
+    # Recorrer las comunidades donde el usuario es administrador
+    for comunidad in comunidades_admin:
+        # Consultar la base de datos no SQL para contar los incidentes
+        incidentes_count = base_incidentes.count_documents({"comunidad": comunidad.comunidad.nombre,"solucionado":False})
+        # Almacenar la información en un diccionario
+        resultado_comunidad = {
+            'comunidad': comunidad.comunidad.nombre,
+            'incidentes_count': incidentes_count
+        }
+        incidentes.append(resultado_comunidad)
+
+    # Recorrer las comunidades donde el usuario no es administrador (si es necesario)
+    for comunidad in comunidades_no_admin:
+        # Consultar la base de datos no SQL para contar los incidentes
+        incidentes_count = base_incidentes.count_documents({"comunidad": comunidad.comunidad.nombre,"solucionado":False})
+        # Almacenar la información en un diccionario
+        resultado_comunidad = {
+            'comunidad': comunidad.comunidad.nombre,
+            'incidentes_count': incidentes_count
+        }
+        incidentes.append(resultado_comunidad)
+    
     context = {
         'request':request,
         'groups':group_names,
         'perfil': perfil,
         'comunidades_admin': comunidades_admin,
-        'comunidades_no_admin': comunidades_no_admin
+        'comunidades_no_admin': comunidades_no_admin,
+        'incidentes':incidentes
     }
 
     return render(request, 'mis_comunidades.html', context)
+########################################################################################################################################################
+
+def listar_incidentes_comunidades(request, id_comunidad):
+    
+    group_names = requestGroups(request)
+    perfil = Perfil.objects.get(user=request.user)
+    comunidad = Comunidad.objects.get(id=id_comunidad)
+
+    incidente_cursor = base_incidentes.find({"comunidad": comunidad.nombre,"solucionado":False})
+    # Lista para almacenar los incidentes relevantes
+    lista_incidentes = []
+
+    # Iterar sobre los resultados del cursor y filtrar el campo _id
+    for incidente in incidente_cursor:
+        incidente['id'] = str(incidente['_id'])
+        incidente2 = base_incidentes.find_one({'_id': ObjectId(incidente['_id'])})
+        lista_incidentes.append(incidente)
+    
+    for incidente in lista_incidentes:
+        logging.info(incidente)
+    
+    context = {
+        'request':request,
+        'groups':group_names,
+        'perfil': perfil,
+        'lista_incidentes':lista_incidentes,
+        'id_comunidad':id_comunidad
+    }
+
+    return render(request, 'incidentes_comunidad.html', context)
+
+def resolver_incidente(request, id_incidente, id_comunidad):
+    incidente = base_incidentes.find_one({'_id': ObjectId(id_incidente)})
+    if incidente:
+        fecha_actual = datetime.now()
+        fecha_cierre = fecha_actual.strftime("%d/%m/%Y %H:%M")
+        
+        # Crear un diccionario para las actualizaciones
+        actualizaciones = {
+            "solucionado": True,
+            "fechaCierre": fecha_cierre
+        }
+        
+        # Actualizar el documento en la base de datos
+        base_incidentes.update_one({"_id": ObjectId(id_incidente)}, {"$set": actualizaciones})
+        print("Incidente resuelto correctamente.")
+    else:
+        print("No se encontró ningún incidente con el ID proporcionado.")
+      
+    return redirect('listar_incidentes_comunidades', id_comunidad=id_comunidad)
 ########################################################################################################################################################
 def crear_solicitud_comunidad(request):
     admin = User.objects.get(is_superuser=True)
@@ -475,18 +557,10 @@ def servicio_perfil_estacion(request, servicio_id, establecimiento_id,tipo):
 
 @login_required
 def reportar_incidente(request, servicio_id, establecimiento_id, comunidades_nombres, tipo):
-    my_client = pymongo.MongoClient(settings.DB_NAME)
-    # First define the database name
-    dbname = my_client['dds2023']
-    # Now get/create collection name (remember that you will see the database in your mongodb cluster only after you create a collection)
-    collection_name = dbname["incidente"]
+    
     # Crear el nuevo registro
     perfil = Perfil.objects.get(user=request.user)
     lista_comunidades = comunidades_nombres.split('-') 
-    print(servicio_id)
-    print(establecimiento_id)
-    print(comunidades_nombres)
-    print(tipo)
     
     establecimiento = None
     nombre_establecimiento= None
@@ -518,9 +592,8 @@ def reportar_incidente(request, servicio_id, establecimiento_id, comunidades_nom
             "fechaCierre" : None
         }
         incidentes.append(incidente)
-        print(incidente)   
-    
-    collection_name.insert_many(incidentes)
+        
+    base_incidentes.insert_many(incidentes)
      
     return redirect('establecimiento', id=establecimiento_id, tipo=tipo)
 
@@ -609,13 +682,13 @@ def establecimiento(request,id,tipo):
     dbname = my_client['dds2023']
 
     # Now get/create collection name (remember that you will see the database in your mongodb cluster only after you create a collection)
-    collection_name = dbname["incidente"]
+    base_incidentes = dbname["incidente"]
     
     incidentes = []
 
     for servicio in detalles_servicios:
         incidete = []
-        incidente_cursor = collection_name.find({"establecimiento": establecimiento.nombre, "servicio": servicio["servicio"].nombre, "comunidad": {"$in": nombres_comunidades} })
+        incidente_cursor = base_incidentes.find({"establecimiento": establecimiento.nombre, "servicio": servicio["servicio"].nombre, "solucionado": False, "comunidad": {"$in": nombres_comunidades} })
         incidete.extend(list(incidente_cursor)) 
         if incidete:
             logging.info("este entra")
@@ -692,7 +765,7 @@ my_client = pymongo.MongoClient(settings.DB_NAME)
 dbname = my_client['dds2023']
 
 # Now get/create collection name (remember that you will see the database in your mongodb cluster only after you create a collection)
-collection_name = dbname["incidente"]
+base_incidentes = dbname["incidente"]
 
 """ #let's create two documents
 incidente = {
@@ -767,12 +840,12 @@ incidente6 = {
     "fechaCreado" : datetime.strptime("11/02/2024 13:59", "%d/%m/%Y %H:%M"),
     "fechaCierre" : datetime.strptime("12/02/2024 14:59", "%d/%m/%Y %H:%M"),
 }
-collection_name.insert_many([incidente,incidente2,incidente3,incidente4,incidente5,incidente6]) """
+base_incidentes.insert_many([incidente,incidente2,incidente3,incidente4,incidente5,incidente6]) """
 
-med_details = collection_name.find({})
+med_details = base_incidentes.find({})
 
 for r in med_details:
     print(r["servicio"])
 
-""" update_data = collection_name.update_one({'incidenteId':'0000001'}, {'$set':{'departamento':'test3'}}) """
+""" update_data = base_incidentes.update_one({'incidenteId':'0000001'}, {'$set':{'departamento':'test3'}}) """
 
