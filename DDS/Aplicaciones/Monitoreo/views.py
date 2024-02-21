@@ -6,7 +6,7 @@ from django.contrib import messages
 
 
 
-from .forms import CustomUserCreationForm, FormularioServicio, UserProfileForm, SolicitudComunidadForm
+from .forms import CustomUserCreationForm, SolicitudServicio, UserProfileForm, SolicitudComunidadForm
 from .models import Perfil, Categoria, Comunidad, ComunidadPerfil, Servicio, LineaTransporte, Organizacion, Estacion, Sucursal, PrestacionServicioEstacion, PrestacionServicioSucursal, ServicioPerfilEstacion, ServicioPerfilSucursal
 from .requests import obtener_localidades, obtener_provincias, obtener_ubicacion
 from django.contrib.auth.decorators import login_required, user_passes_test
@@ -395,29 +395,52 @@ def crear_solicitud_comunidad(request):
 ########################################################################################################################################################
 
 def administrar_comunidad(request, id_comunidad):
-    
+    admin = User.objects.get(is_superuser=True)
+    perfil = Perfil.objects.get(user=request.user)
     if request.method == 'POST': 
-        form = FormularioServicio(request.POST)
+        form = SolicitudServicio(request.POST)
         if form.is_valid():
-            categoria_id = form.cleaned_data['categoria']
-            servicio = Servicio(
-                nombre = form.cleaned_data['nombre'],
-                categoria = Categoria.objects.get(pk=categoria_id)
-            )
-            servicio.save()
+            solicitud_servicio=form.save()
+            nombre = form.cleaned_data['nombre']
+            categoria = form.cleaned_data['categoria']
+            categoria_alternativa = form.cleaned_data['categoria_alternativa']
+            motivo = form.cleaned_data['motivo']  
+            comunidad = form.cleaned_data['comunidad']      
+            objeto_id = solicitud_servicio.id
+                       
+            if categoria_alternativa is None:
+                categoria_alternativa= "Null"
+            if motivo is None:
+                motivo = "Null"
+            
+            send_mail(
+                    'Solicitud de Creación de Servicio',
+                    f'ID Solicitud: {objeto_id}\n\nComunidad: {comunidad}\n\nNombre usuario: {perfil.user.username}\n\nNombre Servicio: {nombre}\n\nCategoría: {categoria}\n\nCategoría alternativa: {categoria_alternativa}\n\nMotivo: {motivo}',
+                    'alejo.poncedleon@gmail.com',  
+                    [f'{admin.email}'],  # CAMBIAR CORREO ADMIN PARA TESTEAR
+                    fail_silently=False,
+                )
+
+
+        else:
+            print('error en formulario')
+            print(form.errors)
+
     perfil = Perfil.objects.get(user=request.user)
     comunidad_perfiles = ComunidadPerfil.objects.filter(comunidad=id_comunidad).exclude(perfil=perfil)
     cantidad_miembros = comunidad_perfiles.count()
     group_names = requestGroups(request)
     comunidad = get_object_or_404(Comunidad, pk=id_comunidad)
+    categorias = Categoria.objects.all()
     
-    form = FormularioServicio()
+    form = SolicitudServicio()
     context = { 'comunidad_perfiles': comunidad_perfiles, 
                'form': form, 
                'id_comunidad': id_comunidad,
                'comunidad':comunidad,
                'groups':group_names,
                'cantidad_miembros':cantidad_miembros,
+               'categorias':categorias
                
                }
     
