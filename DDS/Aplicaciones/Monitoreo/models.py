@@ -194,6 +194,20 @@ class SolicitudComunidad(models.Model):
         return 'solicitud ID:'+ str(self.id) +' | Comunidad '+self.nombre
 
 ####################################################################  
+class SolicitudServicio(models.Model):
+    id = models.AutoField(primary_key=True)
+    nombre = models.CharField(max_length=100)
+    categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE, null=True, blank=True)
+    categoria_alternativa = models.CharField(max_length=100, null=True,blank =True)
+    comunidad = models.ForeignKey(Comunidad, on_delete=models.CASCADE)
+    perfil = models.ForeignKey('Perfil', on_delete=models.CASCADE)
+    motivo = models.CharField(max_length=255, null=True,blank =True)
+
+    def __str__(self):
+        return 'solicitud ID:'+ str(self.id) +' | Servicio '+self.nombre
+
+####################################################################  
+    
     
 @receiver(post_save, sender=User)
 def asignar_grupo_usuario(sender, instance, created, **kwargs):

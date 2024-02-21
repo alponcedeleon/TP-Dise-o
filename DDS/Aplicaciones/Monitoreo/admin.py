@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.contrib.auth.models import Group
-from .models import Estacion, LineaTransporte, Servicio, Categoria, Comunidad, Perfil, ComunidadPerfil, Sucursal, Organizacion, Establecimiento, OrganismoExterno, PrestacionServicioEstacion,PrestacionServicioSucursal,ServicioPerfilEstacion,ServicioPerfilSucursal, SolicitudComunidad
+from .models import Estacion,SolicitudServicio, LineaTransporte, Servicio, Categoria, Comunidad, Perfil, ComunidadPerfil, Sucursal, Organizacion, Establecimiento, OrganismoExterno, PrestacionServicioEstacion,PrestacionServicioSucursal,ServicioPerfilEstacion,ServicioPerfilSucursal, SolicitudComunidad
 from django import forms
 import requests 
 from django.core.mail import send_mail
@@ -81,16 +81,44 @@ def rechazar_solicitud(modeladmin,request,queryset):
                 )        
         solicitud.delete()
 
+def aprobar_solicitud_Servicio(modeladmin,request,queryset):
+    for solicitud in queryset:
+        
+        usuario = solicitud.perfil       
+        send_mail(
+                    'Solicitud de Servicio Aprobada',
+                    f'Hola {usuario.nombre},\n\nTe informamos que tu solicitud para la creacion del servicio "{solicitud.nombre}" ha sido aprobada ¡Felicitaciones!\n\nAtentamente,\nEl equipo de nuestra aplicación',
+                   'alejo.poncedleon@gmail.com',  
+                    [f'{usuario.email}'],  
+                   fail_silently=False,
+                )
+        #solicitud.delete()
 
+def rechazar_solicitud_Servicio(modeladmin,request,queryset):
+    for solicitud in queryset:
+                
+        usuario = solicitud.perfil        
+        send_mail(
+                    'Solicitud de Servicio Rechazada',
+                    f'Hola {usuario.nombre},\n\nTe informamos que tu solicitud para la creacion del servicio "{solicitud.nombre}" ha sido rechazada.\n\nAtentamente,\nEl equipo de nuestra aplicación',
+                   'alejo.poncedleon@gmail.com',  
+                    [f'{usuario.email}'],  
+                   fail_silently=False,
+                )        
+        solicitud.delete()
 
 class SolicitudComunidadAdmin(admin.ModelAdmin):
     actions = [aprobar_solicitud,rechazar_solicitud]
+
+class SolicitudServicioAdmin(admin.ModelAdmin):
+    actions = [aprobar_solicitud_Servicio,rechazar_solicitud_Servicio]
 
 
 
 admin.site.register(SolicitudComunidad,SolicitudComunidadAdmin)
 admin.site.register(Estacion, EstacionAdmin)
 admin.site.register(Sucursal, SucursalAdmin)
+admin.site.register(SolicitudServicio, SolicitudServicioAdmin)
 admin.site.register(LineaTransporte)
 admin.site.register(Organizacion)
 admin.site.register(Servicio)

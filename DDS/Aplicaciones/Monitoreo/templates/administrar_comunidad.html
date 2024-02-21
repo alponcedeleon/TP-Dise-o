@@ -29,9 +29,45 @@
             </div>
             <div class="modal-body text-center">
               <!-- Your form content goes here -->
-              <form method="POST" action="{% url 'administrar_comunidad' id_comunidad %}">
+              <form method="POST" enctype="multipart/form-data">
                   {% csrf_token %}
-                  {{ form.as_p }}
+                  <input
+                    type="text"
+                    name="nombre"                    
+                    class="form-control mb-2"
+                    placeholder="Ingrese un Nombre para el servicio"
+                    autocomplete="off"
+                    required
+                  />
+                  <select
+                    id="categoria"
+                    name="categoria"
+                    class="form-control mb-2"
+                  >
+                  {% for categoria in categorias %}
+                  <option value="{{ categoria.id }}">{{ categoria.nombre }}</option>
+              {% endfor %}
+
+                </select>
+                
+                  <input type="text" name="categoria_alternativa" class="form-control mb-2" placeholder="Ingrese una categoría alternativa si su respuesta fue 'Otra'" autocomplete="off">
+              
+                  <textarea
+                    name="motivo"
+                    class="form-control mb-2"
+                     placeholder="Ingrese un motivo para crear el servicio"
+                     rows="4"
+                    autocomplete="off"  
+                    ></textarea>
+                    <input type="hidden" name="perfil"
+              value="{{ request.user.id }}" />
+
+              <input type="hidden" name="comunidad"
+              value="{{ comunidad.id }}" />
+
+
+
+
                   <div class="form-group mt-5">
                   <button type="submit" class="btn btn-primary">Solicitar</button>
                 </div>
@@ -145,4 +181,6 @@
 </html>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 

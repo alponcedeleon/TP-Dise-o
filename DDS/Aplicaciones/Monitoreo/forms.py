@@ -1,7 +1,7 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
 
-from .models import Perfil, Categoria,SolicitudComunidad
+from .models import Perfil, Categoria,SolicitudComunidad, SolicitudServicio
 
 
 class CustomUserCreationForm(UserCreationForm):
@@ -21,15 +21,12 @@ class SolicitudComunidadForm(forms.ModelForm):
         model = SolicitudComunidad
         fields = ['nombre', 'descripcion', 'perfil', 'motivo']
 
-class FormularioServicio(forms.Form):
-    nombre = forms.CharField(label='Nombre del servicio', max_length=100)
-    categoria = forms.ChoiceField(label='Categoría', choices=[])
+class SolicitudServicio(forms.ModelForm):
+    class Meta:
+        model = SolicitudServicio
+        fields = ['nombre', 'categoria', 'categoria_alternativa' ,'comunidad','perfil', 'motivo']
 
-    def __init__(self, *args, **kwargs):
-        super(FormularioServicio, self).__init__(*args, **kwargs)
-        categorias = Categoria.objects.all()
-        choices = [(categoria.id, categoria.nombre) for categoria in categorias]
-        self.fields['categoria'].choices = choices
+    
 
 class CSVUploadForm(forms.Form):
     archivo_csv = forms.FileField(widget=forms.FileInput(attrs={'class': 'boton-fileupload'}))
