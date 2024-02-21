@@ -7554,3 +7554,18 @@ C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\DDS\urls.py changed, reloading
 Watching for file changes with StatReloader
 C:\Users\javier\Desktop\Django\test\TP-Dise-o\DDS\DDS\urls.py changed, reloading.
 Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Not Found: /entidad/1/lineatransporte/images/logo-alt.png
+Not Found: /media/profile_pics/subte_linea_A.jpg
+este entra
+Baño Masculino
+Not Found: /establecimiento/4/estacion/profile_pics/San_Pedrito.jpg
+Not Found: /establecimiento/4/estacion/images/logo-alt.png
+{'_id': ObjectId('65d2c92fe6ae2d0cdbf3944f'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Masculino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '19/02/2024 00:21', 'fechaCierre': None, 'id': '65d2c92fe6ae2d0cdbf3944f'}
+Not Found: /establecimiento/4/estacion/profile_pics/San_Pedrito.jpg
+Not Found: /establecimiento/4/estacion/images/logo-alt.png
+este entra
+Baño Masculino
+Not Found: /establecimiento/4/estacion/profile_pics/San_Pedrito.jpg
+Not Found: /establecimiento/4/estacion/images/logo-alt.png
+{'_id': ObjectId('65d5746cb9faad882412097d'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Masculino', 'comunidad': 'Claras de huevo', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 2, 'solucionado': False, 'fechaCreado': '21/02/2024 00:56', 'fechaCierre': None, 'id': '65d5746cb9faad882412097d'}
