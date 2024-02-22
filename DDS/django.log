@@ -4895,3 +4895,5 @@ Starting new HTTPS connection (1): apis.datos.gob.ar:443
 https://apis.datos.gob.ar:443 "GET /georef/api/provincias?campos=nombre&max=1000 HTTP/1.1" 200 None
 C:\Users\alejo\Desktop\TPA-git\TP-Dise-o\DDS\Aplicaciones\Monitoreo\admin.py changed, reloading.
 Watching for file changes with StatReloader
+C:\Users\alejo\Desktop\TPA-git\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
+Watching for file changes with StatReloader
