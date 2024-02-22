@@ -7,7 +7,7 @@ from django.contrib import messages
 
 
 from .forms import CustomUserCreationForm, SolicitudServicio, UserProfileForm, SolicitudComunidadForm
-from .models import Perfil, Categoria, Comunidad, ComunidadPerfil, Servicio, LineaTransporte, Organizacion, Estacion, Sucursal, PrestacionServicioEstacion, PrestacionServicioSucursal, ServicioPerfilEstacion, ServicioPerfilSucursal
+from .models import Perfil, Categoria, Comunidad, ComunidadPerfil, Servicio, LineaTransporte, Organizacion, Estacion, Sucursal, PrestacionServicioEstacion, PrestacionServicioSucursal, ServicioPerfilEstacion, ServicioPerfilSucursal, OrganismoExterno, Establecimiento
 from .requests import obtener_localidades, obtener_provincias, obtener_ubicacion
 from django.contrib.auth.decorators import login_required, user_passes_test
 import logging
@@ -25,6 +25,11 @@ from bson.objectid import ObjectId
 import pymongo
 from django.conf import settings
 from datetime import datetime
+
+class CSVRow:
+    def __init__(self, columna_1, columna_2):
+        self.columna_1 = columna_1
+        self.columna_2 = columna_2
 
 my_client = pymongo.MongoClient(settings.DB_NAME)
 # First define the database name
@@ -780,6 +785,84 @@ def perfil_usuario(request):
     }
 
     return render(request, 'perfil.html', context)
+
+@login_required
+def ranking_entidades_con_mayor_tiempo_promedio_de_tiempo_de_cierre_de_incidentes(request):
+    from Aplicaciones.Monitoreo import cron
+    from django.core.exceptions import ObjectDoesNotExist
+    establecimientos = []
+    try:
+        orgExt = OrganismoExterno.objects.get(nombre=request.user)
+    except ObjectDoesNotExist:
+        orgExt = None
+
+    if orgExt != None:
+        for linea in orgExt.lineas.all():
+            establecimientos.append(linea.estacion_origen.nombre)
+            establecimientos.append(linea.estacion_destino.nombre)
+            for estacion in linea.estaciones_intermedias.all():
+                establecimientos.append(estacion.nombre)
+    
+        for organizacion in orgExt.organizaciones.all():
+            establecimientos.append(organizacion.nombre)
+    
+    print(establecimientos)
+
+
+    if request.method == 'POST':
+        cron.entidades_con_mayor_tiempo_promedio_de_tiempo_de_cierre_de_incidentes()
+
+    return renderizar_csv(request, establecimientos, 'entidades-con-mayor-tiempo-de-cierre-*.csv')
+
+@login_required
+def ranking_entidades_con_mayor_incidentes_reportados_en_la_semana(request):
+    from Aplicaciones.Monitoreo import cron
+    establecimientos = []
+    orgExt = OrganismoExterno.objects.get(nombre=request.user)
+    for linea in orgExt.lineas.all():
+        establecimientos.append(linea.estacion_origen.nombre)
+        establecimientos.append(linea.estacion_destino.nombre)
+        for estacion in linea.estaciones_intermedias.all():
+            establecimientos.append(estacion.nombre)
+    
+    for organizacion in orgExt.organizaciones.all():
+        establecimientos.append(organizacion.nombre)
+    
+    print(establecimientos)
+
+    if request.method == 'POST':
+        cron.entidades_con_mayor_incidentes_reportados_en_la_semana()
+
+    return renderizar_csv(request, establecimientos, 'entidades-con-mas-incidentes-*.csv')
+
+def renderizar_csv(request, establecimientos, nombre_archivo):
+    import glob
+    import os
+
+    # Buscamos el archivo mas reciente
+    ruta = './rankings/'
+    patron = nombre_archivo
+    archivos_csv = glob.glob(os.path.join(ruta, patron))
+    archivo_mas_reciente = max(archivos_csv, key=os.path.getmtime)
+    filas = []
+
+    # Abrir el archivo más reciente y leer línea por línea
+    with open(archivo_mas_reciente, 'r') as archivo:
+        for index, linea in enumerate(archivo):
+            elementos = linea.strip().split(',')
+            if index == 0 or elementos[0] in establecimientos:
+                fila = CSVRow(elementos[0], elementos[1])
+                filas.append(fila)
+    
+    nombre_columnas = filas.pop(0)
+
+    context = {
+        'request':request,
+        'filas': filas,
+        'nombre_columnas':  nombre_columnas
+    }
+    return render(request, 'visualizar_rankings.html', context)
+
 ########################################################################################################################################################
 
 my_client = pymongo.MongoClient(settings.DB_NAME)

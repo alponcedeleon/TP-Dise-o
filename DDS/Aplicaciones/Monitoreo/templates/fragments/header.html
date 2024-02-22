@@ -31,8 +31,14 @@
        
 
         {% if 'Organismo' in groups %}
-        <li class="nav-item @@informes">
-          <a class="nav-link" href="/informes">Informes</a>
+        <li class="nav-item dropdown @@informes">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Informes
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/informes/mayor-tiempo">Mayor tiempo promedio de cierre</a>
+            <a class="dropdown-item" href="/informes/mas-incidentes">Más incidentes</a>
+          </div>
         </li>
         <li class="nav-item @@cargarDatos">
           <a class="nav-link" href="/cargar-datos">Cargar Datos</a>

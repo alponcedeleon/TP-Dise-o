@@ -26,3 +26,6 @@ Configuraciones necesarias:
 
 ->> pip install requests   (Utilizar API)
 
+(para que corran los rankings)
+->> pip install django-crontab
+->> python manage.py crontab add
