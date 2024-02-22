@@ -17,6 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from Aplicaciones.Monitoreo import views
+from Aplicaciones.Monitoreo import cron
 from django.urls import include
 from django.contrib.auth.views import logout_then_login
 from django.conf import settings
@@ -48,6 +49,10 @@ urlpatterns = [
     path('eliminar_servicio_perfil_estacion/<int:servicio_id>/<int:establecimiento_id>/<str:tipo>/', views.eliminar_servicio_perfil_estacion, name='eliminar_servicio_perfil_estacion'),
     path('cargar-datos/', views.cargar_datos_desde_csv, name='cargar_datos'),
     path('salir_comunidad/<int:comunidad_id>/<str:pag_redirect>/<str:tipo>/', views.salir_comunidad, name='salir_comunidad'),
+    path('calcular-ranking1/', cron.entidades_con_mayor_tiempo_promedio_de_tiempo_de_cierre_de_incidentes, name='calcular-ranking1'),
+    path('calcular-ranking2/', cron.entidades_con_mayor_incidentes_reportados_en_la_semana, name='calcular-ranking2'),
+    path('informes/mayor-tiempo', views.ranking_entidades_con_mayor_tiempo_promedio_de_tiempo_de_cierre_de_incidentes, name='informes/mayor-tiempo'),
+    path('informes/mas-incidentes', views.ranking_entidades_con_mayor_incidentes_reportados_en_la_semana, name='informes/mas-incidentes')
 ]
  
 if settings.DEBUG:

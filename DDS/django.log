@@ -4795,6 +4795,7 @@ Watching for file changes with StatReloader
 >>>>>>> d2822c70382284b630acd1c5f709f0b4cf255625
 Watching for file changes with StatReloader
 Watching for file changes with StatReloader
+<<<<<<< HEAD
 {'_id': ObjectId('65d2c829e6ae2d0cdbf3944a'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Femenino', 'comunidad': 'asdad', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 6, 'solucionado': False, 'fechaCreado': '19/02/2024 00:16', 'fechaCierre': None, 'id': '65d2c829e6ae2d0cdbf3944a'}
 {'_id': ObjectId('65d3debddf0cdee23fd8c1e4'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Ascensor', 'comunidad': 'asdad', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 6, 'solucionado': False, 'fechaCreado': '19/02/2024 20:05', 'fechaCierre': None, 'id': '65d3debddf0cdee23fd8c1e4'}
 {'_id': ObjectId('65d2c829e6ae2d0cdbf39449'), 'incidenteId': '0000001', 'establecimiento': 'San Pedrito', 'servicio': 'Baño Femenino', 'comunidad': 'Silla de Ruedas', 'departamento': 'Comuna 6', 'provincia': 'Ciudad Autónoma de Buenos Aires', 'usuarioReportador': 6, 'solucionado': False, 'fechaCreado': '19/02/2024 00:16', 'fechaCierre': None, 'id': '65d2c829e6ae2d0cdbf39449'}
@@ -4897,3 +4898,278 @@ C:\Users\alejo\Desktop\TPA-git\TP-Dise-o\DDS\Aplicaciones\Monitoreo\admin.py cha
 Watching for file changes with StatReloader
 C:\Users\alejo\Desktop\TPA-git\TP-Dise-o\DDS\Aplicaciones\Monitoreo\views.py changed, reloading.
 Watching for file changes with StatReloader
+=======
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Internal Server Error: /informes/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/agustincappellacci/Desktop/Code/Facu/dds/nuevo-tp-en-python/TP-Dise-o/DDS/Aplicaciones/Monitoreo/views.py", line 790, in ranking_entidades_con_mayor_tiempo_promedio_de_tiempo_de_cierre_de_incidentes
+    return renderizar_csv(request, 'entidades-con-mayor-tiempo-de-cierre-*.csv')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/agustincappellacci/Desktop/Code/Facu/dds/nuevo-tp-en-python/TP-Dise-o/DDS/Aplicaciones/Monitoreo/views.py", line 808, in renderizar_csv
+    archivo_mas_reciente = max(archivos_csv, key=os.path.getmtime)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: max() iterable argument is empty
+Internal Server Error: /informes/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/agustincappellacci/Desktop/Code/Facu/dds/nuevo-tp-en-python/TP-Dise-o/DDS/Aplicaciones/Monitoreo/views.py", line 790, in ranking_entidades_con_mayor_tiempo_promedio_de_tiempo_de_cierre_de_incidentes
+    return renderizar_csv(request, 'entidades-con-mayor-tiempo-de-cierre-*.csv')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/agustincappellacci/Desktop/Code/Facu/dds/nuevo-tp-en-python/TP-Dise-o/DDS/Aplicaciones/Monitoreo/views.py", line 808, in renderizar_csv
+    archivo_mas_reciente = max(archivos_csv, key=os.path.getmtime)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: max() iterable argument is empty
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Internal Server Error: /informes/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/agustincappellacci/Desktop/Code/Facu/dds/nuevo-tp-en-python/TP-Dise-o/DDS/Aplicaciones/Monitoreo/views.py", line 798, in ranking_entidades_con_mayor_tiempo_promedio_de_tiempo_de_cierre_de_incidentes
+    return renderizar_csv(request, 'entidades-con-mayor-tiempo-de-cierre-*.csv')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/agustincappellacci/Desktop/Code/Facu/dds/nuevo-tp-en-python/TP-Dise-o/DDS/Aplicaciones/Monitoreo/views.py", line 816, in renderizar_csv
+    archivo_mas_reciente = max(archivos_csv, key=os.path.getmtime)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: max() iterable argument is empty
+Watching for file changes with StatReloader
+Internal Server Error: /informes/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/agustincappellacci/Desktop/Code/Facu/dds/nuevo-tp-en-python/TP-Dise-o/DDS/Aplicaciones/Monitoreo/views.py", line 798, in ranking_entidades_con_mayor_tiempo_promedio_de_tiempo_de_cierre_de_incidentes
+    return renderizar_csv(request, 'entidades-con-mayor-tiempo-de-cierre-*.csv')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/agustincappellacci/Desktop/Code/Facu/dds/nuevo-tp-en-python/TP-Dise-o/DDS/Aplicaciones/Monitoreo/views.py", line 816, in renderizar_csv
+    archivo_mas_reciente = max(archivos_csv, key=os.path.getmtime)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: max() iterable argument is empty
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+/Users/agustincappellacci/Desktop/Code/Facu/dds/nuevo-tp-en-python/TP-Dise-o/DDS/Aplicaciones/Monitoreo/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/agustincappellacci/Desktop/Code/Facu/dds/nuevo-tp-en-python/TP-Dise-o/DDS/Aplicaciones/Monitoreo/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/agustincappellacci/Desktop/Code/Facu/dds/nuevo-tp-en-python/TP-Dise-o/DDS/Aplicaciones/Monitoreo/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/agustincappellacci/Desktop/Code/Facu/dds/nuevo-tp-en-python/TP-Dise-o/DDS/Aplicaciones/Monitoreo/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/agustincappellacci/Desktop/Code/Facu/dds/nuevo-tp-en-python/TP-Dise-o/DDS/Aplicaciones/Monitoreo/views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /informes/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/agustincappellacci/Desktop/Code/Facu/dds/nuevo-tp-en-python/TP-Dise-o/DDS/Aplicaciones/Monitoreo/views.py", line 796, in ranking_entidades_con_mayor_tiempo_promedio_de_tiempo_de_cierre_de_incidentes
+    org = get_object_or_404(Organizacion, user=request.user)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/django/shortcuts.py", line 86, in get_object_or_404
+    return queryset.get(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/django/db/models/query.py", line 635, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/django/db/models/query.py", line 1476, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/django/db/models/query.py", line 1494, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/django/db/models/query.py", line 1501, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1613, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1645, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1495, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1307, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1772, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'user' into field. Choices are: foto, id, nombre, organizacion, organizaciones_org, provincia, tipo_organizacion
+/Users/agustincappellacci/Desktop/Code/Facu/dds/nuevo-tp-en-python/TP-Dise-o/DDS/Aplicaciones/Monitoreo/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/agustincappellacci/Desktop/Code/Facu/dds/nuevo-tp-en-python/TP-Dise-o/DDS/Aplicaciones/Monitoreo/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/agustincappellacci/Desktop/Code/Facu/dds/nuevo-tp-en-python/TP-Dise-o/DDS/Aplicaciones/Monitoreo/views.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /informes/
+/Users/agustincappellacci/Desktop/Code/Facu/dds/nuevo-tp-en-python/TP-Dise-o/DDS/Aplicaciones/Monitoreo/views.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /informes/
+/Users/agustincappellacci/Desktop/Code/Facu/dds/nuevo-tp-en-python/TP-Dise-o/DDS/Aplicaciones/Monitoreo/views.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /informes/
+/Users/agustincappellacci/Desktop/Code/Facu/dds/nuevo-tp-en-python/TP-Dise-o/DDS/Aplicaciones/Monitoreo/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/agustincappellacci/Desktop/Code/Facu/dds/nuevo-tp-en-python/TP-Dise-o/DDS/Aplicaciones/Monitoreo/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/agustincappellacci/Desktop/Code/Facu/dds/nuevo-tp-en-python/TP-Dise-o/DDS/Aplicaciones/Monitoreo/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/agustincappellacci/Desktop/Code/Facu/dds/nuevo-tp-en-python/TP-Dise-o/DDS/Aplicaciones/Monitoreo/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/agustincappellacci/Desktop/Code/Facu/dds/nuevo-tp-en-python/TP-Dise-o/DDS/Aplicaciones/Monitoreo/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/agustincappellacci/Desktop/Code/Facu/dds/nuevo-tp-en-python/TP-Dise-o/DDS/Aplicaciones/Monitoreo/views.py changed, reloading.
+Watching for file changes with StatReloader
+Starting new HTTPS connection (1): apis.datos.gob.ar:443
+https://apis.datos.gob.ar:443 "GET /georef/api/provincias HTTP/1.1" 200 None
+Starting new HTTPS connection (1): apis.datos.gob.ar:443
+https://apis.datos.gob.ar:443 "GET /georef/api/provincias HTTP/1.1" 200 None
+Starting new HTTPS connection (1): apis.datos.gob.ar:443
+https://apis.datos.gob.ar:443 "GET /georef/api/provincias HTTP/1.1" 200 None
+Starting new HTTPS connection (1): apis.datos.gob.ar:443
+https://apis.datos.gob.ar:443 "GET /georef/api/provincias HTTP/1.1" 200 None
+/Users/agustincappellacci/Desktop/Code/Facu/dds/nuevo-tp-en-python/TP-Dise-o/DDS/Aplicaciones/Monitoreo/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/agustincappellacci/Desktop/Code/Facu/dds/nuevo-tp-en-python/TP-Dise-o/DDS/Aplicaciones/Monitoreo/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/agustincappellacci/Desktop/Code/Facu/dds/nuevo-tp-en-python/TP-Dise-o/DDS/Aplicaciones/Monitoreo/views.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /login
+Internal Server Error: /informes/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/agustincappellacci/Desktop/Code/Facu/dds/nuevo-tp-en-python/TP-Dise-o/DDS/Aplicaciones/Monitoreo/views.py", line 796, in ranking_entidades_con_mayor_tiempo_promedio_de_tiempo_de_cierre_de_incidentes
+    for estacion in linea.estaciones_intermedias:
+TypeError: 'ManyRelatedManager' object is not iterable
+/Users/agustincappellacci/Desktop/Code/Facu/dds/nuevo-tp-en-python/TP-Dise-o/DDS/Aplicaciones/Monitoreo/views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /informes/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/agustincappellacci/Desktop/Code/Facu/dds/nuevo-tp-en-python/TP-Dise-o/DDS/Aplicaciones/Monitoreo/views.py", line 797, in ranking_entidades_con_mayor_tiempo_promedio_de_tiempo_de_cierre_de_incidentes
+    for estacion in linea.estaciones_intermedias:
+TypeError: 'ManyRelatedManager' object is not iterable
+/Users/agustincappellacci/Desktop/Code/Facu/dds/nuevo-tp-en-python/TP-Dise-o/DDS/Aplicaciones/Monitoreo/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/agustincappellacci/Desktop/Code/Facu/dds/nuevo-tp-en-python/TP-Dise-o/DDS/Aplicaciones/Monitoreo/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/agustincappellacci/Desktop/Code/Facu/dds/nuevo-tp-en-python/TP-Dise-o/DDS/Aplicaciones/Monitoreo/views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /informes/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/agustincappellacci/Desktop/Code/Facu/dds/nuevo-tp-en-python/TP-Dise-o/DDS/Aplicaciones/Monitoreo/views.py", line 808, in ranking_entidades_con_mayor_tiempo_promedio_de_tiempo_de_cierre_de_incidentes
+    return renderizar_csv(request, establecimientos, 'entidades-con-mayor-tiempo-de-cierre-*.csv')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/agustincappellacci/Desktop/Code/Facu/dds/nuevo-tp-en-python/TP-Dise-o/DDS/Aplicaciones/Monitoreo/views.py", line 849, in renderizar_csv
+    nombre_columnas = filas.pop(0)
+                      ^^^^^^^^^^^^
+IndexError: pop from empty list
+/Users/agustincappellacci/Desktop/Code/Facu/dds/nuevo-tp-en-python/TP-Dise-o/DDS/Aplicaciones/Monitoreo/views.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /favicon.ico
+Watching for file changes with StatReloader
+/Users/agustincappellacci/Desktop/Code/Facu/dds/nuevo-tp-en-python/TP-Dise-o/DDS/DDS/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/agustincappellacci/Desktop/Code/Facu/dds/nuevo-tp-en-python/TP-Dise-o/DDS/Aplicaciones/Monitoreo/views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /informes/mayor-tiempo
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/agustincappellacci/Desktop/Code/Facu/dds/nuevo-tp-en-python/TP-Dise-o/DDS/Aplicaciones/Monitoreo/views.py", line 792, in ranking_entidades_con_mayor_tiempo_promedio_de_tiempo_de_cierre_de_incidentes
+    orgExt = OrganismoExterno.objects.get(nombre="pepito")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/django/db/models/query.py", line 649, in get
+    raise self.model.DoesNotExist(
+Aplicaciones.Monitoreo.models.OrganismoExterno.DoesNotExist: OrganismoExterno matching query does not exist.
+/Users/agustincappellacci/Desktop/Code/Facu/dds/nuevo-tp-en-python/TP-Dise-o/DDS/Aplicaciones/Monitoreo/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/agustincappellacci/Desktop/Code/Facu/dds/nuevo-tp-en-python/TP-Dise-o/DDS/Aplicaciones/Monitoreo/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/agustincappellacci/Desktop/Code/Facu/dds/nuevo-tp-en-python/TP-Dise-o/DDS/Aplicaciones/Monitoreo/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/agustincappellacci/Desktop/Code/Facu/dds/nuevo-tp-en-python/TP-Dise-o/DDS/Aplicaciones/Monitoreo/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/agustincappellacci/Desktop/Code/Facu/dds/nuevo-tp-en-python/TP-Dise-o/DDS/Aplicaciones/Monitoreo/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/agustincappellacci/Desktop/Code/Facu/dds/nuevo-tp-en-python/TP-Dise-o/DDS/Aplicaciones/Monitoreo/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/agustincappellacci/Desktop/Code/Facu/dds/nuevo-tp-en-python/TP-Dise-o/DDS/Aplicaciones/Monitoreo/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/agustincappellacci/Desktop/Code/Facu/dds/nuevo-tp-en-python/TP-Dise-o/DDS/Aplicaciones/Monitoreo/views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /informes/mayor-tiempo
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/agustincappellacci/Desktop/Code/Facu/dds/nuevo-tp-en-python/TP-Dise-o/DDS/Aplicaciones/Monitoreo/views.py", line 794, in ranking_entidades_con_mayor_tiempo_promedio_de_tiempo_de_cierre_de_incidentes
+    print(perfil.emal)
+          ^^^^^^^^^^^
+AttributeError: 'Perfil' object has no attribute 'emal'. Did you mean: 'email'?
+/Users/agustincappellacci/Desktop/Code/Facu/dds/nuevo-tp-en-python/TP-Dise-o/DDS/Aplicaciones/Monitoreo/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/agustincappellacci/Desktop/Code/Facu/dds/nuevo-tp-en-python/TP-Dise-o/DDS/Aplicaciones/Monitoreo/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/agustincappellacci/Desktop/Code/Facu/dds/nuevo-tp-en-python/TP-Dise-o/DDS/Aplicaciones/Monitoreo/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/agustincappellacci/Desktop/Code/Facu/dds/nuevo-tp-en-python/TP-Dise-o/DDS/Aplicaciones/Monitoreo/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/agustincappellacci/Desktop/Code/Facu/dds/nuevo-tp-en-python/TP-Dise-o/DDS/Aplicaciones/Monitoreo/cron.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/agustincappellacci/Desktop/Code/Facu/dds/nuevo-tp-en-python/TP-Dise-o/DDS/Aplicaciones/Monitoreo/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/agustincappellacci/Desktop/Code/Facu/dds/nuevo-tp-en-python/TP-Dise-o/DDS/DDS/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/agustincappellacci/Desktop/Code/Facu/dds/nuevo-tp-en-python/TP-Dise-o/DDS/DDS/urls.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+>>>>>>> 8b25d281de961f6e453fcf7a3f8c437ee56c928c

@@ -1,0 +1,30 @@
+
+{% load static %}
+<html lang="es">
+  {% include 'fragments/head.html' %} 
+  <body class="body-wrapper" data-spy="scroll" data-target=".privacy-nav">
+    {% include 'fragments/header.html' %} 
+    <div class="container mt-5">
+      <div class="row column">
+        <h1>Ranking de incidentes</h1>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>{{ nombre_columnas.columna_1 }}</th>
+                    <th>{{ nombre_columnas.columna_2 }}</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for fila in filas %}
+                <tr>
+                    <td>{{ fila.columna_1 }}</td>
+                    <td>{{ fila.columna_2 }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+      </div>
+    </div>
+    {% include 'fragments/scripts.html' %} 
+  </body>
+</html>
