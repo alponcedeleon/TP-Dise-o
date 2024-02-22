@@ -188,6 +188,8 @@ CRONJOBS = [
     ('0 0 * * 0', 'Aplicaciones.Monitoreo.cron.entidades_con_mayor_incidentes_reportados_en_la_semana'),  # Run entidades_con_mayor_incidentes_reportados_en_la_semana every Sunday at midnight
 ]
 
+EMAIL_ENABLED = True
+
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587  # Puerto TLS de Gmail

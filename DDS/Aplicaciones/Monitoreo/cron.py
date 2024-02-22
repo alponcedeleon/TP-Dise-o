@@ -110,6 +110,8 @@ def avisar_a_organizaciones(nombre_informe):
     from django.core.mail import send_mail
     from DDS.DDS import settings
 
+    if not settings.EMAIL_ENABLED:
+        return
 
     orgs = OrganismoExterno.objects.all()
     for org in orgs:
