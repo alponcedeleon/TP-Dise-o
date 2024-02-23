@@ -28,9 +28,11 @@
 				<article class="featured">
 					<!-- Image -->
           {% if tipo == 'lineatransporte' %}
+                  {% if lineas.foto %}
 					<div class="image">
 						<a href="blog-single.html"><img class="img-fluid" src="{{ lineas.foto.url }}" alt="featured-article"></a>
 					</div>
+                  {% endif %}
 					
 					<div class="content">						
 						<h2><a href="blog-single.html">{{lineas.nombre}}</a></h2>						
@@ -41,10 +43,11 @@
                         </ul>
                         </div>
 						{% else %}
-            <div class="image">
-              <a href="blog-single.html"><img class="img-fluid" src="{{ organizaciones.foto.url }}" alt="featured-article"></a>
-            </div>
-            
+            {% if organizaciones.foto %}
+              <div class="image">
+                <a href="blog-single.html"><img class="img-fluid" src="{{ organizaciones.foto.url }}" alt="featured-article"></a>
+              </div>
+            {% endif %}
             <div class="content">						
               <h2><a href="blog-single.html">{{organizaciones.nombre}}</a></h2>						
               <ul class="text-md-left">

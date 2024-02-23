@@ -63,6 +63,7 @@ class Organizacion(Entidad):
         ('Supermercado', 'Supermercado'),
         ('Centro Comunal', 'Centro Comunal'),
         ('Banco', 'Banco'),
+        ('Farmacia', 'Farmacia')
     )
     tipo_organizacion = models.CharField(max_length=20, choices=TIPO_CHOICES)
 
